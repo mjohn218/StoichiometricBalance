@@ -1,0 +1,18 @@
+To run code
+
+./balance_network_dist.exe parms_ErbB.inp ErbB_abund.inp ErbB_Edges.txt ErbB_IIN_full_new.txt HeLa_Probs_abund.txt constraints_ErbB.inp > run0.out
+
+Inputs:
+
+parms_ErbB.inp:	     Parameters for the simulation. Includes number of proteins, number of PPIs, minimum number of complexes 
+		     each interface must participate in, number of proteins with constrained concentrations, number of random 
+		     copy numbers to form distribution with, a flag which determined whether random copy numbers are sampled or 
+		     shuffled from input copy numbers, and the alpha scaling parameter
+ErbB_abund.inp:	     Copy numbers of each protein. Also defines which ID each protein has (count starts at 0).
+ErbB_Edges.txt:    List of protein-protein interactions
+ErB_IIN_full_new.txt:	     The interface-interaction network. Defines which interfaces are on which proteins and their interactions
+HeLa_Probs_abund.txt: Human HeLa cell concentration distribution. Left columns: bins for copy numbers. Middle column: PMF. Right 
+			  column: CMF
+constraints_ErbB.inp:     Optional input which determines which proteins will have their concentrations constrained. Default is all 
+		     proteins
+

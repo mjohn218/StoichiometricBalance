@@ -1,0 +1,8 @@
+56 # npro
+186 # nedge
+20 # min complex
+56 #Num constraints 
+1 #flag 1: sample CNs 0: shuffle CNs
+5000 #nruns_rand
+1 #QPsolveonly alpha
+
