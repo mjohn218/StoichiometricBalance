@@ -1,0 +1,89 @@
+*****STEPS FOR INSTALLATION*****
+
+Please see TROUBLESHOOTING below if you encounter errors
+
+The code can be compiled and run on a Mac or Linux OS. If you are using a Windows OS, you will need a Unix-like environment to run the code, such as Cygwin: https://www.cygwin.com/
+
+*****LINUX INSTRUCTIONS******
+
+1) Go to http://www.hsl.rl.ac.uk/archive/hslarchive.html and download the MA27 library. 
+
+2) Extract the MA27 folder and run
+
+./configure
+make
+
+inside to make the library libma27.a
+
+3) Extract OOQP tar file
+
+4) Place libma27.a into top directory in OOQP folder. You can place it elsewhere, but will need to modify the Makefile inside OOQP
+
+5) Run
+
+./configure
+make
+
+Inside OOQP folder. This will require LAPACK and BLAS libraries, so you may need to install these if you don't have them. (See the INSTALL file inside the OOQP directory for more details)
+
+6) Go back to top directory and add proper library tags to the Makefile. If you don't know the proper library tags, look at GNUMakefile inside the OOQP directory and copy them from there. Copy into the FLIBSLIN tag.
+
+7) Run
+
+make
+
+To compile balance_network_dist.exe
+
+
+*****MAC INSTRUCTIONS******
+
+1) Go to http://www.hsl.rl.ac.uk/archive/hslarchive.html and download the MA27 library. 
+
+2) Extract the MA27 folder and run
+
+./configure
+make
+
+inside to make the library libma27.a
+
+3) Extract OOQP tar file
+
+4) Place libma27.a into top directory in OOQP folder. You can place it elsewhere, but will need to modify the Makefile inside OOQP
+
+5) Add -lstdc++ to FLIBS variable inside GNUMakefile 
+
+6) Open src/Readers/hash.C and comment out "using namespace std". Then change all three instances of "cerr" to "std::cerr". If you don't do this, you may get an 'Ambiguous definition of "hash"' error. This is because C++ has its own defintion of the "hash" function.
+
+7) Run
+
+./configure
+make
+
+Inside OOQP folder. This will require LAPACK and BLAS libraries, so you may need to install these if you don't have them. (See the INSTALL file inside the OOQP directory for more details)
+
+8) Go back to top directory and add proper library tags to the Makefile. If you don't know the proper library tags, look at GNUMakefile inside the OOQP directory and copy them from there. Copy into the FLIBSMAC tag.
+
+9) Run
+
+make
+
+To compile balance_network_dist.exe
+
+*****TROUBLESHOOTING****
+
+Make sure the prerequisite libraries (BLAS, LAPACK, and MA27 are available)
+
+
+Error: "Fortran compiler cannot make executables"
+
+Your gfortran compiler may be out of date. Upgrade it. You can find binaries here:
+
+MacOS
+https://gcc.gnu.org/wiki/GFortranBinaries#MacOS 
+Linux
+https://gcc.gnu.org/wiki/GFortranBinaries#GNU.2BAC8-Linux
+
+
+
+
+
