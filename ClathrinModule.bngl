@@ -1,0 +1,289 @@
+begin model
+begin parameters
+	
+	#Volumes
+	NA 6.022e23 #mol^-1
+	sigma 0.002 #um
+	vol_CP 37.2e-15 #volume L
+	#vol_CP 3.2e-15
+	sa_PM 75.7#75.7 #um^2
+	#sa_PM 2.1715 #um^2
+	vol_PM sa_PM*sigma*1e-15 #volume L
+
+	#Binding parameters (Kd in units of microMolar. Convert to molar, then get kon rate, then divide by NA)
+	koff 1
+	kdump 1000 #Rate of destruction for Clathrin complexes of a certain size
+	kc 1000#200 #Recycling rate for adding molecules back into the pool
+	# Made this very fast because I want to see how many vesicles are produced under max CN conditions.
+	# In reality, some proteins are being recycled at all times, but it's difficult to estimate 
+	# how many. If I want to simulate this, the best way would be to multiply all copy numbers
+	# by 90% or something.
+	
+	kon_chc_chc (1/(100*1e-6))/NA #Liter/second
+	kon_chc_ent (1/(22*1e-6))/NA
+	kon_chc_yap (1/(160*1e-6))/NA 
+	kon_ede_ent (1/(12*1e-6))/NA
+	kon_ede_yap (1/(0.6*1e-6))/NA
+	kon_ede_ede (1/(0.127*1e-6))/NA
+	kon_chc_clc (1/(0.0001*1e-6))/NA #Very high affinity
+	kon_clc_sla2 (1/(22*1e-6))/NA #May be even stronger, like 60 nM. See: 
+	#https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2150824/ HIP1R binds to CLC in the low nanomolar range.
+	# However, another paper notes that there is some steric hindranes with the triskelia, so use lower range
+	kon_sla2_sla2 (1/(0.001*1e-6))/NA #Based on very strong self-binding of HIP1R (human homologue). Virtually no monomers in vitro
+	kon_syp_syp (1/(2.5*1e-6))/NA #Based on FCHO self-binding: http://www.sciencedirect.com/science/article/pii/S0969212607001815
+	kon_syp_ede (1/(0.227*1e-6))/NA
+	# From this paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4299599/ Also claims a
+	# SLA2 to EDE interaction, not in our model. Should I add it in? Also says no interaction found
+	# with ENT1 or YAP1802; not my problem I guess.
+	
+	kon_l_ent (1/(0.02*1e-6))/NA
+	kon_l_yap (1/(0.3*1e-6))/NA
+	kon_l_sla2 (1/(0.2*1e-6))/NA #Based on this: 0.2 - 0.5 uM
+	# http://www.jbc.org/content/286/39/34155.full.pdf
+	# It should be stronger than AP180 to L, which is 0.5 uM. Paper gives a rate of 174 nM
+	kon_l_syp (1/(53*1e-6))/NA #Binding of F-BAR domain is weaker
+	# Source: http://www.cell.com/cms/attachment/2024311279/2044098539/mmc2.pdf
+	# Note that this tested a generic F-BAR domain, not SYP1
+	# #However, this only assumes it binds to one lipid. Evidence it binds to more.
+	
+	#Rate constants for cytoplasm
+	kon_chc_chc_cy kon_chc_chc/vol_CP #1/second
+	kon_chc_ent_cy kon_chc_ent/vol_CP
+	kon_chc_yap_cy kon_chc_yap/vol_CP
+	kon_ede_ent_cy kon_ede_ent/vol_CP
+	kon_ede_yap_cy kon_ede_yap/vol_CP
+	kon_ede_ede_cy kon_ede_ede/vol_CP
+	kon_chc_clc_cy kon_chc_clc/vol_CP
+	kon_clc_sla2_cy kon_clc_sla2/vol_CP
+	kon_sla2_sla2_cy kon_sla2_sla2/vol_CP
+	kon_syp_syp_cy kon_syp_syp/vol_CP
+	kon_syp_ede_cy kon_syp_ede/vol_CP
+	
+	kon_l_ent_cy kon_l_ent/vol_CP
+	kon_l_yap_cy kon_l_yap/vol_CP
+	kon_l_sla2_cy kon_l_sla2/vol_CP
+	kon_l_syp_cy kon_l_syp/vol_CP
+	
+	#Rate increase for lipid membranes
+	
+	kon_chc_chc_pm kon_chc_chc/vol_PM - kon_chc_chc_cy
+	kon_chc_ent_pm kon_chc_ent/vol_PM - kon_chc_ent_cy
+	kon_chc_yap_pm kon_chc_yap/vol_PM - kon_chc_yap_cy
+	kon_ede_ent_pm kon_ede_ent/vol_PM - kon_ede_ent_cy
+	kon_ede_yap_pm kon_ede_yap/vol_PM - kon_ede_yap_cy
+	kon_ede_ede_pm kon_ede_ede/vol_PM - kon_ede_ede_cy
+	kon_chc_clc_pm kon_chc_clc/vol_PM - kon_chc_clc_cy
+	kon_clc_sla2_pm kon_clc_sla2/vol_PM - kon_clc_sla2_cy
+	kon_sla2_sla2_pm kon_sla2_sla2/vol_PM - kon_sla2_sla2_cy
+	kon_syp_syp_pm kon_syp_syp/vol_PM - kon_syp_syp_cy
+	kon_syp_ede_pm kon_syp_ede/vol_PM - kon_syp_ede_cy
+	
+	kon_l_ent_pm kon_l_ent/vol_PM - kon_l_ent_cy
+	kon_l_yap_pm kon_l_yap/vol_PM - kon_l_yap_cy
+	kon_l_sla2_pm kon_l_sla2/vol_PM - kon_l_sla2_cy
+	kon_l_syp_pm kon_l_syp/vol_PM - kon_l_syp_cy
+
+	#Initial Copy Numbers
+	CHC1_0 6426 #19278/3
+	CLC1_0 14538
+	EDE1_0 5964
+	ENT1_0 1750/2#1750
+	ENT2_0 1324/2#1325
+	YAP1801_0 357
+	YAP1802_0 264
+	SLA2_0 3904/2#3904
+	SYP1_0 2467
+	L_0 2.5292e4*sa_PM # particles/um^2 -> particles
+
+end parameters
+begin molecule types
+	CHC1(a1,a2,a3,b1,b2,b3,c1,c2,c3) #Assume these are the light chain sites that bind to sla2
+	CLC1(a,b)
+	EDE1(a,a,b,c)
+	ENT(a,b,lb)
+	#ENT2(a,b,lb)
+	YAP1801(a,lb)
+	YAP1802(a,b)
+	#Trying to add SLA2 and SYP1 to see how it affects model
+	SLA2(a,b,lb)
+	SYP1(a,b,lb)
+	L(p)	
+	Ve()
+end molecule types
+
+begin seed species
+	CHC1(a1,a2,a3,b1,b2,b3,c1,c2,c3) CHC1_0#,c1,c2,c3)	CHC1_0
+	CLC1(a,b)	CLC1_0
+	EDE1(a,a,b,c)	EDE1_0
+	ENT(a,b,lb)	ENT1_0 + ENT2_0
+	#ENT2(a,b,lb)	ENT2_0
+	YAP1801(a,lb)	YAP1801_0
+	YAP1802(a,b)	YAP1802_0
+	SLA2(a,b,lb) SLA2_0
+	SYP1(a,b,lb) SYP1_0
+	L(p)	L_0
+	Ve() 0
+end seed species
+
+begin observables
+	Molecules ClathrinLip CHC1().L()
+	Molecules Clathrin CHC1()
+	Molecules CHCself CHC1().CHC1()
+	Molecules FreeCHC CHC1(a1,a2,a3,b1,b2,b3) 
+	Molecules Yap_CHC YAP1801(a!+).CHC1()
+	Molecules ENT_CHC ENT(a!+).CHC1()
+	#Molecules ENT2_CHC ENT2(a!+).CHC1()
+	Molecules ClathrinLight CLC1()
+	Molecules EDE_1 EDE1()
+	Molecules ENT ENT()
+	#Molecules ENT_2 ENT2()
+	Molecules SLA_2 SLA2()
+	Molecules SYP_1 SYP1()
+	Molecules ENT_L ENT(lb!1).L(p!1)
+	#Molecules ENT2_L ENT2(lb!1).L(p!1)
+	Molecules YAP_L YAP1801(lb!1).L(p!1)
+	Molecules SLA_L SLA2(lb!1).L(p!1)
+	Molecules SLA_CHC SLA2(a!+).CHC1()
+	Molecules YAP_1801 YAP1801()
+	Molecules YAP_1802 YAP1802()
+	Molecules Lipids L()
+Molecules EDEdub EDE1(a!+,a!+)
+Molecules EDEsin EDE1(a!+)
+	Molecules Vesicles Ve()
+	Molecules Triskelia CHC1(c1!1,c2!2,c3!3).CLC1(a!1).CLC1(a!2).CLC1(a!3)
+	Molecules TL CHC1(c1!1,c2!2,c3!3).CLC1(a!1).CLC1(a!2).CLC1(a!3).L()
+end observables
+
+begin functions
+#Need a function that causes a clathrin "dump" back 
+# into the cytosol after a clathrin cage reaches a certain size.
+	BooleanFunc(x) = if(Triskelia(x)>=100,kdump,0) 
+	#BooleanFunc2(x) = if(ClathrinLight(x)>=300,1,0)
+	
+	CreateL() = if(Lipids<L_0,kc,0)
+	CreateCHC() = if(Clathrin<CHC1_0,kc/2,0) #Assuming CHC to adaptor ratio is roughly 2 to 1
+	CreateCLC() = if(ClathrinLight<CLC1_0,kc/2,0)
+	CreateENT() = if(ENT<ENT1_0+ENT2_0,kc,0)
+	#CreateENT2() = if(ENT_2<ENT2_0,kc,0)
+	CreateEDE1() = if(EDE_1<EDE1_0,kc,0)
+	CreateYAP1801() = if(YAP_1801<YAP1801_0,kc,0)
+	CreateYAP1802() = if(YAP_1802<YAP1802_0,kc,0)
+	CreateSLA2() = if(SLA_2<SLA2_0,kc,0)
+	CreateSYP1() = if(SYP_1<SYP1_0,kc,0)
+	
+	#HasLip(x) = if(Lipids(x)>0,1,0)
+	
+end functions
+
+begin reaction rules
+	CHC1(a1) + CHC1(a1) <-> CHC1(a1!1).CHC1(a1!1) kon_chc_chc_cy, koff
+	CHC1(a1).L() + CHC1(a1).L() -> CHC1(a1!1).L().CHC1(a1!1).L() kon_chc_chc_pm
+	CHC1(a2) + CHC1(a2) <-> CHC1(a2!1).CHC1(a2!1) kon_chc_chc_cy, koff
+	CHC1(a2).L() + CHC1(a2).L() -> CHC1(a2!1).L().CHC1(a2!1).L() kon_chc_chc_pm
+	CHC1(a3) + CHC1(a3) <-> CHC1(a3!1).CHC1(a3!1) kon_chc_chc_cy, koff
+	CHC1(a3).L() + CHC1(a3).L() -> CHC1(a3!1).L().CHC1(a3!1).L() kon_chc_chc_pm
+	CHC1(a1) + CHC1(a2) <-> CHC1(a1!1).CHC1(a2!1) kon_chc_chc_cy, koff
+	CHC1(a1).L() + CHC1(a2).L() -> CHC1(a1!1).L().CHC1(a2!1).L() kon_chc_chc_pm
+	CHC1(a2) + CHC1(a3) <-> CHC1(a2!1).CHC1(a3!1) kon_chc_chc_cy, koff
+	CHC1(a2).L() + CHC1(a3).L() -> CHC1(a2!1).L().CHC1(a3!1).L() kon_chc_chc_pm
+	CHC1(a1) + CHC1(a3) <-> CHC1(a1!1).CHC1(a3!1) kon_chc_chc_cy, koff
+	CHC1(a1).L() + CHC1(a3).L() -> CHC1(a1!1).L().CHC1(a3!1).L() kon_chc_chc_pm
+	
+	CHC1(b1) + ENT(a) <-> CHC1(b1!1).ENT(a!1) kon_chc_ent_cy, koff
+	CHC1(b1).L() + ENT(a).L() -> CHC1(b1!1).L().ENT(a!1).L() kon_chc_ent_pm
+	#CHC1(b1) + ENT2(a) <-> CHC1(b1!1).ENT2(a!1) kon_chc_ent_cy, koff
+	#CHC1(b1).L() + ENT2(a).L() -> CHC1(b1!1).L().ENT2(a!1).L() kon_chc_ent_pm
+	CHC1(b1) + YAP1801(a) <-> CHC1(b1!1).YAP1801(a!1) kon_chc_yap_cy, koff
+	CHC1(b1).L() + YAP1801(a).L() -> CHC1(b1!1).L().YAP1801(a!1).L() kon_chc_yap_pm
+	CHC1(b1) + YAP1802(b) <-> CHC1(b1!1).YAP1802(b!1) kon_chc_yap_cy, koff
+	CHC1(b1).L() + YAP1802(b).L() -> CHC1(b1!1).L().YAP1802(b!1).L() kon_chc_yap_pm
+	
+	CHC1(b2) + ENT(a) <-> CHC1(b2!1).ENT(a!1) kon_chc_ent_cy, koff
+	CHC1(b2).L() + ENT(a).L() -> CHC1(b2!1).L().ENT(a!1).L() kon_chc_ent_pm
+	#CHC1(b2) + ENT2(a) <-> CHC1(b2!1).ENT2(a!1) kon_chc_ent_cy, koff
+	#CHC1(b2).L() + ENT2(a).L() -> CHC1(b2!1).L().ENT2(a!1).L() kon_chc_ent_pm
+	CHC1(b2) + YAP1801(a) <-> CHC1(b2!1).YAP1801(a!1) kon_chc_yap_cy, koff
+	CHC1(b2).L() + YAP1801(a).L() -> CHC1(b2!1).L().YAP1801(a!1).L() kon_chc_yap_pm
+	CHC1(b2) + YAP1802(b) <-> CHC1(b2!1).YAP1802(b!1) kon_chc_yap_cy, koff
+	CHC1(b2).L() + YAP1802(b).L() -> CHC1(b2!1).L().YAP1802(b!1).L() kon_chc_yap_pm
+	
+	CHC1(b3) + ENT(a) <-> CHC1(b3!1).ENT(a!1) kon_chc_ent_cy, koff
+	CHC1(b3).L() + ENT(a).L() -> CHC1(b3!1).L().ENT(a!1).L() kon_chc_ent_pm
+	#CHC1(b3) + ENT2(a) <-> CHC1(b3!1).ENT2(a!1) kon_chc_ent_cy, koff
+	#CHC1(b3).L() + ENT2(a).L() -> CHC1(b3!1).L().ENT2(a!1).L() kon_chc_ent_pm
+	CHC1(b3) + YAP1801(a) <-> CHC1(b3!1).YAP1801(a!1) kon_chc_yap_cy, koff
+	CHC1(b3).L() + YAP1801(a).L() -> CHC1(b3!1).L().YAP1801(a!1).L() kon_chc_yap_pm
+	CHC1(b3) + YAP1802(b) <-> CHC1(b3!1).YAP1802(b!1) kon_chc_yap_cy, koff
+	CHC1(b3).L() + YAP1802(b).L() -> CHC1(b3!1).L().YAP1802(b!1).L() kon_chc_yap_pm
+	
+	CHC1(c1) + CLC1(a) <-> CHC1(c1!1).CLC1(a!1) kon_chc_clc_cy, koff
+	CHC1(c1).L() + CLC1(a).L() -> CHC1(c1!1).L().CLC1(a!1).L() kon_chc_clc_pm
+	CHC1(c2) + CLC1(a) <-> CHC1(c2!1).CLC1(a!1) kon_chc_clc_cy, koff
+	CHC1(c2).L() + CLC1(a).L() -> CHC1(c2!1).L().CLC1(a!1).L() kon_chc_clc_pm
+	CHC1(c3) + CLC1(a) <-> CHC1(c3!1).CLC1(a!1) kon_chc_clc_cy, koff
+	CHC1(c3).L() + CLC1(a).L() -> CHC1(c3!1).L().CLC1(a!1).L() kon_chc_clc_pm
+	#EDE1(a1) + ENT(b) <-> EDE1(a1!1).ENT(b!1) kon_ede_ent_cy, koff
+	#EDE1(a1).L() + ENT(b).L() -> EDE1(a1!1).L().ENT(b!1).L() kon_ede_ent_pm
+	#EDE1(a2) + ENT(b) <-> EDE1(a2!1).ENT(b!1) kon_ede_ent_cy, koff
+	#EDE1(a2).L() + ENT(b).L() -> EDE1(a2!1).L().ENT(b!1).L() kon_ede_ent_pm
+	EDE1(a) + ENT(b) <-> EDE1(a!1).ENT(b!1) kon_ede_ent_cy, koff
+	EDE1(a).L() + ENT(b).L() -> EDE1(a!1).L().ENT(b!1).L() kon_ede_ent_pm
+	EDE1(a) + YAP1802(a) <-> EDE1(a!1).YAP1802(a!1) kon_ede_yap_cy, koff
+	EDE1(a).L() + YAP1802(a).L() -> EDE1(a!1).L().YAP1802(a!1).L() kon_ede_yap_pm
+	#EDE1(a2) + YAP1802(a) <-> EDE1(a2!1).YAP1802(a!1) kon_ede_yap_cy, koff
+	#EDE1(a2).L() + YAP1802(a).L() -> EDE1(a2!1).L().YAP1802(a!1).L() kon_ede_yap_pm
+	EDE1(b) + EDE1(b) <-> EDE1(b!1).EDE1(b!1) kon_ede_ede_cy, koff
+	EDE1(b).L() + EDE1(b).L() -> EDE1(b!1).L().EDE1(b!1).L() kon_ede_ede_pm
+	L(p) + ENT(lb) <-> L(p!1).ENT(lb!1) kon_l_ent_cy, koff
+	L(p) + ENT(lb).L() -> L(p!1).ENT(lb!1).L() kon_l_ent_pm
+	#L(p) + ENT2(lb) <-> L(p!1).ENT2(lb!1) kon_l_ent_cy, koff
+	#L(p) + ENT2(lb).L() -> L(p!1).ENT2(lb!1).L() kon_l_ent_pm
+	L(p) + YAP1801(lb) <-> L(p!1).YAP1801(lb!1) kon_l_yap_cy, koff
+	L(p) + YAP1801(lb).L() -> L(p!1).YAP1801(lb!1).L() kon_l_yap_pm
+	
+	#L(p) + YAP1802(lb) <-> L(p!1).YAP1802(lb!1) kon_l_yap_cy, koff
+	#L(p) + YAP1802(lb).L() -> L(p!1).YAP1802(lb!1).L() kon_l_yap_pm
+	# 
+	# Adding in SLA2 reactions
+	CLC1(b) + SLA2(a) <-> CLC1(b!1).SLA2(a!1) kon_clc_sla2_cy, koff
+	CLC1(b).L() + SLA2(a).L() -> CLC1(b!1).L().SLA2(a!1).L() kon_clc_sla2_pm
+	SLA2(b) + SLA2(b) <-> SLA2(b!1).SLA2(b!1) kon_sla2_sla2_cy, koff
+	SLA2(b).L() + SLA2(b).L() -> SLA2(b!1).L().SLA2(b!1).L() kon_sla2_sla2_pm
+	
+	L(p) + SLA2(lb) <-> L(p!1).SLA2(lb!1) kon_l_sla2_cy, koff
+	L(p) + SLA2(lb).L() -> L(p!1).SLA2(lb!1).L() kon_l_sla2_pm
+	
+	#SYP1 reactions
+	
+	SYP1(b) + SYP1(b) <-> SYP1(b!1).SYP1(b!1) kon_syp_syp_cy, koff
+	SYP1(b).L() + SYP1(b).L() -> SYP1(b!1).L().SYP1(b!1).L() kon_syp_syp_pm
+	SYP1(a) + EDE1(c) <-> SYP1(a!1).EDE1(c!1) kon_syp_ede_cy, koff
+	SYP1(a).L() + EDE1(c).L() -> SYP1(a!1).L().EDE1(c!1).L() kon_syp_ede_pm
+	
+	L(p) + SYP1(lb) <-> L(p!1).SYP1(lb!1) kon_l_syp_cy, koff
+	L(p) + SYP1(lb).L() -> L(p!1).SYP1(lb!1).L() kon_l_syp_pm
+	
+	#Need to "dump" everything back into cytosol. Easiest way I think is to:
+	# 1) Delete the complex
+	# 2) Generate new molecules until the total amount reaches the original "total"
+	%c::L() -> Ve() BooleanFunc(c)#*BooleanFunc2(c)#FunctionProduct("BooleanFunc(c)","BooleanFunc2(c)")
+	
+	0 -> CHC1(a1,a2,a3,b1,b2,b3,c1,c2,c3) CreateCHC()
+	0 -> CLC1(a,b)+CLC1(a,b)+CLC1(a,b) CreateCLC() #Create 3 times as much to balance with CHC
+	0 -> EDE1(a,a,b,c) CreateEDE1()
+	0 -> ENT(a,b,lb) CreateENT()
+	0 -> YAP1801(a,lb) CreateYAP1801()
+	0 -> YAP1802(a,b) CreateYAP1802()
+	0 -> L(p)+L(p)+L(p)+L(p) CreateL() #Faster recycling since four kinds of proteins bind it
+	0 -> SLA2(a,b,lb) CreateSLA2()
+	0 -> SYP1(a,b,lb) CreateSYP1()
+	
+	#Later, will add on misinteractions
+	
+end reaction rules
+
+end model
+
+#generate_network({overwrite=>1});
+simulate_nf({suffix=>"nf",t_end=>20,n_steps=>5000,param=>"-gml 2000000"});
+#simulate_ode({suffix=>"ode",t_end=>10,n_steps=>50});
