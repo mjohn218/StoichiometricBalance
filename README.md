@@ -5,3 +5,5 @@ Also requires a distribution of protein copy numbers for the organism, to sample
 Distributions available for yeast and human copy numbers. 
 
 C++ code
+
+Formatted model for the Clathrin vesicle system ClathrinModule.bngl is provided in BioNetGen Language.
