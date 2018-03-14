@@ -6,4 +6,4 @@ Distributions available for yeast and human copy numbers.
 
 C++ code
 
-Formatted model for the Clathrin vesicle system ClathrinModule.bngl is provided in BioNetGen Language.
+Note: In this directory, we have also provided the formatted model for the Clathrin vesicle system: ClathrinModule.bngl is provided in BioNetGen Language. Model description in the publication: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006022#abstract0
