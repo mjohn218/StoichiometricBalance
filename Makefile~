@@ -2,21 +2,21 @@
 
 OOQPINCLUDEDIR=$(OOQP)/include
 OOQPLIBDIR=$(OOQP)/lib
-GFORTRANLIB=/usr/local/gfortran/lib
+
 
 CFLAGS = $(shell gsl-config --cflags)
 CFLAGS += -O3 -I include -I /include
 CFLAGS += -I$(OOQPINCLUDEDIR)
 
 #DIRECTORY TO SEARCH FOR LIBS
-LDFLAGS  =-L$(OOQPLIBDIR) -L$(GFORTRANLIB)
+LDFLAGS  =-L$(OOQPLIBDIR) -L/usr/local/gfortran/lib
 MA27LIB  = -L$(OOQP)/
 
-#For MAC users, specify directories for quadmath, stdc++, libm, and gfortran--not needed!
+#For MAC users, specify directories for quadmath, stdc++, libm, and gfortran
 #GCCLIB = /usr/local/gfortran/lib/gcc/x86_64-apple-darwin14/4.9.2
 #GFLIB = /usr/local/gfortran/lib
 
-#For LINUX users, specify directories for blas (or g2c), stdc++, libm, and gfortran. The numbered versions here will need to be updated.
+#For LINUX users, specify directories for blas (or g2c), stdc++, libm, and gfortran 
 LINGCC = /usr/lib/gcc/x86_x64-redhat-linux/4.1.2
 GFLIB =
 BLAS = 
