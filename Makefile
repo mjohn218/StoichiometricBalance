@@ -47,7 +47,9 @@ else
 	LIBS  +=$(FLIBSMAC)
 endif
 
-_EXECUTABLES = balance_network_dist.exe\
+_EXECUTABLES = 	stoich_balance.exe \
+
+
 
 ##look to find all subroutines
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))

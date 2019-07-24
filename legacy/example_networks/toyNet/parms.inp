@@ -1,0 +1,8 @@
+4 # npro
+4 # nedge
+10 # min complex
+4 #Num constraints 
+1 #flag 1: sample CNs 0: shuffle CNs
+5000 #nruns_rand
+1 #alpha
+

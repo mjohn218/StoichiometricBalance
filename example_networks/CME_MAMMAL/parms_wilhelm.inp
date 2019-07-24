@@ -1,8 +1,9 @@
-127	# Number of proteins
+77	# Number of proteins
 50	# min number of complexes (determines min number of interface copies as well).
 1	#alpha: default 1, lower value biases towards equal interfaces copies within a protein.
 100	#Number of times to perform randomized copy numbers: 0 will only do Real copy numbers
 1	#Flag only applies to randomized copy numbers: 1 means: sample Copy Nums.  0 means shuffle CNs
-0 	# OPTIONAL: Maximum number of complexes, default is Infinity, by setting to "0".
+40000 	# OPTIONAL: Maximum number of complexes, default is Infinity, by setting to "0".
+
 
 

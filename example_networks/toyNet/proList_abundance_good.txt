@@ -1,0 +1,5 @@
+ProteinName 	Copy Numbers IsConstrained?
+proA	1300	Y
+proB	900	Y
+proC	1200	Y
+proD	300	Y

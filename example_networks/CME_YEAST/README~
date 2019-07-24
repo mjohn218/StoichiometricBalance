@@ -1,0 +1,30 @@
+To run code
+
+../../bin/stoich_balance.exe parms_cme.inp CME_Yeast_ProteinList.txt CME_Yeast_Network_4col.txt SCerevisiae_CopyNumberDist.txt >std.out
+
+
+Inputs:
+
+parms_cme.inp:	     Parameters for the simulation. Includes number of proteins, minimum number of complexes 
+		     each interface must participate in, number of times to run randomized copy numbers--for p-value. 
+		     a flag which determined whether random copy numbers are sampled or shuffled from real values. 
+		     the alpha scaling parameter.
+		     maximum complexes: default set to zero indicates no upper bound (or infinity). 
+		    
+CME_Yeast_ProteinList.txt:	Protein name, Copy numbers, and IsConstrained? 
+				IsConstraine: Yes means balance shouldl be close as possible to defined copy numbers, 
+				IsConstrained: No means that interfaces still add up to partners, but,
+					       copy numbers are not constrained to be close to the starting observed values.
+CME_Yeast_Network_4col.txt:    List of protein-interface interactions. Four Columns: Pro1 Iface1 Pro2 Iface2
+SCerevisiae_CopyNumberDist.txt:   OPTIONAL: Yeast concentration distribution.  This is used to determine a p-value, but initializing
+				  copy numbers based on sampling from this distribution.
+				  Left columns: bins for copy numbers. Right column: Cumulative distribution function.
+
+
+MAIN OUTPUT:
+RealCopyNumbers_vsBalancedCopyNumbers.txt: 	List of each protein and interface. List of starting copy numbers (R), 
+						balanced interface copy numbers (R'), and balanced copy numbers per protein (R'')
+						by averaging over all interfaces for that protein. Finally, prints the variance for (R') 
+						for multi-interface proteins.
+	
+

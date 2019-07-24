@@ -1,0 +1,5 @@
+ProteinName 	Copy Numbers IsConstrained?
+proA	122	Y
+proB	5024	Y
+proC	876	Y
+proD	2860	Y

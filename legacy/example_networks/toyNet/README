@@ -1,0 +1,17 @@
+To run code
+
+./balance_network_dist.exe parms.inp abund.inp PPIedges.txt IIN.txt Probs_abundance.txt [constraints.inp] > run0.out
+
+Inputs:
+
+parms.inp:	     Parameters for the simulation. Includes number of proteins, number of PPIs, minimum number of complexes 
+		     each interface must participate in, number of proteins with constrained concentrations, number of random 
+		     copy numbers to form distribution with, a flag which determined whether random copy numbers are sampled or 
+		     shuffled from input copy numbers, and the alpha scaling parameter
+abund.inp:	     Copy numbers of each protein. Also defines which ID each protein has (count starts at 0).
+PPIedges.txt:    List of protein-protein interactions
+IIN.txt:	     The interface-interaction network. Defines which interfaces are on which proteins and their interactions
+Probs_abundance.txt: Yeast concentration distribution. Left columns: bins for copy numbers. Middle column: PMF. Right column: CMF
+constraints.inp:     Optional input which determines which proteins will have their concentrations constrained. Default is all 
+		     proteins
+

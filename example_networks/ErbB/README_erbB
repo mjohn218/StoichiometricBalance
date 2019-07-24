@@ -1,0 +1,34 @@
+To run code
+
+../../bin/stoich_balance.exe parms_ErbB.inp ErbB_ProteinList_Hela.txt ErbB_Network_fourCol.txt HeLa_Kulak_CopyNumberCDF.txt >r1.out
+
+
+
+Inputs:
+
+parms_ErbB.inp:	     Parameters for the simulation. Includes number of proteins, minimum number of complexes 
+		     each interface must participate in, number of times to run randomized copy numbers--for p-value. 
+		     a flag which determined whether random copy numbers are sampled or shuffled from real values. 
+		     the alpha scaling parameter.
+		     maximum complexes: default set to zero indicates no upper bound (or infinity). 
+		    
+ErbB_ProteinList_Hela.txt:	Protein name, Copy numbers, and IsConstrained? 
+				IsConstraine: Yes means balance shouldl be close as possible to defined copy numbers, 
+				IsConstrained: No means that interfaces still add up to partners, but,
+					       copy numbers are not constrained to be close to the starting observed values.
+ErbB_Network_fourCol.txt:    List of protein-interface interactions. Four Columns: Pro1 Iface1 Pro2 Iface2
+
+HeLa_Kulak_CopyNumberCDF.txt:   OPTIONAL: Hela Cell copy number distribution.  This is used to determine a p-value, but initializing
+				  copy numbers based on sampling from this distribution.
+				  Left columns: bins for copy numbers. Right column: Cumulative distribution function.
+
+
+MAIN OUTPUT:
+RealCopyNumbers_vsBalancedCopyNumbers.txt: 	List of each protein and interface. List of starting copy numbers (R), 
+						balanced interface copy numbers (R'), and balanced copy numbers per protein (R'').
+						R'' is simply calculated by averaging over all interface copy number (R') for that protein. 
+						Finally, prints the variance for (R') for multi-interface proteins.
+	
+
+
+in r1.out: These inputs are found to have 540 edges, 377 interfaces, and 115 constrained proteins, out of 127 specified proteins in the network.

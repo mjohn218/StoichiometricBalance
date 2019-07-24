@@ -79,7 +79,7 @@ To compile balance_network_dist.exe
 Make sure the prerequisite libraries (BLAS, LAPACK, and MA27 are available)
 
 
-Error: "Fortran compiler cannot make executables"
+Error 1: "Fortran compiler cannot make executables"
 
 Your gfortran compiler may be out of date. Upgrade it. You can find binaries here:
 
@@ -88,7 +88,14 @@ https://gcc.gnu.org/wiki/GFortranBinaries#MacOS
 Linux
 https://gcc.gnu.org/wiki/GFortranBinaries#GNU.2BAC8-Linux
 
+Error 2: "In file included from EXES/stoich_balance.cpp:69:
+include/qp_solvers.h:6:10: fatal error: 'QpGenData.h' file not found
+#include "QpGenData.h"  "
+         ^~~~~~~~~~~~~
 
+This means that it does not have the path to the OOQP directory specified.
+Solution 1: Inside the Makefile on line 1, set "OOQP=path_to_OOQP" e.g. OOQP=./OOQP-0.99.26
+Solution 2: Set an environment variable to define OOQP at the terminal prompt or in the .bashrc file: export OOQP="/Users/maggie/OOQP-0.99.26"
 
 
 

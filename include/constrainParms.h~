@@ -20,8 +20,6 @@ public:
   double scaleT;
   int mut_change;
   int min_complex;
-  int max_complex;
-  
   int global_mut;
   double MaxTime;
   int nstepMC;
