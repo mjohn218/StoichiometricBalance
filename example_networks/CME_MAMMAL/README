@@ -1,0 +1,33 @@
+To run code
+
+../../bin/stoich_balance.exe parms_hela.inp ProteinList_Hein_CME_HeLa.txt Network_CME_MAMMALS_4col.txt Hein_CellTypeHeLa_CopyNumberCDF.txt >std.out
+
+
+Inputs:
+
+parms_help.inp:	     Parameters for the simulation. Includes number of proteins, minimum number of complexes 
+		     each interface must participate in, number of times to run randomized copy numbers--for p-value. 
+		     a flag which determined whether random copy numbers are sampled or shuffled from real values. 
+		     the alpha scaling parameter.
+		     maximum complexes: default set to zero indicates no upper bound (or infinity). 
+		    
+ProteinList_Hein_CME_HeLa.txt:	Protein name, Copy numbers, and IsConstrained? 
+				IsConstraine: Yes means balance shouldl be close as possible to defined copy numbers, 
+				IsConstrained: No means that interfaces still add up to partners, but,
+					       copy numbers are not constrained to be close to the starting observed values.
+Network_CME_MAMMALS_4col.txt:    List of protein-interface interactions. Four Columns: Pro1 Iface1 Pro2 Iface2
+
+Hein_CellTypeHeLa_CopyNumberCDF.txt:   OPTIONAL: Cell Type Protein Copy Number distribution.  This is used to determine a p-value, but initializing
+				  copy numbers based on sampling from this distribution.
+				  Left columns: bins for copy numbers. Right column: Cumulative distribution function.
+
+
+MAIN OUTPUT:
+RealCopyNumbers_vsBalancedCopyNumbers.txt: 	List of each protein and interface. List of starting copy numbers (R), 
+						balanced interface copy numbers (R'), and balanced copy numbers per protein (R'')
+						by averaging over all interfaces for that protein. Finally, prints the variance for (R') 
+						for multi-interface proteins.
+	
+
+std.out :		This will tell you what edges were including in the balance calculation, what are the properties of the proteins, 
+			the Interface Network Used for the proteins in ProteinList_..txt file. Reports the Parameters used as well.
