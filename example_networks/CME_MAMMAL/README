@@ -1,6 +1,6 @@
 To run code
 
-../../bin/stoich_balance.exe parms_hela.inp ProteinList_Hein_CME_HeLa.txt Network_CME_MAMMALS_4col.txt Hein_CellTypeHeLa_CopyNumberCDF.txt >std.out
+../../bin/stoich_balance.exe parms_hela.inp ProteinList_Hein_CME_HeLa.txt Network_CME_MAMMALS_5col.txt Hein_CellTypeHeLa_CopyNumberCDF.txt >std.out
 
 
 Inputs:
@@ -8,16 +8,16 @@ Inputs:
 parms_help.inp:	     Parameters for the simulation. Includes number of proteins, minimum number of complexes 
 		     each interface must participate in, number of times to run randomized copy numbers--for p-value. 
 		     a flag which determined whether random copy numbers are sampled or shuffled from real values. 
-		     the alpha scaling parameter.
+		     the alpha scaling parameter: to make all interfaces on a protein closely matched, set this low (<1)
 		     maximum complexes: default set to zero indicates no upper bound (or infinity). 
 		    
 ProteinList_Hein_CME_HeLa.txt:	Protein name, Copy numbers, and IsConstrained? 
-				IsConstraine: Yes means balance shouldl be close as possible to defined copy numbers, 
+				IsConstrained: Yes means balance shouldl be close as possible to defined copy numbers, 
 				IsConstrained: No means that interfaces still add up to partners, but,
 					       copy numbers are not constrained to be close to the starting observed values.
-Network_CME_MAMMALS_4col.txt:    List of protein-interface interactions. Four Columns: Pro1 Iface1 Pro2 Iface2
+Network_CME_MAMMALS_5col.txt:    List of protein-interface interactions. Five Columns: Pro1 Iface1 Pro2 Iface2 Stoichimetry
 
-Hein_CellTypeHeLa_CopyNumberCDF.txt:   OPTIONAL: Cell Type Protein Copy Number distribution.  This is used to determine a p-value, but initializing
+Hein_CellTypeHeLa_CopyNumberCDF.txt:   OPTIONAL: Cell Type Protein Copy Number distribution.  This is used to determine a p-value, by initializing
 				  copy numbers based on sampling from this distribution.
 				  Left columns: bins for copy numbers. Right column: Cumulative distribution function.
 
@@ -30,7 +30,8 @@ RealCopyNumbers_vsBalancedCopyNumbers.txt: 	List of each protein and interface. 
 	
 
 std.out :		This will tell you what edges were including in the balance calculation, what are the properties of the proteins, 
-			the Interface Network Used for the proteins in ProteinList_..txt file. Reports the Parameters used as well.
+			the Interface Network Used for the proteins in ProteinList_..txt file. Reports the Parameters used as well. For the Real copy
+			numbers, it also lists the solved number of complexes assigned to each interaction.
 
 ***NOTE: p-values will not be accurate if LIPIDS are included in the network, because their copy numbers are not reflected in the Protein CDFs. Their copy numbers are too high and will not be sampled!
 *****	 Same goes for the CARGO, since they are sums over multiple protein copy numbers. 
