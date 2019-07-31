@@ -564,5 +564,5 @@ INPPL1	IPPc	PI345P3	Head_group	1:1
 SYNJ1	IPPc_Sac1	PI45P2	Head_group	1:1
 SYNJ2	IPPc_Sac1	PI45P2	Head_group	1:1
 OCRL	IPPc	PI45P2	Head_group	1:1
-PI4KA	Kinase_lipid	PI	Head_group	1:1
+PI4KA	Kinase_lipid	PI_PS	Head_group	1:0.5
 PIP5K1C	Kinase_lipid	PI4P	Head_group	1:1

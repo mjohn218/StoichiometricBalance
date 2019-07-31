@@ -1,0 +1,14 @@
+edge: 451 HIP1.ENTH::PI_PS.Head_group conc: 1.34443e+07
+edge: 452 PI_PS.Head_group::HIP1R.ENTH conc: 1.1501e+07
+edge: 453 PI_PS.Head_group::FCHO1.FBAR_MEM conc: 1.18218e+07
+edge: 454 PI_PS.Head_group::FCHO2.FBAR_MEM conc: 1.1851e+07
+edge: 455 PI_PS.Head_group::TRIP10.FBAR_MEM conc: 1.14786e+07
+edge: 456 PI_PS.Head_group::FNBP1.FBAR_MEM conc: 1.5312e+07
+edge: 457 PI_PS.Head_group::FNBP1L.FBAR_MEM conc: 1.53541e+07
+edge: 458 PI_PS.Head_group::MYO1E.PH conc: 3.07672e+07
+edge: 459 PI_PS.Head_group::BIN1.BAR_MEM conc: 1.53631e+07
+edge: 460 PI_PS.Head_group::SH3GL2.BAR_MEM conc: 1.53061e+07
+edge: 461 PI_PS.Head_group::SH3GL1.BAR_MEM conc: 1.55926e+07
+edge: 462 PI_PS.Head_group::PACSIN2.FBAR_MEM conc: 1.55425e+07
+edge: 463 PI_PS.Head_group::SNX9.BAR_PX conc: 1.29382e+07
+edge: 464 PI_PS.Head_group::PI4KA.Kinase_lipid conc: 2.54988e+07
