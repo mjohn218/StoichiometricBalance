@@ -583,7 +583,7 @@ int main(int argc, char *argv[])
   build_Amatrix_with_Stoich(Nif, A, numpartners, Speclist, Stoichlist);
   
   /*A[i*Nif+j] i is column, j is the row, each row is a different interface, each column a different complex.*/
-  /* cout <<"-------------------"<<endl;
+  cout <<"-------------------"<<endl;
   cout <<" Write A MATRIX TRANSPOSE (First row is all interfaces in complex 1) to amatrixT.out file: "<<endl;
   ofstream amatrix("amatrixT.out");
   for(i=0;i<Nif*Ncomplex;i++){
@@ -593,7 +593,7 @@ int main(int argc, char *argv[])
 	  amatrix <<A[i]<<'\t';
   }
   cout <<"-------------------"<<endl; 
-  */
+
   /*Establish constraints on the number of interfaces, based on protein home */
   double *indivconc=new double[Nif];
   double *complexconc=new double[Ncomplex];
@@ -877,10 +877,10 @@ int main(int argc, char *argv[])
 	    cout <<"edge: "<<i<<" "<<edgenames[i]<<" conc: "<<complexconc[i]<<endl;
 	}
 	cout<<"-------------------------------"<<endl;
-	/*cout <<"--------Solved for interface copy numbers-----"<<endl;
+	cout <<"--------Solved for interface copy numbers-----"<<endl;
 	for(i=0;i<Nif;i++){
 	    cout <<"i: "<<iNames[i]<<" "<<indivconc[i]<<endl;
-	    }*/
+	}
     }
     //We can now get the variances using Rp
     get_variances(Npro, Nif, wholep, Rp, ivars, imean);
