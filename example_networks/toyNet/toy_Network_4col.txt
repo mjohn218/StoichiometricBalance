@@ -1,8 +1,0 @@
-Protein1 Interface1	Protein2 Interface2
-proA	iface0_toB	proB 	iface2_toA
-proA	iface1_toC	proC	iface4_toA
-proB	iface3_toC	proC	iface5_shared
-proC	iface5_shared	proD	iface7_toC
-proC	iface6_self	proC	iface6_self
-END OF FILE
-

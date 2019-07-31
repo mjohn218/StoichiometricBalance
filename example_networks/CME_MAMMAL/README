@@ -31,3 +31,6 @@ RealCopyNumbers_vsBalancedCopyNumbers.txt: 	List of each protein and interface. 
 
 std.out :		This will tell you what edges were including in the balance calculation, what are the properties of the proteins, 
 			the Interface Network Used for the proteins in ProteinList_..txt file. Reports the Parameters used as well.
+
+***NOTE: p-values will not be accurate if LIPIDS are included in the network, because their copy numbers are not reflected in the Protein CDFs. Their copy numbers are too high and will not be sampled!
+*****	 Same goes for the CARGO, since they are sums over multiple protein copy numbers. 

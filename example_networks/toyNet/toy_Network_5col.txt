@@ -1,0 +1,7 @@
+Protein1	Interface1	Protein2	Interface2	Stoichiometry
+proA	iface0_toB	proB 	iface2_toA	1:1
+proA	iface1_toC	proC	iface4_toA	1:1
+proB	iface3_toC	proC	iface5_shared	1:1
+proC	iface5_shared	proD	iface7_toC	1:1
+proC	iface6_self	proC	iface6_self	1:1
+END OF FILE				

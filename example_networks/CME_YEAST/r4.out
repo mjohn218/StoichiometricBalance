@@ -1,0 +1,1206 @@
+------------------ Parameters -----------
+ N Proteins : 56
+ Minimum number of Complexes assignable (>=0): 50
+ Alpha value assigned: 1. A value of 1 works well. Very small forces all interfaces on same protein to be equal copy numbers. 
+ Number of times to repeat with randomized copy numbers, solely to evaluate p-value : 100
+ Only if above is >0: initialize random copies from the Cell Type distribution, or by shuffling the observed copy numbers: 1. (Set to 1 to sample from Cell Type distribution.) 
+ Max Complexes: 0. Default=0 will allow max to infinity (unconstrained max value). 
+----------
+ -------------------- 
+ PROTEINS COUNTED: 56 FROM INPUT FILE: CME_Yeast_NoCOF1_ProteinList.txt	 -------------------- 
+ NUMBER OF CONSTRAINED PROTEIN ABUNDANCES : 55. Calculated from file: CME_Yeast_NoCOF1_ProteinList.txt
+ -------------------- 
+NUMBER OF EDGES : 206 read from file: CME_Yeast_Network_5col.txt
+ -------------------- 
+AFTER CHECKING FOR DUPLICATES, EDGES READ IN IS NOW: 206
+ -------------------- 
+ -------------------- 
+ MATCH EDGES BASED ON PROTEIN LIST FROM FILE CME_Yeast_NoCOF1_ProteinList.txt
+CANNOT FIND BOTH PROTEINS IN EDGE: 24 skipping... ACT1 COF1
+CANNOT FIND BOTH PROTEINS IN EDGE: 46 skipping... AIP1 COF1
+ ------------------- 
+ TOTAL PROTEINS: 56 TOTAL INTERFACES: 192 MAX PARNTER PER INTERFACE: 15
+ ---------------------
+ Total IIN Edges for these proteins: 204. Skipping a total of: 2 edges from the file CME_Yeast_Network_5col.txt that did not have proteins listed in the file CME_Yeast_NoCOF1_ProteinList.txt
+----------------------------------
+ PRINT OUT PROTEIN INTERFACES and PROPERTIES : 
+----------------------------------
+ Protein index: 0 Name: ABP1 copies: 30791 Total interfaces: 7 Name, index: 	Cofilin_ADF,0	PRD_441to455,2	SH3,4	Acidic_Domain,12	PRD_504to518,15	PRD_470to486,17	PRD_513to528,19	
+ Protein index: 1 Name: ACT1 copies: 117202 Total interfaces: 4 Name, index: 	Subunit1_2_outsideFilament,1	BarbedEnd_back,22	PointedEnd_back,23	Subunit4_outsideFilament,42	
+ Protein index: 2 Name: AIM21 copies: 1978 Total interfaces: 3 Name, index: 	PRD_383to400,5	PRD_3to18,44	Speculated_to_CAP1_2,46	
+ Protein index: 3 Name: AIM3 copies: 220 Total interfaces: 3 Name, index: 	PRD_83to97,49	PRD_546to560,50	PhosphoSite,51	
+ Protein index: 4 Name: AIP1 copies: 9739 Total interfaces: 1 Name, index: 	Interface_to_ACT1,43	
+ Protein index: 5 Name: AKL1 copies: 1307 Total interfaces: 2 Name, index: 	Homodimer_interface,53	Kinase_Domain,54	
+ Protein index: 6 Name: APL1 copies: 319 Total interfaces: 3 Name, index: 	Interface_beta_to_mu,60	Interface_beta_to_sigma,62	Interface_beta_to_alpha,64	
+ Protein index: 7 Name: APL3 copies: 426 Total interfaces: 3 Name, index: 	Interface_alpha_to_beta,65	Interface_alpha_to_sigma,66	Interface_alpha_to_mu,68	
+ Protein index: 8 Name: APM4 copies: 298 Total interfaces: 3 Name, index: 	Interface_mu_to_beta,61	Interface_mu_to_alpha,69	Interface_mu_to_sigma,70	
+ Protein index: 9 Name: APP1 copies: 70 Total interfaces: 2 Name, index: 	PRD_502to518,6	PRD_465to480,72	
+ Protein index: 10 Name: APS2 copies: 78 Total interfaces: 3 Name, index: 	Interface_sigma_to_beta,63	Interface_sigma_to_alpha,67	Interface_sigma_to_mu,71	
+ Protein index: 11 Name: ARC15 copies: 8217 Total interfaces: 3 Name, index: 	Interface_to_arc19,75	Interface_to_arc40,77	Interface_to_arp2,79	
+ Protein index: 12 Name: ARC18 copies: 15195 Total interfaces: 2 Name, index: 	Interface_to_actin_filament,29	Interface_to_arp3,81	
+ Protein index: 13 Name: ARC19 copies: 1583 Total interfaces: 5 Name, index: 	Interface_to_arc15,76	Interface_to_arc35,83	Interface_to_arc40,85	Interface_to_arp2,87	Interface_to_arp3,89	
+ Protein index: 14 Name: ARC35 copies: 8495 Total interfaces: 3 Name, index: 	Interface_to_actin_filament,30	Interface_to_arc19,84	Interface_to_arp3,91	
+ Protein index: 15 Name: ARC40 copies: 5066 Total interfaces: 3 Name, index: 	interface_to_actin_filament,31	interface_to_arc15,78	interface_to_arc19,86	
+ Protein index: 16 Name: ARK1 copies: 346 Total interfaces: 2 Name, index: 	PRD_607to621,7	kinase_domain,98	
+ Protein index: 17 Name: ARP2 copies: 11254 Total interfaces: 7 Name, index: 	side_front_to_acidic_domain,13	back_barbed_end_to_actin,27	interface_to_arc15,80	interface_to_arc19,88	barbed_end_groove_to_Chelix,100	interface_to_arp3,102	speculated_to_PRK1,104	
+ Protein index: 18 Name: ARP3 copies: 8098 Total interfaces: 7 Name, index: 	side_front_to_acidic_domain,14	back_barbed_end_to_actin,28	interface_to_arc18,82	interface_to_arc19,90	interface_to_arc35,92	interface_to_arp2,103	barbed_end_groove_to_Chelix,106	
+ Protein index: 19 Name: BBC1 copies: 6204 Total interfaces: 2 Name, index: 	SH3_domain,45	PRD_700to730,108	
+ Protein index: 20 Name: BSP1 copies: 458 Total interfaces: 4 Name, index: 	PRD_334to348,8	PRD_183to197,112	interface_to_INP52_notPRD,113	PRD_231to245,158	
+ Protein index: 21 Name: BZZ1 copies: 2631 Total interfaces: 1 Name, index: 	SH3_domain,73	
+ Protein index: 22 Name: CAP1 copies: 10000 Total interfaces: 4 Name, index: 	interface_to_actin,24	speculated_interface_to_AIM21,47	dimer_interface_to_CAP2,117	speculated_interface_to_TWF1,119	
+ Protein index: 23 Name: CAP2 copies: 5445 Total interfaces: 4 Name, index: 	interface_to_actin,25	speculated_interface_to_AIM21,48	dimer_interface_to_CAP1,118	speculated_interface_to_TWF1,121	
+ Protein index: 24 Name: CHC1 copies: 19278 Total interfaces: 3 Name, index: 	self_binding_to_trimers,123	N_terminal_domain,124	interface_to_light_chain,128	
+ Protein index: 25 Name: CLC1 copies: 14538 Total interfaces: 2 Name, index: 	interface_to_heavy_chain,129	interface_to_SLA2,130	
+ Protein index: 26 Name: CRN1 copies: 6509 Total interfaces: 4 Name, index: 	acidic_domain,93	C_helix,107	coiled_coil_domain,132	beta_propeller_domain,133	
+ Protein index: 27 Name: EDE1 copies: 5964 Total interfaces: 5 Name, index: 	phospho_site,55	EH_domain,134	speculated_to_PAL1,137	coiled_coil_domain,139	C_terminal_domain,182	
+ Protein index: 28 Name: END3 copies: 4196 Total interfaces: 2 Name, index: 	C_terminal_region,140	N_terminal_domain,164	
+ Protein index: 29 Name: ENT1 copies: 1750 Total interfaces: 3 Name, index: 	Clathrin_Box,125	Two_NPF_motifs,135	phospho_site,155	
+ Protein index: 30 Name: ENT2 copies: 1325 Total interfaces: 3 Name, index: 	Two_phospho_site,56	Clathrin_Box,126	Two_NPF_motifs,136	
+ Protein index: 31 Name: GTS1 copies: 2007 Total interfaces: 2 Name, index: 	PRD_245to266,143	speculated_interface_to_YAP1801,144	
+ Protein index: 32 Name: INP52 copies: 393 Total interfaces: 3 Name, index: 	PRD_1113to1126,9	N_terminal_region,114	PRD_983to997,171	
+ Protein index: 33 Name: LAS17 copies: 165 Total interfaces: 11 Name, index: 	WH2_domain,32	acidic_domain,94	C_helix,101	PRD_347to359,109	PRD_383to400,110	PRD_180to195,146	PRD_310to330,147	PRD_211to225,148	phospho_site,156	speculated_to_SYP1,179	WH1_domain,185	
+ Protein index: 34 Name: LSB3 copies: 2910 Total interfaces: 3 Name, index: 	SH3_domain,16	phospho_site,57	dimerization_interface,149	
+ Protein index: 35 Name: LSB5 copies: 787 Total interfaces: 2 Name, index: 	VHS_domain,150	NPF_motif_region,170	
+ Protein index: 36 Name: MYO3 copies: 1841 Total interfaces: 3 Name, index: 	head_domain,33	acidic_domain,95	SH3_domain,111	
+ Protein index: 37 Name: MYO5 copies: 2219 Total interfaces: 4 Name, index: 	head_domain,34	SH3_domain,74	acidic_domain,96	PRD_1070to1084,115	
+ Protein index: 38 Name: PAL1 copies: 1230 Total interfaces: 1 Name, index: 	speculated_interface_to_EDE1,138	
+ Protein index: 39 Name: PAN1 copies: 3357 Total interfaces: 7 Name, index: 	coiled_coil_domain,35	acidic_domain,97	phospho_site_LR2,99	long_repeat_2,141	EH_domain_2,142	PRD_1469to1480,151	N_terminal_LR1,154	
+ Protein index: 40 Name: PFY1 copies: 29465 Total interfaces: 1 Name, index: 	interface_to_actin,26	
+ Protein index: 41 Name: PRK1 copies: 177 Total interfaces: 3 Name, index: 	PRD_748to761,10	kinase_domain,52	interface_to_arp2,105	
+ Protein index: 42 Name: RVS161 copies: 13654 Total interfaces: 1 Name, index: 	dimerization_interface_,161	
+ Protein index: 43 Name: RVS167 copies: 6020 Total interfaces: 3 Name, index: 	SH3_domain,3	dimerization_interface_,160	oligomerization_domain_,162	
+ Protein index: 44 Name: SAC6 copies: 30402 Total interfaces: 1 Name, index: 	Four_CH_domains,36	
+ Protein index: 45 Name: SCD5 copies: 46 Total interfaces: 2 Name, index: 	phospho_site,58	residue302-500,163	
+ Protein index: 46 Name: SCP1 copies: 2456 Total interfaces: 2 Name, index: 	PRD_156to169,11	actin_bundling_CalponinLR,37	
+ Protein index: 47 Name: SLA1 copies: 2964 Total interfaces: 10 Name, index: 	SH3_domains1-2,20	SH3_domain_3,21	phospho_site,59	Clathrin_Box,165	SHD2_domain,166	PRD_191to205,167	C_terminal_repeat_toEND3,168	SHD1_domain,169	C_terminal_repeat_toPAN1,173	Gap1_domain,174	
+ Protein index: 48 Name: SLA2 copies: 3904 Total interfaces: 5 Name, index: 	Talin_like_domain,38	interface_to_CLC1,131	coiled_coil_domain,175	phospho_site,176	homodimer_interface_CC,177	
+ Protein index: 49 Name: SYP1 copies: 2467 Total interfaces: 5 Name, index: 	PRD_519to533,172	interface_to_LAS17,178	PRD_413to427,180	C_terminal_muHD,181	BAR_domain,183	
+ Protein index: 50 Name: TWF1 copies: 4975 Total interfaces: 3 Name, index: 	two_cofilin_domain,39	speculated_interface_to_CAP1,120	speculated_interface_to_CAP2,122	
+ Protein index: 51 Name: VRP1 copies: 473 Total interfaces: 5 Name, index: 	two_WH2_domain,40	PRD_3to18,116	PRD_398to407,152	PRD_513to527,159	C_terminal_region,184	
+ Protein index: 52 Name: YAP1801 copies: 357 Total interfaces: 4 Name, index: 	Five_NPF_motifs,153	phospho_site,157	speculated_to_GTS1,186	Clathrin_Box,187	
+ Protein index: 53 Name: YAP1802 copies: 264 Total interfaces: 5 Name, index: 	Clathrin_Box,127	speculated_to_GTS1,145	Five_NPF_motifs,188	phospho_site,189	coiled_coil_domain,190	
+ Protein index: 54 Name: YSC84 copies: 1833 Total interfaces: 3 Name, index: 	SH3_domain,18	YAB_domain,41	dimerization_interface,191	
+ Protein index: 55 Name:  copies: 0 Total interfaces: 0 Name, index: 	
+----------------------------------
+ PRINT OUT INTERFACE INTERACTION NETWORK 
+----------------------------------
+0 Name: ABP1.Cofilin_ADF Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+1 Name: ACT1.Subunit1_2_outsideFilament Npartner: 15	 Partners: ABP1.Cofilin_ADF	ARC18.Interface_to_actin_filament	ARC35.Interface_to_actin_filament	ARC40.interface_to_actin_filament	LAS17.WH2_domain	MYO3.head_domain	MYO5.head_domain	PAN1.coiled_coil_domain	SAC6.Four_CH_domains	SCP1.actin_bundling_CalponinLR	SLA2.Talin_like_domain	TWF1.two_cofilin_domain	VRP1.two_WH2_domain	YSC84.YAB_domain	CRN1.coiled_coil_domain	
+2 Name: ABP1.PRD_441to455 Npartner: 1	 Partners: RVS167.SH3_domain	
+3 Name: RVS167.SH3_domain Npartner: 12	 Partners: ABP1.PRD_441to455	AIM21.PRD_383to400	AIM3.PRD_83to97	APP1.PRD_465to480	APP1.PRD_502to518	LAS17.PRD_347to359	LAS17.PRD_310to330	BSP1.PRD_183to197	BSP1.PRD_231to245	GTS1.PRD_245to266	VRP1.PRD_513to527	SLA1.PRD_191to205	
+4 Name: ABP1.SH3 Npartner: 8	 Partners: AIM21.PRD_383to400	APP1.PRD_502to518	ARK1.PRD_607to621	BSP1.PRD_334to348	INP52.PRD_1113to1126	PRK1.PRD_748to761	SCP1.PRD_156to169	AIM3.PRD_546to560	
+5 Name: AIM21.PRD_383to400 Npartner: 2	 Partners: ABP1.SH3	RVS167.SH3_domain	
+6 Name: APP1.PRD_502to518 Npartner: 7	 Partners: ABP1.SH3	BBC1.SH3_domain	BZZ1.SH3_domain	MYO5.SH3_domain	RVS167.SH3_domain	SLA1.SH3_domains1-2	SLA1.SH3_domain_3	
+7 Name: ARK1.PRD_607to621 Npartner: 1	 Partners: ABP1.SH3	
+8 Name: BSP1.PRD_334to348 Npartner: 1	 Partners: ABP1.SH3	
+9 Name: INP52.PRD_1113to1126 Npartner: 1	 Partners: ABP1.SH3	
+10 Name: PRK1.PRD_748to761 Npartner: 1	 Partners: ABP1.SH3	
+11 Name: SCP1.PRD_156to169 Npartner: 1	 Partners: ABP1.SH3	
+12 Name: ABP1.Acidic_Domain Npartner: 2	 Partners: ARP2.side_front_to_acidic_domain	ARP3.side_front_to_acidic_domain	
+13 Name: ARP2.side_front_to_acidic_domain Npartner: 6	 Partners: ABP1.Acidic_Domain	LAS17.acidic_domain	MYO3.acidic_domain	MYO5.acidic_domain	PAN1.acidic_domain	CRN1.acidic_domain	
+14 Name: ARP3.side_front_to_acidic_domain Npartner: 6	 Partners: ABP1.Acidic_Domain	CRN1.acidic_domain	MYO3.acidic_domain	MYO5.acidic_domain	PAN1.acidic_domain	LAS17.acidic_domain	
+15 Name: ABP1.PRD_504to518 Npartner: 1	 Partners: LSB3.SH3_domain	
+16 Name: LSB3.SH3_domain Npartner: 10	 Partners: ABP1.PRD_504to518	AIM3.PRD_83to97	APP1.PRD_465to480	BSP1.PRD_183to197	LAS17.PRD_347to359	LAS17.PRD_383to400	LAS17.PRD_310to330	GTS1.PRD_245to266	SLA1.PRD_191to205	SYP1.PRD_413to427	
+17 Name: ABP1.PRD_470to486 Npartner: 1	 Partners: YSC84.SH3_domain	
+18 Name: YSC84.SH3_domain Npartner: 10	 Partners: ABP1.PRD_470to486	AIM21.PRD_3to18	AIM3.PRD_83to97	APP1.PRD_465to480	BSP1.PRD_183to197	GTS1.PRD_245to266	SLA1.PRD_191to205	LAS17.PRD_347to359	LAS17.PRD_383to400	LAS17.PRD_310to330	
+19 Name: ABP1.PRD_513to528 Npartner: 2	 Partners: SLA1.SH3_domains1-2	SLA1.SH3_domain_3	
+20 Name: SLA1.SH3_domains1-2 Npartner: 7	 Partners: ABP1.PRD_513to528	APP1.PRD_502to518	BSP1.PRD_183to197	INP52.PRD_983to997	LAS17.PRD_347to359	SYP1.PRD_519to533	VRP1.PRD_3to18	
+21 Name: SLA1.SH3_domain_3 Npartner: 3	 Partners: ABP1.PRD_513to528	APP1.PRD_502to518	LAS17.PRD_347to359	
+22 Name: ACT1.BarbedEnd_back Npartner: 4	 Partners: ACT1.PointedEnd_back	CAP1.interface_to_actin	CAP2.interface_to_actin	PFY1.interface_to_actin	
+23 Name: ACT1.PointedEnd_back Npartner: 3	 Partners: ACT1.BarbedEnd_back	ARP2.back_barbed_end_to_actin	ARP3.back_barbed_end_to_actin	
+24 Name: CAP1.interface_to_actin Npartner: 1	 Partners: ACT1.BarbedEnd_back	
+25 Name: CAP2.interface_to_actin Npartner: 1	 Partners: ACT1.BarbedEnd_back	
+26 Name: PFY1.interface_to_actin Npartner: 1	 Partners: ACT1.BarbedEnd_back	
+27 Name: ARP2.back_barbed_end_to_actin Npartner: 1	 Partners: ACT1.PointedEnd_back	
+28 Name: ARP3.back_barbed_end_to_actin Npartner: 1	 Partners: ACT1.PointedEnd_back	
+29 Name: ARC18.Interface_to_actin_filament Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+30 Name: ARC35.Interface_to_actin_filament Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+31 Name: ARC40.interface_to_actin_filament Npartner: 6	 Partners: ACT1.Subunit1_2_outsideFilament	CRN1.acidic_domain	LAS17.acidic_domain	MYO3.acidic_domain	MYO5.acidic_domain	PAN1.acidic_domain	
+32 Name: LAS17.WH2_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+33 Name: MYO3.head_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+34 Name: MYO5.head_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+35 Name: PAN1.coiled_coil_domain Npartner: 3	 Partners: ACT1.Subunit1_2_outsideFilament	PAN1.N_terminal_LR1	SLA2.coiled_coil_domain	
+36 Name: SAC6.Four_CH_domains Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+37 Name: SCP1.actin_bundling_CalponinLR Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+38 Name: SLA2.Talin_like_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+39 Name: TWF1.two_cofilin_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+40 Name: VRP1.two_WH2_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+41 Name: YSC84.YAB_domain Npartner: 1	 Partners: ACT1.Subunit1_2_outsideFilament	
+42 Name: ACT1.Subunit4_outsideFilament Npartner: 2	 Partners: AIP1.Interface_to_ACT1	CRN1.beta_propeller_domain	
+43 Name: AIP1.Interface_to_ACT1 Npartner: 1	 Partners: ACT1.Subunit4_outsideFilament	
+44 Name: AIM21.PRD_3to18 Npartner: 2	 Partners: BBC1.SH3_domain	YSC84.SH3_domain	
+45 Name: BBC1.SH3_domain Npartner: 5	 Partners: AIM21.PRD_3to18	APP1.PRD_502to518	BBC1.PRD_700to730	LAS17.PRD_347to359	LAS17.PRD_383to400	
+46 Name: AIM21.Speculated_to_CAP1_2 Npartner: 2	 Partners: CAP1.speculated_interface_to_AIM21	CAP2.speculated_interface_to_AIM21	
+47 Name: CAP1.speculated_interface_to_AIM21 Npartner: 1	 Partners: AIM21.Speculated_to_CAP1_2	
+48 Name: CAP2.speculated_interface_to_AIM21 Npartner: 1	 Partners: AIM21.Speculated_to_CAP1_2	
+49 Name: AIM3.PRD_83to97 Npartner: 3	 Partners: LSB3.SH3_domain	RVS167.SH3_domain	YSC84.SH3_domain	
+50 Name: AIM3.PRD_546to560 Npartner: 1	 Partners: ABP1.SH3	
+51 Name: AIM3.PhosphoSite Npartner: 1	 Partners: PRK1.kinase_domain	
+52 Name: PRK1.kinase_domain Npartner: 10	 Partners: AIM3.PhosphoSite	ENT2.Two_phospho_site	PAN1.phospho_site_LR2	ENT1.phospho_site	LAS17.phospho_site	YAP1801.phospho_site	SCD5.phospho_site	SLA1.phospho_site	SLA2.phospho_site	YAP1802.phospho_site	
+53 Name: AKL1.Homodimer_interface Npartner: 1	 Partners: AKL1.Homodimer_interface	
+54 Name: AKL1.Kinase_Domain Npartner: 5	 Partners: EDE1.phospho_site	ENT2.Two_phospho_site	LSB3.phospho_site	SCD5.phospho_site	SLA1.phospho_site	
+55 Name: EDE1.phospho_site Npartner: 1	 Partners: AKL1.Kinase_Domain	
+56 Name: ENT2.Two_phospho_site Npartner: 2	 Partners: AKL1.Kinase_Domain	PRK1.kinase_domain	
+57 Name: LSB3.phospho_site Npartner: 2	 Partners: AKL1.Kinase_Domain	ARK1.kinase_domain	
+58 Name: SCD5.phospho_site Npartner: 2	 Partners: AKL1.Kinase_Domain	PRK1.kinase_domain	
+59 Name: SLA1.phospho_site Npartner: 3	 Partners: AKL1.Kinase_Domain	ARK1.kinase_domain	PRK1.kinase_domain	
+60 Name: APL1.Interface_beta_to_mu Npartner: 1	 Partners: APM4.Interface_mu_to_beta	
+61 Name: APM4.Interface_mu_to_beta Npartner: 1	 Partners: APL1.Interface_beta_to_mu	
+62 Name: APL1.Interface_beta_to_sigma Npartner: 1	 Partners: APS2.Interface_sigma_to_beta	
+63 Name: APS2.Interface_sigma_to_beta Npartner: 1	 Partners: APL1.Interface_beta_to_sigma	
+64 Name: APL1.Interface_beta_to_alpha Npartner: 1	 Partners: APL3.Interface_alpha_to_beta	
+65 Name: APL3.Interface_alpha_to_beta Npartner: 1	 Partners: APL1.Interface_beta_to_alpha	
+66 Name: APL3.Interface_alpha_to_sigma Npartner: 1	 Partners: APS2.Interface_sigma_to_alpha	
+67 Name: APS2.Interface_sigma_to_alpha Npartner: 1	 Partners: APL3.Interface_alpha_to_sigma	
+68 Name: APL3.Interface_alpha_to_mu Npartner: 1	 Partners: APM4.Interface_mu_to_alpha	
+69 Name: APM4.Interface_mu_to_alpha Npartner: 1	 Partners: APL3.Interface_alpha_to_mu	
+70 Name: APM4.Interface_mu_to_sigma Npartner: 1	 Partners: APS2.Interface_sigma_to_mu	
+71 Name: APS2.Interface_sigma_to_mu Npartner: 1	 Partners: APM4.Interface_mu_to_sigma	
+72 Name: APP1.PRD_465to480 Npartner: 3	 Partners: LSB3.SH3_domain	RVS167.SH3_domain	YSC84.SH3_domain	
+73 Name: BZZ1.SH3_domain Npartner: 5	 Partners: APP1.PRD_502to518	MYO5.PRD_1070to1084	VRP1.PRD_3to18	LAS17.PRD_347to359	LAS17.PRD_180to195	
+74 Name: MYO5.SH3_domain Npartner: 7	 Partners: APP1.PRD_502to518	BBC1.PRD_700to730	LAS17.PRD_347to359	LAS17.PRD_211to225	MYO5.PRD_1070to1084	VRP1.PRD_398to407	PAN1.PRD_1469to1480	
+75 Name: ARC15.Interface_to_arc19 Npartner: 1	 Partners: ARC19.Interface_to_arc15	
+76 Name: ARC19.Interface_to_arc15 Npartner: 1	 Partners: ARC15.Interface_to_arc19	
+77 Name: ARC15.Interface_to_arc40 Npartner: 1	 Partners: ARC40.interface_to_arc15	
+78 Name: ARC40.interface_to_arc15 Npartner: 1	 Partners: ARC15.Interface_to_arc40	
+79 Name: ARC15.Interface_to_arp2 Npartner: 1	 Partners: ARP2.interface_to_arc15	
+80 Name: ARP2.interface_to_arc15 Npartner: 1	 Partners: ARC15.Interface_to_arp2	
+81 Name: ARC18.Interface_to_arp3 Npartner: 1	 Partners: ARP3.interface_to_arc18	
+82 Name: ARP3.interface_to_arc18 Npartner: 1	 Partners: ARC18.Interface_to_arp3	
+83 Name: ARC19.Interface_to_arc35 Npartner: 1	 Partners: ARC35.Interface_to_arc19	
+84 Name: ARC35.Interface_to_arc19 Npartner: 1	 Partners: ARC19.Interface_to_arc35	
+85 Name: ARC19.Interface_to_arc40 Npartner: 1	 Partners: ARC40.interface_to_arc19	
+86 Name: ARC40.interface_to_arc19 Npartner: 1	 Partners: ARC19.Interface_to_arc40	
+87 Name: ARC19.Interface_to_arp2 Npartner: 1	 Partners: ARP2.interface_to_arc19	
+88 Name: ARP2.interface_to_arc19 Npartner: 1	 Partners: ARC19.Interface_to_arp2	
+89 Name: ARC19.Interface_to_arp3 Npartner: 1	 Partners: ARP3.interface_to_arc19	
+90 Name: ARP3.interface_to_arc19 Npartner: 1	 Partners: ARC19.Interface_to_arp3	
+91 Name: ARC35.Interface_to_arp3 Npartner: 1	 Partners: ARP3.interface_to_arc35	
+92 Name: ARP3.interface_to_arc35 Npartner: 1	 Partners: ARC35.Interface_to_arp3	
+93 Name: CRN1.acidic_domain Npartner: 3	 Partners: ARC40.interface_to_actin_filament	ARP3.side_front_to_acidic_domain	ARP2.side_front_to_acidic_domain	
+94 Name: LAS17.acidic_domain Npartner: 3	 Partners: ARC40.interface_to_actin_filament	ARP2.side_front_to_acidic_domain	ARP3.side_front_to_acidic_domain	
+95 Name: MYO3.acidic_domain Npartner: 3	 Partners: ARC40.interface_to_actin_filament	ARP2.side_front_to_acidic_domain	ARP3.side_front_to_acidic_domain	
+96 Name: MYO5.acidic_domain Npartner: 3	 Partners: ARC40.interface_to_actin_filament	ARP2.side_front_to_acidic_domain	ARP3.side_front_to_acidic_domain	
+97 Name: PAN1.acidic_domain Npartner: 3	 Partners: ARC40.interface_to_actin_filament	ARP2.side_front_to_acidic_domain	ARP3.side_front_to_acidic_domain	
+98 Name: ARK1.kinase_domain Npartner: 5	 Partners: LSB3.phospho_site	PAN1.phospho_site_LR2	SLA1.phospho_site	SLA2.phospho_site	YAP1802.phospho_site	
+99 Name: PAN1.phospho_site_LR2 Npartner: 2	 Partners: ARK1.kinase_domain	PRK1.kinase_domain	
+100 Name: ARP2.barbed_end_groove_to_Chelix Npartner: 2	 Partners: LAS17.C_helix	CRN1.C_helix	
+101 Name: LAS17.C_helix Npartner: 2	 Partners: ARP2.barbed_end_groove_to_Chelix	ARP3.barbed_end_groove_to_Chelix	
+102 Name: ARP2.interface_to_arp3 Npartner: 1	 Partners: ARP3.interface_to_arp2	
+103 Name: ARP3.interface_to_arp2 Npartner: 1	 Partners: ARP2.interface_to_arp3	
+104 Name: ARP2.speculated_to_PRK1 Npartner: 1	 Partners: PRK1.interface_to_arp2	
+105 Name: PRK1.interface_to_arp2 Npartner: 1	 Partners: ARP2.speculated_to_PRK1	
+106 Name: ARP3.barbed_end_groove_to_Chelix Npartner: 2	 Partners: CRN1.C_helix	LAS17.C_helix	
+107 Name: CRN1.C_helix Npartner: 2	 Partners: ARP3.barbed_end_groove_to_Chelix	ARP2.barbed_end_groove_to_Chelix	
+108 Name: BBC1.PRD_700to730 Npartner: 3	 Partners: BBC1.SH3_domain	MYO3.SH3_domain	MYO5.SH3_domain	
+109 Name: LAS17.PRD_347to359 Npartner: 9	 Partners: BBC1.SH3_domain	BZZ1.SH3_domain	LSB3.SH3_domain	MYO3.SH3_domain	MYO5.SH3_domain	RVS167.SH3_domain	SLA1.SH3_domains1-2	SLA1.SH3_domain_3	YSC84.SH3_domain	
+110 Name: LAS17.PRD_383to400 Npartner: 4	 Partners: BBC1.SH3_domain	LSB3.SH3_domain	LSB5.VHS_domain	YSC84.SH3_domain	
+111 Name: MYO3.SH3_domain Npartner: 6	 Partners: BBC1.PRD_700to730	LAS17.PRD_347to359	LAS17.PRD_211to225	PAN1.PRD_1469to1480	MYO5.PRD_1070to1084	VRP1.PRD_398to407	
+112 Name: BSP1.PRD_183to197 Npartner: 4	 Partners: LSB3.SH3_domain	YSC84.SH3_domain	RVS167.SH3_domain	SLA1.SH3_domains1-2	
+113 Name: BSP1.interface_to_INP52_notPRD Npartner: 1	 Partners: INP52.N_terminal_region	
+114 Name: INP52.N_terminal_region Npartner: 1	 Partners: BSP1.interface_to_INP52_notPRD	
+115 Name: MYO5.PRD_1070to1084 Npartner: 3	 Partners: BZZ1.SH3_domain	MYO5.SH3_domain	MYO3.SH3_domain	
+116 Name: VRP1.PRD_3to18 Npartner: 2	 Partners: BZZ1.SH3_domain	SLA1.SH3_domains1-2	
+117 Name: CAP1.dimer_interface_to_CAP2 Npartner: 1	 Partners: CAP2.dimer_interface_to_CAP1	
+118 Name: CAP2.dimer_interface_to_CAP1 Npartner: 1	 Partners: CAP1.dimer_interface_to_CAP2	
+119 Name: CAP1.speculated_interface_to_TWF1 Npartner: 1	 Partners: TWF1.speculated_interface_to_CAP1	
+120 Name: TWF1.speculated_interface_to_CAP1 Npartner: 1	 Partners: CAP1.speculated_interface_to_TWF1	
+121 Name: CAP2.speculated_interface_to_TWF1 Npartner: 1	 Partners: TWF1.speculated_interface_to_CAP2	
+122 Name: TWF1.speculated_interface_to_CAP2 Npartner: 1	 Partners: CAP2.speculated_interface_to_TWF1	
+123 Name: CHC1.self_binding_to_trimers Npartner: 1	 Partners: CHC1.self_binding_to_trimers	
+124 Name: CHC1.N_terminal_domain Npartner: 5	 Partners: ENT1.Clathrin_Box	ENT2.Clathrin_Box	YAP1802.Clathrin_Box	SLA1.Clathrin_Box	YAP1801.Clathrin_Box	
+125 Name: ENT1.Clathrin_Box Npartner: 1	 Partners: CHC1.N_terminal_domain	
+126 Name: ENT2.Clathrin_Box Npartner: 1	 Partners: CHC1.N_terminal_domain	
+127 Name: YAP1802.Clathrin_Box Npartner: 1	 Partners: CHC1.N_terminal_domain	
+128 Name: CHC1.interface_to_light_chain Npartner: 1	 Partners: CLC1.interface_to_heavy_chain	
+129 Name: CLC1.interface_to_heavy_chain Npartner: 1	 Partners: CHC1.interface_to_light_chain	
+130 Name: CLC1.interface_to_SLA2 Npartner: 1	 Partners: SLA2.interface_to_CLC1	
+131 Name: SLA2.interface_to_CLC1 Npartner: 1	 Partners: CLC1.interface_to_SLA2	
+132 Name: CRN1.coiled_coil_domain Npartner: 2	 Partners: ACT1.Subunit1_2_outsideFilament	CRN1.coiled_coil_domain	
+133 Name: CRN1.beta_propeller_domain Npartner: 1	 Partners: ACT1.Subunit4_outsideFilament	
+134 Name: EDE1.EH_domain Npartner: 3	 Partners: ENT1.Two_NPF_motifs	ENT2.Two_NPF_motifs	YAP1802.Five_NPF_motifs	
+135 Name: ENT1.Two_NPF_motifs Npartner: 2	 Partners: EDE1.EH_domain	PAN1.EH_domain_2	
+136 Name: ENT2.Two_NPF_motifs Npartner: 2	 Partners: EDE1.EH_domain	PAN1.EH_domain_2	
+137 Name: EDE1.speculated_to_PAL1 Npartner: 1	 Partners: PAL1.speculated_interface_to_EDE1	
+138 Name: PAL1.speculated_interface_to_EDE1 Npartner: 1	 Partners: EDE1.speculated_to_PAL1	
+139 Name: EDE1.coiled_coil_domain Npartner: 1	 Partners: EDE1.coiled_coil_domain	
+140 Name: END3.C_terminal_region Npartner: 2	 Partners: PAN1.long_repeat_2	YAP1802.coiled_coil_domain	
+141 Name: PAN1.long_repeat_2 Npartner: 2	 Partners: END3.C_terminal_region	SCD5.residue302-500	
+142 Name: PAN1.EH_domain_2 Npartner: 4	 Partners: ENT1.Two_NPF_motifs	ENT2.Two_NPF_motifs	YAP1801.Five_NPF_motifs	YAP1802.Five_NPF_motifs	
+143 Name: GTS1.PRD_245to266 Npartner: 3	 Partners: YSC84.SH3_domain	LSB3.SH3_domain	RVS167.SH3_domain	
+144 Name: GTS1.speculated_interface_to_YAP1801 Npartner: 2	 Partners: YAP1802.speculated_to_GTS1	YAP1801.speculated_to_GTS1	
+145 Name: YAP1802.speculated_to_GTS1 Npartner: 1	 Partners: GTS1.speculated_interface_to_YAP1801	
+146 Name: LAS17.PRD_180to195 Npartner: 1	 Partners: BZZ1.SH3_domain	
+147 Name: LAS17.PRD_310to330 Npartner: 3	 Partners: LSB3.SH3_domain	RVS167.SH3_domain	YSC84.SH3_domain	
+148 Name: LAS17.PRD_211to225 Npartner: 2	 Partners: MYO3.SH3_domain	MYO5.SH3_domain	
+149 Name: LSB3.dimerization_interface Npartner: 2	 Partners: LSB3.dimerization_interface	YSC84.dimerization_interface	
+150 Name: LSB5.VHS_domain Npartner: 1	 Partners: LAS17.PRD_383to400	
+151 Name: PAN1.PRD_1469to1480 Npartner: 2	 Partners: MYO3.SH3_domain	MYO5.SH3_domain	
+152 Name: VRP1.PRD_398to407 Npartner: 2	 Partners: MYO5.SH3_domain	MYO3.SH3_domain	
+153 Name: YAP1801.Five_NPF_motifs Npartner: 1	 Partners: PAN1.EH_domain_2	
+154 Name: PAN1.N_terminal_LR1 Npartner: 2	 Partners: PAN1.coiled_coil_domain	SLA1.C_terminal_repeat_toPAN1	
+155 Name: ENT1.phospho_site Npartner: 1	 Partners: PRK1.kinase_domain	
+156 Name: LAS17.phospho_site Npartner: 1	 Partners: PRK1.kinase_domain	
+157 Name: YAP1801.phospho_site Npartner: 1	 Partners: PRK1.kinase_domain	
+158 Name: BSP1.PRD_231to245 Npartner: 1	 Partners: RVS167.SH3_domain	
+159 Name: VRP1.PRD_513to527 Npartner: 1	 Partners: RVS167.SH3_domain	
+160 Name: RVS167.dimerization_interface_ Npartner: 1	 Partners: RVS161.dimerization_interface_	
+161 Name: RVS161.dimerization_interface_ Npartner: 1	 Partners: RVS167.dimerization_interface_	
+162 Name: RVS167.oligomerization_domain_ Npartner: 1	 Partners: RVS167.oligomerization_domain_	
+163 Name: SCD5.residue302-500 Npartner: 2	 Partners: END3.N_terminal_domain	PAN1.long_repeat_2	
+164 Name: END3.N_terminal_domain Npartner: 2	 Partners: SCD5.residue302-500	SLA1.C_terminal_repeat_toEND3	
+165 Name: SLA1.Clathrin_Box Npartner: 2	 Partners: CHC1.N_terminal_domain	SLA1.SHD2_domain	
+166 Name: SLA1.SHD2_domain Npartner: 2	 Partners: SLA1.Clathrin_Box	SLA1.SHD2_domain	
+167 Name: SLA1.PRD_191to205 Npartner: 3	 Partners: LSB3.SH3_domain	RVS167.SH3_domain	YSC84.SH3_domain	
+168 Name: SLA1.C_terminal_repeat_toEND3 Npartner: 1	 Partners: END3.N_terminal_domain	
+169 Name: SLA1.SHD1_domain Npartner: 1	 Partners: LSB5.NPF_motif_region	
+170 Name: LSB5.NPF_motif_region Npartner: 1	 Partners: SLA1.SHD1_domain	
+171 Name: INP52.PRD_983to997 Npartner: 1	 Partners: SLA1.SH3_domains1-2	
+172 Name: SYP1.PRD_519to533 Npartner: 1	 Partners: SLA1.SH3_domains1-2	
+173 Name: SLA1.C_terminal_repeat_toPAN1 Npartner: 1	 Partners: PAN1.N_terminal_LR1	
+174 Name: SLA1.Gap1_domain Npartner: 1	 Partners: SLA2.coiled_coil_domain	
+175 Name: SLA2.coiled_coil_domain Npartner: 2	 Partners: SLA1.Gap1_domain	PAN1.coiled_coil_domain	
+176 Name: SLA2.phospho_site Npartner: 2	 Partners: ARK1.kinase_domain	PRK1.kinase_domain	
+177 Name: SLA2.homodimer_interface_CC Npartner: 1	 Partners: SLA2.homodimer_interface_CC	
+178 Name: SYP1.interface_to_LAS17 Npartner: 1	 Partners: LAS17.speculated_to_SYP1	
+179 Name: LAS17.speculated_to_SYP1 Npartner: 1	 Partners: SYP1.interface_to_LAS17	
+180 Name: SYP1.PRD_413to427 Npartner: 1	 Partners: LSB3.SH3_domain	
+181 Name: SYP1.C_terminal_muHD Npartner: 1	 Partners: EDE1.C_terminal_domain	
+182 Name: EDE1.C_terminal_domain Npartner: 1	 Partners: SYP1.C_terminal_muHD	
+183 Name: SYP1.BAR_domain Npartner: 1	 Partners: SYP1.BAR_domain	
+184 Name: VRP1.C_terminal_region Npartner: 1	 Partners: LAS17.WH1_domain	
+185 Name: LAS17.WH1_domain Npartner: 1	 Partners: VRP1.C_terminal_region	
+186 Name: YAP1801.speculated_to_GTS1 Npartner: 1	 Partners: GTS1.speculated_interface_to_YAP1801	
+187 Name: YAP1801.Clathrin_Box Npartner: 1	 Partners: CHC1.N_terminal_domain	
+188 Name: YAP1802.Five_NPF_motifs Npartner: 2	 Partners: EDE1.EH_domain	PAN1.EH_domain_2	
+189 Name: YAP1802.phospho_site Npartner: 2	 Partners: ARK1.kinase_domain	PRK1.kinase_domain	
+190 Name: YAP1802.coiled_coil_domain Npartner: 1	 Partners: END3.C_terminal_region	
+191 Name: YSC84.dimerization_interface Npartner: 2	 Partners: LSB3.dimerization_interface	YSC84.dimerization_interface	
+----------------------------------
+---------------
+READING IN CELL TYPE COPY NUMBER DISTRIBUTION FROM THE FILE: SCerevisiae_CopyNumberDist.txt
+TOTAL LINES in Copy Number Distribution for Cell Type: 466
+-------------------
+IIN edges: 204
+--------------
+For p-value: Using Copy number sampled from the distribution in: SCerevisiae_CopyNumberDist.txt
+----------
+NRUNS RANDOM COPY NUMBERS, to evaluate p-value: 100
+-------------------------------------------------------------
+-------------------------------------------------------------
+---------------------PERFORM STOICHIOMETRIC BALANCE-------------------
+-------------------
+--------SOLVING BALANCE FOR THE REAL, OBSERVED PROTEIN COPY NUMBERS------
+Inside qp_solve
+RHS: 6.90736e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.90012e+10 Plus RHS: 1.00724e+10
+-------------------------------
+ ------COPIES OF EACH COMPLEX FOR REAL COPY NUMBERS--------------
+edge: 0 ABP1.Cofilin_ADF::ACT1.Subunit1_2_outsideFilament conc: 16918.9
+edge: 1 ACT1.Subunit1_2_outsideFilament::ARC18.Interface_to_actin_filament conc: 12774.9
+edge: 2 ACT1.Subunit1_2_outsideFilament::ARC35.Interface_to_actin_filament conc: 8271.09
+edge: 3 ACT1.Subunit1_2_outsideFilament::ARC40.interface_to_actin_filament conc: 50
+edge: 4 ACT1.Subunit1_2_outsideFilament::LAS17.WH2_domain conc: 331.476
+edge: 5 ACT1.Subunit1_2_outsideFilament::MYO3.head_domain conc: 1301.71
+edge: 6 ACT1.Subunit1_2_outsideFilament::MYO5.head_domain conc: 1472.71
+edge: 7 ACT1.Subunit1_2_outsideFilament::PAN1.coiled_coil_domain conc: 1517.05
+edge: 8 ACT1.Subunit1_2_outsideFilament::SAC6.Four_CH_domains conc: 30402
+edge: 9 ACT1.Subunit1_2_outsideFilament::SCP1.actin_bundling_CalponinLR conc: 2727.87
+edge: 10 ACT1.Subunit1_2_outsideFilament::SLA2.Talin_like_domain conc: 5111.06
+edge: 11 ACT1.Subunit1_2_outsideFilament::TWF1.two_cofilin_domain conc: 4663.94
+edge: 12 ACT1.Subunit1_2_outsideFilament::VRP1.two_WH2_domain conc: 249.832
+edge: 13 ACT1.Subunit1_2_outsideFilament::YSC84.YAB_domain conc: 8047.34
+edge: 14 ACT1.Subunit1_2_outsideFilament::CRN1.coiled_coil_domain conc: 12007.6
+edge: 15 ABP1.PRD_441to455::RVS167.SH3_domain conc: 14245
+edge: 16 RVS167.SH3_domain::AIM21.PRD_383to400 conc: 50
+edge: 17 RVS167.SH3_domain::AIM3.PRD_83to97 conc: 50
+edge: 18 RVS167.SH3_domain::APP1.PRD_465to480 conc: 50
+edge: 19 RVS167.SH3_domain::APP1.PRD_502to518 conc: 50
+edge: 20 RVS167.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 21 RVS167.SH3_domain::LAS17.PRD_310to330 conc: 50
+edge: 22 RVS167.SH3_domain::BSP1.PRD_183to197 conc: 50
+edge: 23 RVS167.SH3_domain::BSP1.PRD_231to245 conc: 50
+edge: 24 RVS167.SH3_domain::GTS1.PRD_245to266 conc: 50
+edge: 25 RVS167.SH3_domain::VRP1.PRD_513to527 conc: 50
+edge: 26 RVS167.SH3_domain::SLA1.PRD_191to205 conc: 2351.35
+edge: 27 ABP1.SH3::AIM21.PRD_383to400 conc: 3722.97
+edge: 28 ABP1.SH3::APP1.PRD_502to518 conc: 217.806
+edge: 29 ABP1.SH3::ARK1.PRD_607to621 conc: 3158.41
+edge: 30 ABP1.SH3::BSP1.PRD_334to348 conc: 456.933
+edge: 31 ABP1.SH3::INP52.PRD_1113to1126 conc: 520.911
+edge: 32 ABP1.SH3::PRK1.PRD_748to761 conc: 5328.28
+edge: 33 ABP1.SH3::SCP1.PRD_156to169 conc: 2999.74
+edge: 34 ABP1.SH3::AIM3.PRD_546to560 conc: 411.871
+edge: 35 APP1.PRD_502to518::BBC1.SH3_domain conc: 50
+edge: 36 APP1.PRD_502to518::BZZ1.SH3_domain conc: 50
+edge: 37 APP1.PRD_502to518::MYO5.SH3_domain conc: 50
+edge: 38 APP1.PRD_502to518::SLA1.SH3_domains1-2 conc: 50
+edge: 39 APP1.PRD_502to518::SLA1.SH3_domain_3 conc: 50
+edge: 40 ABP1.Acidic_Domain::ARP2.side_front_to_acidic_domain conc: 7920.02
+edge: 41 ABP1.Acidic_Domain::ARP3.side_front_to_acidic_domain conc: 7715.67
+edge: 42 ARP2.side_front_to_acidic_domain::LAS17.acidic_domain conc: 50
+edge: 43 ARP2.side_front_to_acidic_domain::MYO3.acidic_domain conc: 50
+edge: 44 ARP2.side_front_to_acidic_domain::MYO5.acidic_domain conc: 50
+edge: 45 ARP2.side_front_to_acidic_domain::PAN1.acidic_domain conc: 223.581
+edge: 46 ARP2.side_front_to_acidic_domain::CRN1.acidic_domain conc: 2676.89
+edge: 47 ARP3.side_front_to_acidic_domain::CRN1.acidic_domain conc: 2451.06
+edge: 48 ARP3.side_front_to_acidic_domain::MYO3.acidic_domain conc: 50
+edge: 49 ARP3.side_front_to_acidic_domain::MYO5.acidic_domain conc: 50
+edge: 50 ARP3.side_front_to_acidic_domain::PAN1.acidic_domain conc: 413.618
+edge: 51 ARP3.side_front_to_acidic_domain::LAS17.acidic_domain conc: 50
+edge: 52 ABP1.PRD_504to518::LSB3.SH3_domain conc: 13686.8
+edge: 53 LSB3.SH3_domain::AIM3.PRD_83to97 conc: 50
+edge: 54 LSB3.SH3_domain::APP1.PRD_465to480 conc: 50
+edge: 55 LSB3.SH3_domain::BSP1.PRD_183to197 conc: 50
+edge: 56 LSB3.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 57 LSB3.SH3_domain::LAS17.PRD_383to400 conc: 50
+edge: 58 LSB3.SH3_domain::LAS17.PRD_310to330 conc: 50
+edge: 59 LSB3.SH3_domain::GTS1.PRD_245to266 conc: 50
+edge: 60 LSB3.SH3_domain::SLA1.PRD_191to205 conc: 50
+edge: 61 LSB3.SH3_domain::SYP1.PRD_413to427 conc: 50
+edge: 62 ABP1.PRD_470to486::YSC84.SH3_domain conc: 13811.7
+edge: 63 YSC84.SH3_domain::AIM21.PRD_3to18 conc: 50
+edge: 64 YSC84.SH3_domain::AIM3.PRD_83to97 conc: 50
+edge: 65 YSC84.SH3_domain::APP1.PRD_465to480 conc: 50
+edge: 66 YSC84.SH3_domain::BSP1.PRD_183to197 conc: 50
+edge: 67 YSC84.SH3_domain::GTS1.PRD_245to266 conc: 50
+edge: 68 YSC84.SH3_domain::SLA1.PRD_191to205 conc: 50
+edge: 69 YSC84.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 70 YSC84.SH3_domain::LAS17.PRD_383to400 conc: 50
+edge: 71 YSC84.SH3_domain::LAS17.PRD_310to330 conc: 50
+edge: 72 ABP1.PRD_513to528::SLA1.SH3_domains1-2 conc: 6622.46
+edge: 73 ABP1.PRD_513to528::SLA1.SH3_domain_3 conc: 6822.46
+edge: 74 SLA1.SH3_domains1-2::BSP1.PRD_183to197 conc: 50
+edge: 75 SLA1.SH3_domains1-2::INP52.PRD_983to997 conc: 50
+edge: 76 SLA1.SH3_domains1-2::LAS17.PRD_347to359 conc: 50
+edge: 77 SLA1.SH3_domains1-2::SYP1.PRD_519to533 conc: 50
+edge: 78 SLA1.SH3_domains1-2::VRP1.PRD_3to18 conc: 50
+edge: 79 SLA1.SH3_domain_3::LAS17.PRD_347to359 conc: 50
+edge: 80 ACT1.BarbedEnd_back::ACT1.PointedEnd_back conc: 82520.6
+edge: 81 ACT1.BarbedEnd_back::CAP1.interface_to_actin conc: 3452.43
+edge: 82 ACT1.BarbedEnd_back::CAP2.interface_to_actin conc: 1589.02
+edge: 83 ACT1.BarbedEnd_back::PFY1.interface_to_actin conc: 20148.7
+edge: 84 ACT1.PointedEnd_back::ARP2.back_barbed_end_to_actin conc: 10851.9
+edge: 85 ACT1.PointedEnd_back::ARP3.back_barbed_end_to_actin conc: 10611.7
+edge: 86 ARC40.interface_to_actin_filament::CRN1.acidic_domain conc: 9445.61
+edge: 87 ARC40.interface_to_actin_filament::LAS17.acidic_domain conc: 50
+edge: 88 ARC40.interface_to_actin_filament::MYO3.acidic_domain conc: 50
+edge: 89 ARC40.interface_to_actin_filament::MYO5.acidic_domain conc: 50
+edge: 90 ARC40.interface_to_actin_filament::PAN1.acidic_domain conc: 361.798
+edge: 91 PAN1.coiled_coil_domain::PAN1.N_terminal_LR1 conc: 50
+edge: 92 PAN1.coiled_coil_domain::SLA2.coiled_coil_domain conc: 715.112
+edge: 93 ACT1.Subunit4_outsideFilament::AIP1.Interface_to_ACT1 conc: 66511.7
+edge: 94 ACT1.Subunit4_outsideFilament::CRN1.beta_propeller_domain conc: 27981.2
+edge: 95 AIM21.PRD_3to18::BBC1.SH3_domain conc: 2906.64
+edge: 96 BBC1.SH3_domain::BBC1.PRD_700to730 conc: 3963.93
+edge: 97 BBC1.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 98 BBC1.SH3_domain::LAS17.PRD_383to400 conc: 50
+edge: 99 AIM21.Speculated_to_CAP1_2::CAP1.speculated_interface_to_AIM21 conc: 3716.03
+edge: 100 AIM21.Speculated_to_CAP1_2::CAP2.speculated_interface_to_AIM21 conc: 1852.62
+edge: 101 AIM3.PhosphoSite::PRK1.kinase_domain conc: 50
+edge: 102 PRK1.kinase_domain::ENT2.Two_phospho_site conc: 50
+edge: 103 PRK1.kinase_domain::PAN1.phospho_site_LR2 conc: 903.134
+edge: 104 PRK1.kinase_domain::ENT1.phospho_site conc: 50
+edge: 105 PRK1.kinase_domain::LAS17.phospho_site conc: 50
+edge: 106 PRK1.kinase_domain::YAP1801.phospho_site conc: 50
+edge: 107 PRK1.kinase_domain::SCD5.phospho_site conc: 50
+edge: 108 PRK1.kinase_domain::SLA1.phospho_site conc: 2332.31
+edge: 109 PRK1.kinase_domain::SLA2.phospho_site conc: 3240.43
+edge: 110 PRK1.kinase_domain::YAP1802.phospho_site conc: 50
+edge: 111 AKL1.Homodimer_interface::AKL1.Homodimer_interface conc: 1787.83
+edge: 112 AKL1.Kinase_Domain::EDE1.phospho_site conc: 2168.89
+edge: 113 AKL1.Kinase_Domain::ENT2.Two_phospho_site conc: 50
+edge: 114 AKL1.Kinase_Domain::LSB3.phospho_site conc: 2830.67
+edge: 115 AKL1.Kinase_Domain::SCD5.phospho_site conc: 50
+edge: 116 AKL1.Kinase_Domain::SLA1.phospho_site conc: 744.774
+edge: 117 LSB3.phospho_site::ARK1.kinase_domain conc: 3140.48
+edge: 118 SLA1.phospho_site::ARK1.kinase_domain conc: 700.141
+edge: 119 APL1.Interface_beta_to_mu::APM4.Interface_mu_to_beta conc: 289.667
+edge: 120 APL1.Interface_beta_to_sigma::APS2.Interface_sigma_to_beta conc: 253
+edge: 121 APL1.Interface_beta_to_alpha::APL3.Interface_alpha_to_beta conc: 311
+edge: 122 APL3.Interface_alpha_to_sigma::APS2.Interface_sigma_to_alpha conc: 270.833
+edge: 123 APL3.Interface_alpha_to_mu::APM4.Interface_mu_to_alpha conc: 307.5
+edge: 124 APM4.Interface_mu_to_sigma::APS2.Interface_sigma_to_mu conc: 249.5
+edge: 125 BZZ1.SH3_domain::MYO5.PRD_1070to1084 conc: 1459.19
+edge: 126 BZZ1.SH3_domain::VRP1.PRD_3to18 conc: 271.899
+edge: 127 BZZ1.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 128 BZZ1.SH3_domain::LAS17.PRD_180to195 conc: 367.51
+edge: 129 MYO5.SH3_domain::BBC1.PRD_700to730 conc: 755.856
+edge: 130 MYO5.SH3_domain::LAS17.PRD_347to359 conc: 50
+edge: 131 MYO5.SH3_domain::LAS17.PRD_211to225 conc: 63.6424
+edge: 132 MYO5.SH3_domain::MYO5.PRD_1070to1084 conc: 50
+edge: 133 MYO5.SH3_domain::VRP1.PRD_398to407 conc: 50
+edge: 134 MYO5.SH3_domain::PAN1.PRD_1469to1480 conc: 943.152
+edge: 135 ARC15.Interface_to_arc19::ARC19.Interface_to_arc15 conc: 7186.08
+edge: 136 ARC15.Interface_to_arc40::ARC40.interface_to_arc15 conc: 7759.78
+edge: 137 ARC15.Interface_to_arp2::ARP2.interface_to_arc15 conc: 9151.05
+edge: 138 ARC18.Interface_to_arp3::ARP3.interface_to_arc18 conc: 10354.7
+edge: 139 ARC19.Interface_to_arc35::ARC35.Interface_to_arc19 conc: 7263.13
+edge: 140 ARC19.Interface_to_arc40::ARC40.interface_to_arc19 conc: 6931.12
+edge: 141 ARC19.Interface_to_arp2::ARP2.interface_to_arc19 conc: 8360.4
+edge: 142 ARC19.Interface_to_arp3::ARP3.interface_to_arc19 conc: 8223.17
+edge: 143 ARC35.Interface_to_arp3::ARP3.interface_to_arc35 conc: 9055.16
+edge: 144 ARK1.kinase_domain::PAN1.phospho_site_LR2 conc: 528.279
+edge: 145 ARK1.kinase_domain::SLA2.phospho_site conc: 736.304
+edge: 146 ARK1.kinase_domain::YAP1802.phospho_site conc: 50
+edge: 147 ARP2.barbed_end_groove_to_Chelix::LAS17.C_helix conc: 337.936
+edge: 148 ARP2.barbed_end_groove_to_Chelix::CRN1.C_helix conc: 8839.3
+edge: 149 LAS17.C_helix::ARP3.barbed_end_groove_to_Chelix conc: 333.604
+edge: 150 ARP2.interface_to_arp3::ARP3.interface_to_arp2 conc: 9567.26
+edge: 151 ARP2.speculated_to_PRK1::PRK1.interface_to_arp2 conc: 8166.35
+edge: 152 ARP3.barbed_end_groove_to_Chelix::CRN1.C_helix conc: 8603.49
+edge: 153 BBC1.PRD_700to730::MYO3.SH3_domain conc: 667.648
+edge: 154 LAS17.PRD_347to359::MYO3.SH3_domain conc: 50
+edge: 155 LAS17.PRD_383to400::LSB5.VHS_domain conc: 484.441
+edge: 156 MYO3.SH3_domain::LAS17.PRD_211to225 conc: 63.6921
+edge: 157 MYO3.SH3_domain::PAN1.PRD_1469to1480 conc: 1032.8
+edge: 158 MYO3.SH3_domain::MYO5.PRD_1070to1084 conc: 50
+edge: 159 MYO3.SH3_domain::VRP1.PRD_398to407 conc: 50
+edge: 160 BSP1.interface_to_INP52_notPRD::INP52.N_terminal_region conc: 304.121
+edge: 161 CAP1.dimer_interface_to_CAP2::CAP2.dimer_interface_to_CAP1 conc: 4383.99
+edge: 162 CAP1.speculated_interface_to_TWF1::TWF1.speculated_interface_to_CAP1 conc: 5026.03
+edge: 163 CAP2.speculated_interface_to_TWF1::TWF1.speculated_interface_to_CAP2 conc: 3990.8
+edge: 164 CHC1.self_binding_to_trimers::CHC1.self_binding_to_trimers conc: 8062.67
+edge: 165 CHC1.N_terminal_domain::ENT1.Clathrin_Box conc: 3147.51
+edge: 166 CHC1.N_terminal_domain::ENT2.Clathrin_Box conc: 2960.01
+edge: 167 CHC1.N_terminal_domain::YAP1802.Clathrin_Box conc: 1762.02
+edge: 168 CHC1.N_terminal_domain::SLA1.Clathrin_Box conc: 4870.54
+edge: 169 CHC1.N_terminal_domain::YAP1801.Clathrin_Box conc: 1942.62
+edge: 170 CHC1.interface_to_light_chain::CLC1.interface_to_heavy_chain conc: 14415.3
+edge: 171 CLC1.interface_to_SLA2::SLA2.interface_to_CLC1 conc: 7452.46
+edge: 172 CRN1.coiled_coil_domain::CRN1.coiled_coil_domain conc: 2309.5
+edge: 173 EDE1.EH_domain::ENT1.Two_NPF_motifs conc: 1393.03
+edge: 174 EDE1.EH_domain::ENT2.Two_NPF_motifs conc: 1221.75
+edge: 175 EDE1.EH_domain::YAP1802.Five_NPF_motifs conc: 577.022
+edge: 176 ENT1.Two_NPF_motifs::PAN1.EH_domain_2 conc: 478.969
+edge: 177 ENT2.Two_NPF_motifs::PAN1.EH_domain_2 conc: 462.748
+edge: 178 EDE1.speculated_to_PAL1::PAL1.speculated_interface_to_EDE1 conc: 3007.05
+edge: 179 EDE1.coiled_coil_domain::EDE1.coiled_coil_domain conc: 1651.61
+edge: 180 END3.C_terminal_region::PAN1.long_repeat_2 conc: 2428.29
+edge: 181 END3.C_terminal_region::YAP1802.coiled_coil_domain conc: 1061.78
+edge: 182 PAN1.long_repeat_2::SCD5.residue302-500 conc: 50
+edge: 183 PAN1.EH_domain_2::YAP1801.Five_NPF_motifs conc: 922.219
+edge: 184 PAN1.EH_domain_2::YAP1802.Five_NPF_motifs conc: 334.665
+edge: 185 GTS1.speculated_interface_to_YAP1801::YAP1802.speculated_to_GTS1 conc: 702.138
+edge: 186 GTS1.speculated_interface_to_YAP1801::YAP1801.speculated_to_GTS1 conc: 670.761
+edge: 187 LSB3.dimerization_interface::LSB3.dimerization_interface conc: 2525.81
+edge: 188 LSB3.dimerization_interface::YSC84.dimerization_interface conc: 2621.02
+edge: 189 PAN1.N_terminal_LR1::SLA1.C_terminal_repeat_toPAN1 conc: 3484.88
+edge: 190 RVS167.dimerization_interface_::RVS161.dimerization_interface_ conc: 12129.8
+edge: 191 RVS167.oligomerization_domain_::RVS167.oligomerization_domain_ conc: 5874.36
+edge: 192 SCD5.residue302-500::END3.N_terminal_domain conc: 50
+edge: 193 END3.N_terminal_domain::SLA1.C_terminal_repeat_toEND3 conc: 4303.2
+edge: 194 SLA1.Clathrin_Box::SLA1.SHD2_domain conc: 50
+edge: 195 SLA1.SHD2_domain::SLA1.SHD2_domain conc: 2172.98
+edge: 196 SLA1.SHD1_domain::LSB5.NPF_motif_region conc: 3817.45
+edge: 197 SLA1.Gap1_domain::SLA2.coiled_coil_domain conc: 4395.95
+edge: 198 SLA2.homodimer_interface_CC::SLA2.homodimer_interface_CC conc: 2555.53
+edge: 199 SYP1.interface_to_LAS17::LAS17.speculated_to_SYP1 conc: 576.152
+edge: 200 SYP1.C_terminal_muHD::EDE1.C_terminal_domain conc: 2184.36
+edge: 201 SYP1.BAR_domain::SYP1.BAR_domain conc: 532.751
+edge: 202 VRP1.C_terminal_region::LAS17.WH1_domain conc: 304.261
+edge: 203 YSC84.dimerization_interface::YSC84.dimerization_interface conc: 2713.16
+-------------------------------
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 1
+Inside qp_solve
+RHS: 5.23875e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.49225e+11 Plus RHS: 2.7465e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 2
+Inside qp_solve
+RHS: 3.90627e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.27241e+10 Plus RHS: 1.63385e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 3
+Inside qp_solve
+RHS: 2.27106e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.12996e+10 Plus RHS: 1.55806e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 4
+Inside qp_solve
+RHS: 1.20583e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.59208e+10 Plus RHS: 6.4662e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 5
+Inside qp_solve
+RHS: 9.14538e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.28164e+10 Plus RHS: 5.86374e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 6
+Inside qp_solve
+RHS: 2.77207e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.34423e+11 Plus RHS: 1.42785e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 7
+Inside qp_solve
+RHS: 3.47215e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.50881e+10 Plus RHS: 1.96334e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 8
+Inside qp_solve
+RHS: 2.61841e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.00038e+11 Plus RHS: 1.61803e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 9
+Inside qp_solve
+RHS: 1.4807e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.42176e+10 Plus RHS: 9.38526e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 10
+Inside qp_solve
+RHS: 3.57344e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.1727e+11 Plus RHS: 2.40074e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 11
+Inside qp_solve
+RHS: 6.30115e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.73734e+11 Plus RHS: 4.56381e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 12
+Inside qp_solve
+RHS: 1.66736e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.04894e+10 Plus RHS: 1.16246e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 13
+Inside qp_solve
+RHS: 1.97492e+12
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -8.37873e+11 Plus RHS: 1.13705e+12
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 14
+Inside qp_solve
+RHS: 1.84327e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.80596e+09 Plus RHS: 8.62671e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 15
+Inside qp_solve
+RHS: 2.18774e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.88538e+10 Plus RHS: 1.3992e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 16
+Inside qp_solve
+RHS: 2.74928e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.29936e+11 Plus RHS: 1.44991e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 17
+Inside qp_solve
+RHS: 5.47286e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.47925e+10 Plus RHS: 2.99361e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 18
+Inside qp_solve
+RHS: 1.48043e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.30536e+09 Plus RHS: 9.49894e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 19
+Inside qp_solve
+RHS: 1.62509e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.24627e+09 Plus RHS: 7.0046e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 20
+Inside qp_solve
+RHS: 5.62132e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.24366e+11 Plus RHS: 3.37766e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 21
+Inside qp_solve
+RHS: 5.09595e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.12239e+11 Plus RHS: 2.97356e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 22
+Inside qp_solve
+RHS: 4.87285e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.51515e+10 Plus RHS: 3.3577e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 23
+Inside qp_solve
+RHS: 3.56673e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.37129e+11 Plus RHS: 2.19544e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 24
+Inside qp_solve
+RHS: 1.52842e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.13543e+11 Plus RHS: 3.92986e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 25
+Inside qp_solve
+RHS: 1.42159e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.773e+10 Plus RHS: 7.44291e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 26
+Inside qp_solve
+RHS: 1.84295e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.93213e+09 Plus RHS: 8.49733e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 27
+Inside qp_solve
+RHS: 2.33242e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.57682e+09 Plus RHS: 1.37473e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 28
+Inside qp_solve
+RHS: 1.29477e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.54973e+10 Plus RHS: 5.398e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 29
+Inside qp_solve
+RHS: 2.883e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.75787e+10 Plus RHS: 2.10722e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 30
+Inside qp_solve
+RHS: 2.68424e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.00282e+11 Plus RHS: 1.68142e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 31
+Inside qp_solve
+RHS: 5.31036e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.57675e+10 Plus RHS: 2.73361e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 32
+Inside qp_solve
+RHS: 9.36179e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.75031e+10 Plus RHS: 3.61148e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 33
+Inside qp_solve
+RHS: 7.92632e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.20363e+10 Plus RHS: 4.72268e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 34
+Inside qp_solve
+RHS: 5.91627e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.25937e+10 Plus RHS: 3.6569e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 35
+Inside qp_solve
+RHS: 1.58719e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -4.41316e+10 Plus RHS: 1.14587e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 36
+Inside qp_solve
+RHS: 2.52476e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.07561e+11 Plus RHS: 1.44915e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 37
+Inside qp_solve
+RHS: 1.19243e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.75716e+10 Plus RHS: 4.16715e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 38
+Inside qp_solve
+RHS: 1.44505e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.8135e+10 Plus RHS: 7.63698e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 39
+Inside qp_solve
+RHS: 5.36288e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.33804e+11 Plus RHS: 3.02484e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 40
+Inside qp_solve
+RHS: 8.26139e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.69739e+10 Plus RHS: 5.56401e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 41
+Inside qp_solve
+RHS: 9.67259e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -4.23632e+10 Plus RHS: 5.43627e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 42
+Inside qp_solve
+RHS: 6.1396e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.47617e+10 Plus RHS: 3.66343e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 43
+Inside qp_solve
+RHS: 1.96541e+12
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.72915e+11 Plus RHS: 1.39249e+12
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 44
+Inside qp_solve
+RHS: 1.30835e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.22304e+09 Plus RHS: 5.86046e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 45
+Inside qp_solve
+RHS: 4.47202e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.84453e+10 Plus RHS: 2.62749e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 46
+Inside qp_solve
+RHS: 5.85756e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.56312e+11 Plus RHS: 3.29444e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 47
+Inside qp_solve
+RHS: 9.83646e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.20136e+10 Plus RHS: 4.6351e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 48
+Inside qp_solve
+RHS: 1.33493e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.14655e+09 Plus RHS: 6.20277e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 49
+Inside qp_solve
+RHS: 4.86345e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.10445e+11 Plus RHS: 1.759e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 50
+Inside qp_solve
+RHS: 4.3945e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.10536e+10 Plus RHS: 2.28914e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 51
+Inside qp_solve
+RHS: 2.03852e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -8.32657e+10 Plus RHS: 1.20586e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 52
+Inside qp_solve
+RHS: 1.76096e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.0858e+11 Plus RHS: 6.75165e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 53
+Inside qp_solve
+RHS: 3.18213e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.18207e+10 Plus RHS: 2.46393e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 54
+Inside qp_solve
+RHS: 3.69992e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.30773e+10 Plus RHS: 2.39219e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 55
+Inside qp_solve
+RHS: 3.69057e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.41076e+11 Plus RHS: 1.27981e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 56
+Inside qp_solve
+RHS: 1.60863e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.84112e+09 Plus RHS: 9.24523e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 57
+Inside qp_solve
+RHS: 4.13013e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.3984e+10 Plus RHS: 2.73173e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 58
+Inside qp_solve
+RHS: 5.8713e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.68474e+11 Plus RHS: 4.18655e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 59
+Inside qp_solve
+RHS: 1.68269e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.13396e+09 Plus RHS: 1.06929e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 60
+Inside qp_solve
+RHS: 3.37416e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.09465e+11 Plus RHS: 1.27951e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 61
+Inside qp_solve
+RHS: 1.15101e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.26805e+10 Plus RHS: 6.24206e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 62
+Inside qp_solve
+RHS: 2.08338e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.91906e+09 Plus RHS: 1.29148e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 63
+Inside qp_solve
+RHS: 8.11368e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.80575e+10 Plus RHS: 5.30793e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 64
+Inside qp_solve
+RHS: 1.17775e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -4.01697e+10 Plus RHS: 7.76055e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 65
+Inside qp_solve
+RHS: 1.34341e+12
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.16505e+11 Plus RHS: 8.26908e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 66
+Inside qp_solve
+RHS: 5.02276e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.02654e+10 Plus RHS: 2.99623e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 67
+Inside qp_solve
+RHS: 2.38239e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.38891e+10 Plus RHS: 1.6435e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 68
+Inside qp_solve
+RHS: 1.16e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -8.56142e+10 Plus RHS: 3.03861e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 69
+Inside qp_solve
+RHS: 2.27884e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -8.86082e+09 Plus RHS: 1.39276e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 70
+Inside qp_solve
+RHS: 1.29917e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.02067e+10 Plus RHS: 7.97106e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 71
+Inside qp_solve
+RHS: 1.77615e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -8.06345e+10 Plus RHS: 9.69805e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 72
+Inside qp_solve
+RHS: 1.35124e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.24661e+09 Plus RHS: 7.26576e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 73
+Inside qp_solve
+RHS: 1.33101e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.59183e+10 Plus RHS: 6.71824e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 74
+Inside qp_solve
+RHS: 1.12712e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.90206e+10 Plus RHS: 8.3691e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 75
+Inside qp_solve
+RHS: 5.71829e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.94155e+11 Plus RHS: 3.77674e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 76
+Inside qp_solve
+RHS: 3.0944e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.63883e+10 Plus RHS: 1.45557e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 77
+Inside qp_solve
+RHS: 4.33355e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.95691e+10 Plus RHS: 2.37665e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 78
+Inside qp_solve
+RHS: 3.93874e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.68245e+10 Plus RHS: 2.25629e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 79
+Inside qp_solve
+RHS: 7.0033e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.50646e+10 Plus RHS: 3.49684e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 80
+Inside qp_solve
+RHS: 8.39748e+09
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.61119e+09 Plus RHS: 4.78629e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 81
+Inside qp_solve
+RHS: 8.42829e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -4.05469e+10 Plus RHS: 4.3736e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 82
+Inside qp_solve
+RHS: 8.3638e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.12189e+10 Plus RHS: 5.24192e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 83
+Inside qp_solve
+RHS: 7.76948e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.87135e+10 Plus RHS: 3.89813e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 84
+Inside qp_solve
+RHS: 4.46754e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.72872e+10 Plus RHS: 2.73882e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 85
+Inside qp_solve
+RHS: 1.20148e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -4.11054e+10 Plus RHS: 7.90424e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 86
+Inside qp_solve
+RHS: 6.35171e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.57306e+10 Plus RHS: 3.77865e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 87
+Inside qp_solve
+RHS: 2.35101e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.64494e+09 Plus RHS: 1.38651e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 88
+Inside qp_solve
+RHS: 4.54583e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.0147e+10 Plus RHS: 1.53113e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 89
+Inside qp_solve
+RHS: 2.86625e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -7.68759e+10 Plus RHS: 2.09749e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 90
+Inside qp_solve
+RHS: 1.02002e+12
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.98172e+11 Plus RHS: 7.21852e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 91
+Inside qp_solve
+RHS: 1.95595e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -9.6967e+10 Plus RHS: 9.86281e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 92
+Inside qp_solve
+RHS: 2.84386e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.00588e+11 Plus RHS: 8.37979e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 93
+Inside qp_solve
+RHS: 4.33121e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.97725e+10 Plus RHS: 2.35396e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 94
+Inside qp_solve
+RHS: 4.63306e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -3.16374e+11 Plus RHS: 1.46932e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 95
+Inside qp_solve
+RHS: 4.74732e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.61824e+10 Plus RHS: 3.12908e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 96
+Inside qp_solve
+RHS: 2.94792e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -1.46315e+10 Plus RHS: 1.48476e+10
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 97
+Inside qp_solve
+RHS: 2.08619e+11
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.44362e+10 Plus RHS: 1.44183e+11
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 98
+Inside qp_solve
+RHS: 2.24413e+12
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -6.48482e+11 Plus RHS: 1.59564e+12
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 99
+Inside qp_solve
+RHS: 1.24925e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -5.67906e+09 Plus RHS: 6.81346e+09
+-------------------
+Solving balance for the RANDOMIZED COPY NUMBERS,  to define a p-value. Run Number: 100
+Inside qp_solve
+RHS: 6.48135e+10
+Num nonzero elements in Q: 2344 total elements: 20910
+Ierr: 0
+objective function: -2.44853e+10 Plus RHS: 4.03282e+10
+Full time: 0.780485

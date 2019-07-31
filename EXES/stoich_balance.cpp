@@ -181,6 +181,7 @@ int main(int argc, char *argv[])
   expfile.ignore(400,'\n');//>>text>>text>>text;
   ProteinClass temp(-1);
   Interface itemp(0);
+  int cnt=0;
   for(i=0;i<Npro;i++){
       /*
 	Read in name of the protein, its copy numbers (use dummy value if unknown) and
@@ -200,9 +201,17 @@ int main(int argc, char *argv[])
 	  proList[i].isConstrained=false;
       //add this protein to the List.
       proList[i].index=i;
- 
+      cnt++;
       //cout <<genid[i]<<' '<<abund[i]<<endl;
   }
+  /*cout <<" -------------------- "<<endl;
+  cout <<" PROTEINS COUNTED: "<<cnt<<" FROM INPUT FILE: "<<argv[2]<<'\t';
+  
+  if(cnt!=Npro){
+      cout <<" ************************************ "<<endl;
+      cout <<"********WARNING: READ IN DIFFERENT NUMBER OF PROTEINS " <<cnt<<" THAN LISTED IN : "<<argv[1]<<", which is: "<<Npro<<" *********"<<endl;
+      cout <<" ************************************ "<<endl;
+      }*/
   int t=0;
   int *constrain=new int[Nconstrain];
   for(i=0;i<Npro;i++){
