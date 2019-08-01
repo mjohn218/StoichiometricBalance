@@ -1,0 +1,1051 @@
+------------------ Parameters -----------
+ N Proteins : 87
+ Minimum number of Complexes assignable (>=0): 50
+ Alpha value assigned: 1. A value of 1 works well. Very small forces all interfaces on same protein to be equal copy numbers. 
+ Number of times to repeat with randomized copy numbers, solely to evaluate p-value : 100
+ Only if above is >0: initialize random copies from the Cell Type distribution, or by shuffling the observed copy numbers: 0. (Set to 1 to sample from Cell Type distribution.) 
+ Max Complexes: 0. Default=0 will allow max to infinity (unconstrained max value). 
+----------
+ -------------------- 
+ NUMBER OF CONSTRAINED PROTEIN ABUNDANCES : 86. Calculated from file: ProteinList_CME_HELAconsensus_withMembrane.txt
+ -------------------- 
+NUMBER OF EDGES : 576 read from file: Network_CME_MAMMALS_withMembrane.txt
+READ IN THE SAME EXACT INTERACTION TWICE, DELETING ONE OF THEM. Lines: 576 and 577
+ -------------------- 
+AFTER CHECKING FOR DUPLICATES, EDGES READ IN IS NOW: 575
+ -------------------- 
+ -------------------- 
+ MATCH EDGES BASED ON PROTEIN LIST FROM FILE ProteinList_CME_HELAconsensus_withMembrane.txt
+CANNOT FIND BOTH PROTEINS IN EDGE: 3 skipping... SH3GL3 SH3GL3
+CANNOT FIND BOTH PROTEINS IN EDGE: 4 skipping... AMPH AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 10 skipping... SH3GL3 SH3GL2
+CANNOT FIND BOTH PROTEINS IN EDGE: 11 skipping... SH3GL3 SH3GL1
+CANNOT FIND BOTH PROTEINS IN EDGE: 24 skipping... CORO6 ACTB
+CANNOT FIND BOTH PROTEINS IN EDGE: 25 skipping... CORO6 ACTG1
+CANNOT FIND BOTH PROTEINS IN EDGE: 26 skipping... CORO6 ACTB
+CANNOT FIND BOTH PROTEINS IN EDGE: 27 skipping... CORO6 ACTG1
+CANNOT FIND BOTH PROTEINS IN EDGE: 43 skipping... AMPH AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 72 skipping... SGIP1 AP2A2
+CANNOT FIND BOTH PROTEINS IN EDGE: 73 skipping... SGIP1 AP2A1
+CANNOT FIND BOTH PROTEINS IN EDGE: 80 skipping... ARPC1A WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 88 skipping... DNM3 DNM1
+CANNOT FIND BOTH PROTEINS IN EDGE: 89 skipping... DNM3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 97 skipping... DNM3 DNM1
+CANNOT FIND BOTH PROTEINS IN EDGE: 98 skipping... DNM3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 103 skipping... SGIP1 ITSN1
+CANNOT FIND BOTH PROTEINS IN EDGE: 113 skipping... ITSN1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 114 skipping... ITSN1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 115 skipping... ITSN1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 116 skipping... ITSN1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 127 skipping... ITSN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 128 skipping... ITSN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 129 skipping... ITSN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 130 skipping... ITSN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 156 skipping... AMPH SYNJ1
+CANNOT FIND BOTH PROTEINS IN EDGE: 217 skipping... SH3GL3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 218 skipping... SH3GL3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 219 skipping... SH3GL3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 221 skipping... ACTR2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 222 skipping... ACTR3 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 238 skipping... SH3KBP1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 239 skipping... SH3KBP1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 251 skipping... ACTR2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 258 skipping... ACTR3 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 262 skipping... AMPH AP2A2
+CANNOT FIND BOTH PROTEINS IN EDGE: 263 skipping... AMPH AP2A1
+CANNOT FIND BOTH PROTEINS IN EDGE: 264 skipping... AMPH SYNJ1
+CANNOT FIND BOTH PROTEINS IN EDGE: 265 skipping... AMPH BIN1
+CANNOT FIND BOTH PROTEINS IN EDGE: 295 skipping... CLTC SNAP91
+CANNOT FIND BOTH PROTEINS IN EDGE: 296 skipping... CLTC SNAP91
+CANNOT FIND BOTH PROTEINS IN EDGE: 303 skipping... CLTC AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 320 skipping... DNM1 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 325 skipping... DNM2 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 328 skipping... DNM3 SH3GL2
+CANNOT FIND BOTH PROTEINS IN EDGE: 329 skipping... DNM3 SH3GL3
+CANNOT FIND BOTH PROTEINS IN EDGE: 330 skipping... DNM3 DNM1
+CANNOT FIND BOTH PROTEINS IN EDGE: 331 skipping... DNM3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 332 skipping... DNM3 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 333 skipping... DNM3 SH3GL1
+CANNOT FIND BOTH PROTEINS IN EDGE: 335 skipping... DYRK1A AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 345 skipping... EPS15 SNAP91
+CANNOT FIND BOTH PROTEINS IN EDGE: 358 skipping... FNBP1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 364 skipping... FNBP1 DNM3
+CANNOT FIND BOTH PROTEINS IN EDGE: 376 skipping... ITSN1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 389 skipping... ITSN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 410 skipping... PACSIN2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 414 skipping... SGIP1 ITSN1
+CANNOT FIND BOTH PROTEINS IN EDGE: 415 skipping... SGIP1 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 416 skipping... SGIP1 EPS15
+CANNOT FIND BOTH PROTEINS IN EDGE: 427 skipping... SH3GL2 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 432 skipping... SH3GL3 DNM2
+CANNOT FIND BOTH PROTEINS IN EDGE: 433 skipping... SH3GL3 SH3GL1
+CANNOT FIND BOTH PROTEINS IN EDGE: 434 skipping... SH3GL3 SH3GL2
+CANNOT FIND BOTH PROTEINS IN EDGE: 435 skipping... SH3GL3 SH3GL3
+CANNOT FIND BOTH PROTEINS IN EDGE: 438 skipping... SH3KBP1 SH3GL3
+CANNOT FIND BOTH PROTEINS IN EDGE: 451 skipping... SH3KBP1 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 454 skipping... SNX9 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 463 skipping... SNX9 DNM3
+CANNOT FIND BOTH PROTEINS IN EDGE: 468 skipping... TNK2 AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 469 skipping... TNK2 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 471 skipping... TRIP10 WAS
+CANNOT FIND BOTH PROTEINS IN EDGE: 476 skipping... WAS CTTN
+CANNOT FIND BOTH PROTEINS IN EDGE: 477 skipping... CLTC AMPH
+CANNOT FIND BOTH PROTEINS IN EDGE: 488 skipping... CORO6 CORO1A
+CANNOT FIND BOTH PROTEINS IN EDGE: 491 skipping... DNM3 DNM3
+CANNOT FIND BOTH PROTEINS IN EDGE: 509 skipping... AMPH PI45P2
+CANNOT FIND BOTH PROTEINS IN EDGE: 510 skipping... AMPH PI_PS
+CANNOT FIND BOTH PROTEINS IN EDGE: 513 skipping... DNM3 PI45P2
+CANNOT FIND BOTH PROTEINS IN EDGE: 514 skipping... SNAP91 PI45P2
+CANNOT FIND BOTH PROTEINS IN EDGE: 535 skipping... SH3GL3 PI45P2
+CANNOT FIND BOTH PROTEINS IN EDGE: 538 skipping... SH3GL3 PI_PS
+CANNOT FIND BOTH PROTEINS IN EDGE: 544 skipping... SGIP1 PI_PS
+CANNOT FIND BOTH PROTEINS IN EDGE: 545 skipping... SGIP1 PI45P2
+CANNOT FIND BOTH PROTEINS IN EDGE: 550 skipping... SNAP91 CARGO_VAMP2
+CANNOT FIND BOTH PROTEINS IN EDGE: 564 skipping... STON2 CARGO_SYT1
+ ------------------- 
+ TOTAL PROTEINS: 87 TOTAL INTERFACES: 340 MAX PARNTER PER INTERFACE: 34
+ ---------------------
+ Total IIN Edges for these proteins: 489. Skipping a total of: 86 edges from the file Network_CME_MAMMALS_withMembrane.txt that did not have proteins listed in the file ProteinList_CME_HELAconsensus_withMembrane.txt
+----------------------------------
+ PRINT OUT PROTEIN INTERFACES and PROPERTIES : 
+----------------------------------
+ Protein index: 0 Name: AP2A1 copies: 281770 Total interfaces: 8 Name, index: 	A2BS,60	A2PLAT,85	core_to_linker,159	alpha_to_mu_interface,176	alpha_to_beta_interface,264	alpha_to_sigma_interface,267	PIP2_BIND,277	CARGO_BIND,309	
+ Protein index: 1 Name: AP2A2 copies: 57275 Total interfaces: 8 Name, index: 	A2BS,42	A2PLAT,86	core_to_linker,162	alpha_to_mu_interface,177	alpha_to_beta_interface,263	alpha_to_sigma_interface,266	PIP2_BIND,279	CARGO_BIND,311	
+ Protein index: 2 Name: AP2B1 copies: 407590 Total interfaces: 7 Name, index: 	CLAT_linker,58	B2PLAT,94	B2BS,99	beta_to_sigma_interface,164	beta_to_mu_interface,171	beta_to_alpha_interface,262	PIP2_BIND,280	
+ Protein index: 3 Name: AP2M1 copies: 249307 Total interfaces: 6 Name, index: 	M2MUH,168	mu_to_beta_interface,170	mu_to_sigma_interface,172	PHOSPHO_SITE,174	mu_to_alpha_interface,175	PIP2_BIND,281	
+ Protein index: 4 Name: AP2S1 copies: 193931 Total interfaces: 4 Name, index: 	sigma_to_beta_interface,165	sigma_to_mu_interface,173	sigma_to_alpha_interface,265	CARGO_BIND,313	
+ Protein index: 5 Name: CLTC copies: 1696973 Total interfaces: 5 Name, index: 	TRIMER,48	TD_CBOX,83	AD,199	PROX,200	TD_WBOX,253	
+ Protein index: 6 Name: CLTCL1 copies: 20291 Total interfaces: 3 Name, index: 	TRIMER,77	PROX,206	TD_CBOX,207	
+ Protein index: 7 Name: CLTA copies: 1528192 Total interfaces: 2 Name, index: 	BIND,201	interface_hspa8,231	
+ Protein index: 8 Name: CLTB copies: 778407 Total interfaces: 3 Name, index: 	interface_hip1_hip1r,46	BIND,202	interface_hspa8,232	
+ Protein index: 9 Name: HIP1 copies: 14297 Total interfaces: 5 Name, index: 	TALIN,31	CC,45	FXDIF,47	CLAT,205	ENTH,282	
+ Protein index: 10 Name: EPS15 copies: 81853 Total interfaces: 8 Name, index: 	EH3,90	DPF_1-6,92	EH2,116	EH1,137	DPF_linker_11-12,166	DPF_7-15,224	CC,225	UIM2,226	
+ Protein index: 11 Name: FCHO1 copies: 3705 Total interfaces: 6 Name, index: 	FBAR_top,6	FBAR_bottom,8	FBAR_DIMER,35	MUH,37	LINKER,160	FBAR_MEM,285	
+ Protein index: 12 Name: FCHO2 copies: 32874 Total interfaces: 6 Name, index: 	FBAR_bottom,7	FBAR_top,9	FBAR_DIMER,36	MUH,55	LINKER,161	FBAR_MEM,286	
+ Protein index: 13 Name: PICALM copies: 249425 Total interfaces: 5 Name, index: 	DPF,38	NPF1_2,235	CLAT,246	ANTH_MEM,287	ANTH_VAMP,314	
+ Protein index: 14 Name: ITSN1 copies: 19297 Total interfaces: 12 Name, index: 	EH1,34	SH3B,52	SH3D,71	EH2,73	RhoGEF_autoinhibit,101	SH3E_LINK_toDH,102	SH3C,105	SH3E,108	SH3A,123	LINK_SH3AB,233	CC1,236	PH,288	
+ Protein index: 15 Name: DNM2 copies: 343226 Total interfaces: 9 Name, index: 	PRD2,51	PRD_1_4-8_10-15,106	PRD3,113	PRD9,130	Actin_bind,142	GED,211	STALK_DIMER,214	MD,215	PH,289	
+ Protein index: 16 Name: SYNJ1 copies: 9358 Total interfaces: 5 Name, index: 	FxDxF,43	WVxF,44	PRD_span,50	PRD_1285to1290,74	IPPc_Sac1,332	
+ Protein index: 17 Name: SYNJ2 copies: 2913 Total interfaces: 3 Name, index: 	PRD_1285to1290,124	PRD_span,234	IPPc_Sac1,333	
+ Protein index: 18 Name: OCRL copies: 20354 Total interfaces: 5 Name, index: 	CLAT_NS,95	FxDxF,244	CLAT,245	PRD,254	IPPc,334	
+ Protein index: 19 Name: DNM1 copies: 113 Total interfaces: 10 Name, index: 	PRD_1_4-8_10-15,21	PRD2,22	PRD3,23	PRD9,24	Actin_bind,75	MD,210	GED,212	STALK_DIMER,213	PHOSPHO_SITES_PRD,217	PH,290	
+ Protein index: 20 Name: PIP5K1C copies: 3115 Total interfaces: 2 Name, index: 	CTD,100	Kinase_lipid,336	
+ Protein index: 21 Name: HIP1R copies: 37796 Total interfaces: 6 Name, index: 	TALIN,30	PRD_span,39	PRD_1025to1030,140	CC,195	CLAT,268	ENTH,284	
+ Protein index: 22 Name: DNAJC6 copies: 811 Total interfaces: 3 Name, index: 	CLAT,197	Jdomain,276	PTENlike,338	
+ Protein index: 23 Name: HSPA8 copies: 8570840 Total interfaces: 3 Name, index: 	SBD,192	HSPATP,230	COFACTOR,275	
+ Protein index: 24 Name: EPS15L1 copies: 182903 Total interfaces: 3 Name, index: 	EH2,88	EH3,120	EH1,221	
+ Protein index: 25 Name: DAB2 copies: 880533 Total interfaces: 7 Name, index: 	DPF,54	NPF3_4_5,91	CLAT,196	CTD,242	PRD_709to725,250	PTB_MEM,291	PTB_CARGO,317	
+ Protein index: 26 Name: STON2 copies: 1571 Total interfaces: 3 Name, index: 	WVxF,72	NPF2,89	NPF1,114	
+ Protein index: 27 Name: LDLRAP1 copies: 9213 Total interfaces: 4 Name, index: 	CLAT,238	AP2BIND,239	PTB_MEM,292	PTB_CARGO,319	
+ Protein index: 28 Name: ARRB1 copies: 57100 Total interfaces: 4 Name, index: 	CTD,167	CLAT,204	PIP2_BIND,293	CARGO_BIND,327	
+ Protein index: 29 Name: ARRB2 copies: 69260 Total interfaces: 4 Name, index: 	CTD,163	CLAT,203	PIP2_BIND,294	CARGO_BIND,329	
+ Protein index: 30 Name: NUMB copies: 39228 Total interfaces: 7 Name, index: 	PRD,70	PhosphoSite_T102,78	NPF,121	PhosphoSites,190	DPF,243	PTB_MEM,295	PTB_CARGO,320	
+ Protein index: 31 Name: EPN1 copies: 323639 Total interfaces: 7 Name, index: 	NPF,33	DPW,93	CLAT,218	ENTH_H0,219	DEX,222	ENTH,296	UIM,322	
+ Protein index: 32 Name: EPN2 copies: 83147 Total interfaces: 5 Name, index: 	NPF,119	CLAT,198	ENTH_H0,223	ENTH,297	UIM,323	
+ Protein index: 33 Name: EPN3 copies: -1 Total interfaces: 4 Name, index: 	NPF,117	ENTH_H0,220	ENTH,299	UIM,324	
+ Protein index: 34 Name: TRIP10 copies: 145600 Total interfaces: 6 Name, index: 	SH3_1,132	FBAR_DIMER,229	SH3_2,257	FBAR_TOP,258	FBAR_BOTTOM,259	FBAR_MEM,298	
+ Protein index: 35 Name: ACTG1 copies: 11241681 Total interfaces: 4 Name, index: 	Subunit4_outsideFilament,14	Subunit1_2_outsideFilament,16	BarbedEnd_back,19	PointedEnd_Back,144	
+ Protein index: 36 Name: ACTB copies: 2070695 Total interfaces: 4 Name, index: 	Subunit4_outsideFilament,13	Subunit1_2_outsideFilament,15	BarbedEnd_back,18	PointedEnd_Back,143	
+ Protein index: 37 Name: ARPC5L copies: 605294 Total interfaces: 3 Name, index: 	interface_to_arpc4,182	interface_to_actr2,184	interface_to_arpc1a,260	
+ Protein index: 38 Name: ARPC3 copies: 756056 Total interfaces: 2 Name, index: 	interface_to_actin_filament,32	interface_to_actr3,152	
+ Protein index: 39 Name: ARPC4 copies: 622025 Total interfaces: 5 Name, index: 	interface_to_actr2,149	interface_to_actr3,154	interface_to_arpc1a,179	interface_to_arpc2,180	interface_to_arpc5l,183	
+ Protein index: 40 Name: ARPC2 copies: 617419 Total interfaces: 2 Name, index: 	interface_to_actr3,157	interface_to_arpc4,181	
+ Protein index: 41 Name: ARPC1A copies: 95829 Total interfaces: 3 Name, index: 	interface_to_actin_filament_acidic,62	interface_to_arpc4,178	interface_to_arpc5l,261	
+ Protein index: 42 Name: ACTR2 copies: 670302 Total interfaces: 6 Name, index: 	barbed_end_groove_to_Chelix,98	back_barbed_end_to_actin,145	interface_to_actr3,146	interface_to_arpc4,148	side_front_to_acidic_domain,150	interface_to_arpc5l,185	
+ Protein index: 43 Name: ACTR3 copies: 761171 Total interfaces: 7 Name, index: 	barbed_end_groove_to_Chelix,96	interface_to_actr2,147	interface_to_arpc3,151	interface_to_arpc4,153	back_barbed_end_to_actin,155	interface_to_arpc2,156	side_front_to_acidic_domain,158	
+ Protein index: 44 Name: BMP2K copies: 5456 Total interfaces: 1 Name, index: 	PKD,189	
+ Protein index: 45 Name: AAK1 copies: 7661 Total interfaces: 1 Name, index: 	KD,56	
+ Protein index: 46 Name: FNBP1L copies: 78012 Total interfaces: 5 Name, index: 	FBAR_DIMER,79	FBAR_TOP,80	FBAR_BOTTOM,81	SH3,133	FBAR_MEM,301	
+ Protein index: 47 Name: CAPZA2 copies: 965680 Total interfaces: 2 Name, index: 	interface_to_actin,29	interface_to_capzb,194	
+ Protein index: 48 Name: CAPZB copies: 1288194 Total interfaces: 3 Name, index: 	interface_to_actin,28	interface_to_hspa8,191	interface_to_capza2,193	
+ Protein index: 49 Name: CFL1 copies: 12981148 Total interfaces: 1 Name, index: 	ADFH,64	
+ Protein index: 50 Name: CORO1A copies: 4831 Total interfaces: 3 Name, index: 	CC_actinbind,65	beta_propeller,66	CC_dimer,67	
+ Protein index: 51 Name: CORO7 copies: 111744 Total interfaces: 2 Name, index: 	Tyr_motif,169	interface_to_eps15,227	
+ Protein index: 52 Name: WASL copies: 130113 Total interfaces: 6 Name, index: 	VCA_V_WH2_1,26	VCA_V_WH2_2,27	VCA_acidic,76	VCA_central,97	PRD_span,112	PRD_277to392,139	
+ Protein index: 53 Name: MYO1E copies: 214955 Total interfaces: 2 Name, index: 	SH3,129	PH,302	
+ Protein index: 54 Name: BIN1 copies: 87056 Total interfaces: 5 Name, index: 	SH3,49	BAR_DIMER,186	BAR_TOP,187	BAR_BOTTOM,188	BAR_MEM,303	
+ Protein index: 55 Name: SH3GL2 copies: 29976 Total interfaces: 5 Name, index: 	BAR_top,4	BAR_bottom,5	SH3,127	BAR_DIMER,249	BAR_MEM,304	
+ Protein index: 56 Name: SH3GL1 copies: 316561 Total interfaces: 5 Name, index: 	BAR_top,2	BAR_bottom,3	SH3,53	BAR_DIMER,248	BAR_MEM,305	
+ Protein index: 57 Name: DBNL copies: 250160 Total interfaces: 2 Name, index: 	SH3,20	ADFH,25	
+ Protein index: 58 Name: FNBP1 copies: 35892 Total interfaces: 5 Name, index: 	FBAR_top,0	FBAR_bottom,1	SH3,134	FBAR_DIMER,228	FBAR_MEM,300	
+ Protein index: 59 Name: PACSIN2 copies: 266467 Total interfaces: 5 Name, index: 	SH3,128	FBAR_DIMER,270	FBAR_top,271	FBAR_bottom,272	FBAR_MEM,306	
+ Protein index: 60 Name: EPS8 copies: 8801 Total interfaces: 2 Name, index: 	Helix_Bundle,12	AMPHI_HELIX,17	
+ Protein index: 61 Name: NECAP1 copies: 63106 Total interfaces: 2 Name, index: 	PHear,57	WXXF_2,59	
+ Protein index: 62 Name: MYO6 copies: 94106 Total interfaces: 2 Name, index: 	DT,240	WWY,241	
+ Protein index: 63 Name: CTTN copies: 1206471 Total interfaces: 5 Name, index: 	SH3,40	ACIDICMOT,61	SRC_BIND,63	PhosphoSites,103	HSrepeats,209	
+ Protein index: 64 Name: TNK2 copies: 1913 Total interfaces: 5 Name, index: 	CLAT,87	PKD,104	SH3,125	PRD,208	PhosphoSites,256	
+ Protein index: 65 Name: SNX9 copies: 84547 Total interfaces: 6 Name, index: 	BAR_top,10	BAR_bottom,11	SH3,126	LC,252	BAR_DIMER,255	BAR_PX,307	
+ Protein index: 66 Name: ITSN2 copies: 25243 Total interfaces: 7 Name, index: 	WVxF,41	SH3A,68	SH3D,69	SH3C,107	SH3E,109	SH3B,111	CC1,237	
+ Protein index: 67 Name: AGFG1 copies: 238483 Total interfaces: 4 Name, index: 	CLAT,82	FXXFXXF,84	NPF,118	CARGO_BIND,325	
+ Protein index: 68 Name: INPPL1 copies: 77115 Total interfaces: 3 Name, index: 	PRD_span,110	PRD_944to949,122	IPPc,330	
+ Protein index: 69 Name: DYRK1A copies: 22916 Total interfaces: 2 Name, index: 	Kinase_ST,216	Phospho_Site,269	
+ Protein index: 70 Name: SH3BP4 copies: 1410 Total interfaces: 3 Name, index: 	NPF,115	SH3,131	CC,247	
+ Protein index: 71 Name: SH3KBP1 copies: 147078 Total interfaces: 5 Name, index: 	SH3C,135	SH3A,136	SH3B,138	PRD,141	coiled_coil,251	
+ Protein index: 72 Name: GAK copies: 42742 Total interfaces: 3 Name, index: 	CLAT,273	Jdomain,274	PTENlike,339	
+ Protein index: 73 Name: PI4KA copies: 9740 Total interfaces: 1 Name, index: 	Kinase_lipid,335	
+ Protein index: 74 Name: PI45P2 copies: 26000000 Total interfaces: 1 Name, index: 	Head_group,278	
+ Protein index: 75 Name: PI_PS copies: 260000000 Total interfaces: 1 Name, index: 	Head_group,283	
+ Protein index: 76 Name: PI345P3 copies: 29092 Total interfaces: 1 Name, index: 	Head_group,331	
+ Protein index: 77 Name: PI4P copies: 17700000 Total interfaces: 1 Name, index: 	Head_group,337	
+ Protein index: 78 Name: PI34P2 copies: 43638 Total interfaces: 1 Name, index: 	Head_group,308	
+ Protein index: 79 Name: CARGO_YXXO copies: 2615760 Total interfaces: 1 Name, index: 	YXXO,312	
+ Protein index: 80 Name: CARGO_DILEU copies: 212999 Total interfaces: 1 Name, index: 	DEXXXLLI,310	
+ Protein index: 81 Name: CARGO_PTB copies: 587546 Total interfaces: 1 Name, index: 	FYXNPXYF,318	
+ Protein index: 82 Name: CARGO_GPCR copies: 52472 Total interfaces: 1 Name, index: 	pSpT,328	
+ Protein index: 83 Name: CARGO_ubiq copies: 115223 Total interfaces: 1 Name, index: 	ubiquitin,321	
+ Protein index: 84 Name: CARGO_VAMP7 copies: 152764 Total interfaces: 1 Name, index: 	longin,326	
+ Protein index: 85 Name: CARGO_SNARE copies: 1341141 Total interfaces: 1 Name, index: 	coiled_coil,315	
+ Protein index: 86 Name: CARGO_VAMP2 copies: 6333 Total interfaces: 1 Name, index: 	coiled_coil,316	
+----------------------------------
+ PRINT OUT INTERFACE INTERACTION NETWORK 
+----------------------------------
+0 Name: FNBP1.FBAR_top Npartner: 1	 Partners: FNBP1.FBAR_bottom	
+1 Name: FNBP1.FBAR_bottom Npartner: 1	 Partners: FNBP1.FBAR_top	
+2 Name: SH3GL1.BAR_top Npartner: 1	 Partners: SH3GL1.BAR_bottom	
+3 Name: SH3GL1.BAR_bottom Npartner: 2	 Partners: SH3GL1.BAR_top	SH3GL2.BAR_top	
+4 Name: SH3GL2.BAR_top Npartner: 2	 Partners: SH3GL2.BAR_bottom	SH3GL1.BAR_bottom	
+5 Name: SH3GL2.BAR_bottom Npartner: 1	 Partners: SH3GL2.BAR_top	
+6 Name: FCHO1.FBAR_top Npartner: 2	 Partners: FCHO2.FBAR_bottom	FCHO1.FBAR_bottom	
+7 Name: FCHO2.FBAR_bottom Npartner: 2	 Partners: FCHO1.FBAR_top	FCHO2.FBAR_top	
+8 Name: FCHO1.FBAR_bottom Npartner: 1	 Partners: FCHO1.FBAR_top	
+9 Name: FCHO2.FBAR_top Npartner: 1	 Partners: FCHO2.FBAR_bottom	
+10 Name: SNX9.BAR_top Npartner: 1	 Partners: SNX9.BAR_bottom	
+11 Name: SNX9.BAR_bottom Npartner: 1	 Partners: SNX9.BAR_top	
+12 Name: EPS8.Helix_Bundle Npartner: 4	 Partners: ACTB.Subunit4_outsideFilament	ACTG1.Subunit4_outsideFilament	ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+13 Name: ACTB.Subunit4_outsideFilament Npartner: 2	 Partners: EPS8.Helix_Bundle	CORO1A.beta_propeller	
+14 Name: ACTG1.Subunit4_outsideFilament Npartner: 2	 Partners: EPS8.Helix_Bundle	CORO1A.beta_propeller	
+15 Name: ACTB.Subunit1_2_outsideFilament Npartner: 11	 Partners: EPS8.Helix_Bundle	DBNL.ADFH	WASL.VCA_V_WH2_1	WASL.VCA_V_WH2_2	HIP1R.TALIN	HIP1.TALIN	ARPC3.interface_to_actin_filament	CORO1A.CC_actinbind	DNM1.Actin_bind	DNM2.Actin_bind	CFL1.ADFH	
+16 Name: ACTG1.Subunit1_2_outsideFilament Npartner: 10	 Partners: EPS8.Helix_Bundle	DBNL.ADFH	HIP1R.TALIN	HIP1.TALIN	ARPC3.interface_to_actin_filament	CORO1A.CC_actinbind	WASL.VCA_V_WH2_2	WASL.VCA_V_WH2_1	CFL1.ADFH	CTTN.HSrepeats	
+17 Name: EPS8.AMPHI_HELIX Npartner: 2	 Partners: ACTB.BarbedEnd_back	ACTG1.BarbedEnd_back	
+18 Name: ACTB.BarbedEnd_back Npartner: 4	 Partners: EPS8.AMPHI_HELIX	CAPZB.interface_to_actin	CAPZA2.interface_to_actin	ACTB.PointedEnd_Back	
+19 Name: ACTG1.BarbedEnd_back Npartner: 5	 Partners: EPS8.AMPHI_HELIX	CAPZB.interface_to_actin	CAPZA2.interface_to_actin	ACTB.PointedEnd_Back	ACTG1.PointedEnd_Back	
+20 Name: DBNL.SH3 Npartner: 4	 Partners: DNM1.PRD_1_4-8_10-15	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	
+21 Name: DNM1.PRD_1_4-8_10-15 Npartner: 9	 Partners: DBNL.SH3	ITSN2.SH3A	SH3KBP1.SH3C	FNBP1.SH3	ITSN1.SH3A	MYO1E.SH3	SH3BP4.SH3	SH3KBP1.SH3A	SNX9.SH3	
+22 Name: DNM1.PRD2 Npartner: 12	 Partners: DBNL.SH3	BIN1.SH3	ITSN2.SH3A	SNX9.SH3	SH3BP4.SH3	MYO1E.SH3	ITSN1.SH3A	FNBP1.SH3	SH3KBP1.SH3C	SH3KBP1.SH3A	PACSIN2.SH3	SH3GL1.SH3	
+23 Name: DNM1.PRD3 Npartner: 11	 Partners: DBNL.SH3	ITSN2.SH3A	SH3GL1.SH3	SNX9.SH3	SH3BP4.SH3	MYO1E.SH3	ITSN1.SH3A	FNBP1.SH3	SH3KBP1.SH3C	SH3KBP1.SH3A	BIN1.SH3	
+24 Name: DNM1.PRD9 Npartner: 10	 Partners: DBNL.SH3	ITSN2.SH3A	SNX9.SH3	SH3BP4.SH3	MYO1E.SH3	ITSN1.SH3A	FNBP1.SH3	SH3KBP1.SH3C	SH3KBP1.SH3A	SH3GL2.SH3	
+25 Name: DBNL.ADFH Npartner: 2	 Partners: ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+26 Name: WASL.VCA_V_WH2_1 Npartner: 2	 Partners: ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+27 Name: WASL.VCA_V_WH2_2 Npartner: 2	 Partners: ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+28 Name: CAPZB.interface_to_actin Npartner: 2	 Partners: ACTB.BarbedEnd_back	ACTG1.BarbedEnd_back	
+29 Name: CAPZA2.interface_to_actin Npartner: 2	 Partners: ACTB.BarbedEnd_back	ACTG1.BarbedEnd_back	
+30 Name: HIP1R.TALIN Npartner: 2	 Partners: ACTG1.Subunit1_2_outsideFilament	ACTB.Subunit1_2_outsideFilament	
+31 Name: HIP1.TALIN Npartner: 2	 Partners: ACTG1.Subunit1_2_outsideFilament	ACTB.Subunit1_2_outsideFilament	
+32 Name: ARPC3.interface_to_actin_filament Npartner: 2	 Partners: ACTG1.Subunit1_2_outsideFilament	ACTB.Subunit1_2_outsideFilament	
+33 Name: EPN1.NPF Npartner: 6	 Partners: ITSN1.EH1	ITSN1.EH2	EPS15.EH2	EPS15.EH3	EPS15L1.EH1	EPS15.EH1	
+34 Name: ITSN1.EH1 Npartner: 4	 Partners: EPN1.NPF	DAB2.NPF3_4_5	PICALM.NPF1_2	STON2.NPF2	
+35 Name: FCHO1.FBAR_DIMER Npartner: 2	 Partners: FCHO1.FBAR_DIMER	FCHO2.FBAR_DIMER	
+36 Name: FCHO2.FBAR_DIMER Npartner: 2	 Partners: FCHO1.FBAR_DIMER	FCHO2.FBAR_DIMER	
+37 Name: FCHO1.MUH Npartner: 2	 Partners: PICALM.DPF	EPS15.DPF_1-6	
+38 Name: PICALM.DPF Npartner: 1	 Partners: FCHO1.MUH	
+39 Name: HIP1R.PRD_span Npartner: 1	 Partners: CTTN.SH3	
+40 Name: CTTN.SH3 Npartner: 7	 Partners: HIP1R.PRD_span	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	TNK2.PRD	WASL.PRD_span	DNM2.PRD_1_4-8_10-15	
+41 Name: ITSN2.WVxF Npartner: 1	 Partners: AP2A2.A2BS	
+42 Name: AP2A2.A2BS Npartner: 7	 Partners: ITSN2.WVxF	SYNJ1.FxDxF	SYNJ1.WVxF	HIP1.FXDIF	NECAP1.WXXF_2	STON2.WVxF	CLTC.AD	
+43 Name: SYNJ1.FxDxF Npartner: 1	 Partners: AP2A2.A2BS	
+44 Name: SYNJ1.WVxF Npartner: 2	 Partners: AP2A2.A2BS	AP2A1.A2BS	
+45 Name: HIP1.CC Npartner: 2	 Partners: CLTB.interface_hip1_hip1r	HIP1.CC	
+46 Name: CLTB.interface_hip1_hip1r Npartner: 2	 Partners: HIP1.CC	HIP1R.CC	
+47 Name: HIP1.FXDIF Npartner: 2	 Partners: AP2A2.A2BS	AP2A1.A2BS	
+48 Name: CLTC.TRIMER Npartner: 2	 Partners: CLTC.TRIMER	CLTCL1.TRIMER	
+49 Name: BIN1.SH3 Npartner: 8	 Partners: SYNJ1.PRD_span	DNM1.PRD2	DNM2.PRD2	SYNJ1.PRD_1285to1290	WASL.PRD_span	DNM1.PRD3	DNM2.PRD3	TNK2.PRD	
+50 Name: SYNJ1.PRD_span Npartner: 8	 Partners: BIN1.SH3	ITSN1.SH3A	MYO1E.SH3	PACSIN2.SH3	SH3GL1.SH3	SH3GL2.SH3	SNX9.SH3	TNK2.SH3	
+51 Name: DNM2.PRD2 Npartner: 18	 Partners: BIN1.SH3	SNX9.SH3	SH3BP4.SH3	TRIP10.SH3_1	MYO1E.SH3	ITSN2.SH3A	ITSN1.SH3A	FNBP1L.SH3	FNBP1.SH3	ITSN2.SH3E	ITSN1.SH3E	ITSN2.SH3C	ITSN1.SH3C	CTTN.SH3	SH3KBP1.SH3C	PACSIN2.SH3	SH3GL1.SH3	SH3KBP1.SH3A	
+52 Name: ITSN1.SH3B Npartner: 4	 Partners: SH3GL1.SH3	INPPL1.PRD_span	WASL.PRD_span	SH3GL2.SH3	
+53 Name: SH3GL1.SH3 Npartner: 8	 Partners: ITSN1.SH3B	DNM2.PRD3	DNM1.PRD3	SYNJ1.PRD_1285to1290	SYNJ1.PRD_span	DNM2.PRD2	DNM1.PRD2	SH3KBP1.PRD	
+54 Name: DAB2.DPF Npartner: 3	 Partners: FCHO2.MUH	AP2A2.A2PLAT	AP2A1.A2PLAT	
+55 Name: FCHO2.MUH Npartner: 3	 Partners: DAB2.DPF	EPS15.DPF_1-6	EPS15.DPF_7-15	
+56 Name: AAK1.KD Npartner: 3	 Partners: AAK1.KD	NUMB.PhosphoSite_T102	AP2M1.PHOSPHO_SITE	
+57 Name: NECAP1.PHear Npartner: 2	 Partners: AP2B1.CLAT_linker	AP2M1.M2MUH	
+58 Name: AP2B1.CLAT_linker Npartner: 2	 Partners: NECAP1.PHear	CLTC.TD_CBOX	
+59 Name: NECAP1.WXXF_2 Npartner: 2	 Partners: AP2A2.A2BS	AP2A1.A2BS	
+60 Name: AP2A1.A2BS Npartner: 4	 Partners: NECAP1.WXXF_2	SYNJ1.WVxF	HIP1.FXDIF	CLTC.AD	
+61 Name: CTTN.ACIDICMOT Npartner: 3	 Partners: ARPC1A.interface_to_actin_filament_acidic	ACTR3.side_front_to_acidic_domain	ACTR2.side_front_to_acidic_domain	
+62 Name: ARPC1A.interface_to_actin_filament_acidic Npartner: 2	 Partners: CTTN.ACIDICMOT	WASL.VCA_acidic	
+63 Name: CTTN.SRC_BIND Npartner: 1	 Partners: CFL1.ADFH	
+64 Name: CFL1.ADFH Npartner: 3	 Partners: CTTN.SRC_BIND	ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+65 Name: CORO1A.CC_actinbind Npartner: 2	 Partners: ACTB.Subunit1_2_outsideFilament	ACTG1.Subunit1_2_outsideFilament	
+66 Name: CORO1A.beta_propeller Npartner: 2	 Partners: ACTB.Subunit4_outsideFilament	ACTG1.Subunit4_outsideFilament	
+67 Name: CORO1A.CC_dimer Npartner: 1	 Partners: CORO1A.CC_dimer	
+68 Name: ITSN2.SH3A Npartner: 10	 Partners: DNM1.PRD_1_4-8_10-15	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	WASL.PRD_span	DNM2.PRD_1_4-8_10-15	SYNJ2.PRD_span	
+69 Name: ITSN2.SH3D Npartner: 3	 Partners: NUMB.PRD	WASL.PRD_span	SH3KBP1.PRD	
+70 Name: NUMB.PRD Npartner: 2	 Partners: ITSN2.SH3D	ITSN1.SH3D	
+71 Name: ITSN1.SH3D Npartner: 4	 Partners: NUMB.PRD	INPPL1.PRD_span	WASL.PRD_span	INPPL1.PRD_944to949	
+72 Name: STON2.WVxF Npartner: 2	 Partners: AP2A2.A2BS	AP2M1.M2MUH	
+73 Name: ITSN1.EH2 Npartner: 2	 Partners: EPN1.NPF	STON2.NPF1	
+74 Name: SYNJ1.PRD_1285to1290 Npartner: 11	 Partners: BIN1.SH3	TNK2.SH3	SNX9.SH3	SH3GL1.SH3	SH3GL2.SH3	PACSIN2.SH3	MYO1E.SH3	ITSN1.SH3A	SH3KBP1.SH3B	SH3KBP1.SH3C	SH3KBP1.SH3A	
+75 Name: DNM1.Actin_bind Npartner: 1	 Partners: ACTB.Subunit1_2_outsideFilament	
+76 Name: WASL.VCA_acidic Npartner: 3	 Partners: ARPC1A.interface_to_actin_filament_acidic	ACTR2.side_front_to_acidic_domain	ACTR3.side_front_to_acidic_domain	
+77 Name: CLTCL1.TRIMER Npartner: 2	 Partners: CLTCL1.TRIMER	CLTC.TRIMER	
+78 Name: NUMB.PhosphoSite_T102 Npartner: 1	 Partners: AAK1.KD	
+79 Name: FNBP1L.FBAR_DIMER Npartner: 1	 Partners: FNBP1L.FBAR_DIMER	
+80 Name: FNBP1L.FBAR_TOP Npartner: 1	 Partners: FNBP1L.FBAR_BOTTOM	
+81 Name: FNBP1L.FBAR_BOTTOM Npartner: 1	 Partners: FNBP1L.FBAR_TOP	
+82 Name: AGFG1.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+83 Name: CLTC.TD_CBOX Npartner: 16	 Partners: AGFG1.CLAT	AP2B1.CLAT_linker	TNK2.CLAT	OCRL.CLAT_NS	DAB2.CLAT	DNAJC6.CLAT	EPN2.CLAT	ARRB2.CLAT	ARRB1.CLAT	HIP1.CLAT	EPN1.CLAT	LDLRAP1.CLAT	OCRL.CLAT	PICALM.CLAT	HIP1R.CLAT	GAK.CLAT	
+84 Name: AGFG1.FXXFXXF Npartner: 2	 Partners: AP2A1.A2PLAT	AP2A2.A2PLAT	
+85 Name: AP2A1.A2PLAT Npartner: 8	 Partners: AGFG1.FXXFXXF	DAB2.DPF	EPN1.DPW	EPS15.DPF_7-15	MYO6.DT	NUMB.DPF	OCRL.FxDxF	SNX9.LC	
+86 Name: AP2A2.A2PLAT Npartner: 8	 Partners: AGFG1.FXXFXXF	DAB2.DPF	EPN1.DPW	EPS15.DPF_7-15	MYO6.DT	NUMB.DPF	OCRL.FxDxF	SNX9.LC	
+87 Name: TNK2.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+88 Name: EPS15L1.EH2 Npartner: 3	 Partners: STON2.NPF2	EPN2.NPF	STON2.NPF1	
+89 Name: STON2.NPF2 Npartner: 4	 Partners: EPS15L1.EH2	EPS15.EH1	EPS15.EH2	ITSN1.EH1	
+90 Name: EPS15.EH3 Npartner: 6	 Partners: DAB2.NPF3_4_5	SH3BP4.NPF	AGFG1.NPF	NUMB.NPF	EPN1.NPF	EPN3.NPF	
+91 Name: DAB2.NPF3_4_5 Npartner: 4	 Partners: EPS15.EH3	EPS15.EH2	EPS15.EH1	ITSN1.EH1	
+92 Name: EPS15.DPF_1-6 Npartner: 2	 Partners: FCHO2.MUH	FCHO1.MUH	
+93 Name: EPN1.DPW Npartner: 3	 Partners: AP2B1.B2PLAT	AP2A1.A2PLAT	AP2A2.A2PLAT	
+94 Name: AP2B1.B2PLAT Npartner: 7	 Partners: EPN1.DPW	ARRB2.CTD	EPS15.DPF_linker_11-12	ARRB1.CTD	EPN1.DEX	LDLRAP1.AP2BIND	SNX9.LC	
+95 Name: OCRL.CLAT_NS Npartner: 1	 Partners: CLTC.TD_CBOX	
+96 Name: ACTR3.barbed_end_groove_to_Chelix Npartner: 1	 Partners: WASL.VCA_central	
+97 Name: WASL.VCA_central Npartner: 2	 Partners: ACTR3.barbed_end_groove_to_Chelix	ACTR2.barbed_end_groove_to_Chelix	
+98 Name: ACTR2.barbed_end_groove_to_Chelix Npartner: 1	 Partners: WASL.VCA_central	
+99 Name: AP2B1.B2BS Npartner: 2	 Partners: PIP5K1C.CTD	ITSN1.LINK_SH3AB	
+100 Name: PIP5K1C.CTD Npartner: 1	 Partners: AP2B1.B2BS	
+101 Name: ITSN1.RhoGEF_autoinhibit Npartner: 1	 Partners: ITSN1.SH3E_LINK_toDH	
+102 Name: ITSN1.SH3E_LINK_toDH Npartner: 1	 Partners: ITSN1.RhoGEF_autoinhibit	
+103 Name: CTTN.PhosphoSites Npartner: 1	 Partners: TNK2.PKD	
+104 Name: TNK2.PKD Npartner: 2	 Partners: CTTN.PhosphoSites	TNK2.PhosphoSites	
+105 Name: ITSN1.SH3C Npartner: 7	 Partners: DNM2.PRD_1_4-8_10-15	INPPL1.PRD_span	WASL.PRD_span	INPPL1.PRD_944to949	DNM2.PRD3	DNM2.PRD9	DNM2.PRD2	
+106 Name: DNM2.PRD_1_4-8_10-15 Npartner: 13	 Partners: ITSN1.SH3C	ITSN2.SH3C	ITSN1.SH3E	ITSN2.SH3E	CTTN.SH3	FNBP1.SH3	FNBP1L.SH3	ITSN1.SH3A	ITSN2.SH3A	MYO1E.SH3	SH3BP4.SH3	SNX9.SH3	TRIP10.SH3_1	
+107 Name: ITSN2.SH3C Npartner: 6	 Partners: DNM2.PRD_1_4-8_10-15	WASL.PRD_span	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	SH3KBP1.PRD	
+108 Name: ITSN1.SH3E Npartner: 7	 Partners: DNM2.PRD_1_4-8_10-15	INPPL1.PRD_span	WASL.PRD_span	INPPL1.PRD_944to949	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	
+109 Name: ITSN2.SH3E Npartner: 6	 Partners: DNM2.PRD_1_4-8_10-15	WASL.PRD_span	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	SH3KBP1.PRD	
+110 Name: INPPL1.PRD_span Npartner: 5	 Partners: ITSN1.SH3B	ITSN1.SH3C	ITSN1.SH3D	ITSN1.SH3E	ITSN1.SH3A	
+111 Name: ITSN2.SH3B Npartner: 1	 Partners: WASL.PRD_span	
+112 Name: WASL.PRD_span Npartner: 16	 Partners: ITSN2.SH3B	ITSN2.SH3C	ITSN2.SH3D	ITSN2.SH3E	ITSN1.SH3B	ITSN1.SH3C	ITSN1.SH3D	ITSN1.SH3E	BIN1.SH3	CTTN.SH3	FNBP1.SH3	FNBP1L.SH3	ITSN1.SH3A	ITSN2.SH3A	PACSIN2.SH3	TRIP10.SH3_2	
+113 Name: DNM2.PRD3 Npartner: 15	 Partners: SH3GL1.SH3	SNX9.SH3	SH3BP4.SH3	TRIP10.SH3_1	MYO1E.SH3	ITSN2.SH3A	ITSN1.SH3A	FNBP1L.SH3	FNBP1.SH3	ITSN2.SH3E	ITSN1.SH3E	ITSN2.SH3C	ITSN1.SH3C	CTTN.SH3	BIN1.SH3	
+114 Name: STON2.NPF1 Npartner: 4	 Partners: ITSN1.EH2	EPS15L1.EH2	EPS15.EH1	EPS15.EH2	
+115 Name: SH3BP4.NPF Npartner: 3	 Partners: EPS15.EH2	EPS15.EH3	EPS15.EH1	
+116 Name: EPS15.EH2 Npartner: 9	 Partners: SH3BP4.NPF	EPN1.NPF	EPN3.NPF	AGFG1.NPF	EPN2.NPF	DAB2.NPF3_4_5	NUMB.NPF	STON2.NPF2	STON2.NPF1	
+117 Name: EPN3.NPF Npartner: 3	 Partners: EPS15.EH2	EPS15.EH3	EPS15.EH1	
+118 Name: AGFG1.NPF Npartner: 3	 Partners: EPS15.EH2	EPS15.EH3	EPS15.EH1	
+119 Name: EPN2.NPF Npartner: 5	 Partners: EPS15.EH2	EPS15L1.EH2	EPS15L1.EH3	EPS15.EH1	EPS15L1.EH1	
+120 Name: EPS15L1.EH3 Npartner: 1	 Partners: EPN2.NPF	
+121 Name: NUMB.NPF Npartner: 4	 Partners: EPS15.EH2	EPS15.EH3	EPS15L1.EH1	EPS15.EH1	
+122 Name: INPPL1.PRD_944to949 Npartner: 7	 Partners: ITSN1.SH3C	ITSN1.SH3D	ITSN1.SH3E	ITSN1.SH3A	SH3KBP1.SH3B	SH3KBP1.SH3C	SH3KBP1.SH3A	
+123 Name: ITSN1.SH3A Npartner: 16	 Partners: INPPL1.PRD_944to949	SYNJ2.PRD_1285to1290	SYNJ1.PRD_1285to1290	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	SYNJ2.PRD_span	DNM1.PRD_1_4-8_10-15	SYNJ1.PRD_span	DNM2.PRD_1_4-8_10-15	INPPL1.PRD_span	WASL.PRD_span	SH3KBP1.PRD	
+124 Name: SYNJ2.PRD_1285to1290 Npartner: 4	 Partners: ITSN1.SH3A	SH3KBP1.SH3B	SH3KBP1.SH3C	SH3KBP1.SH3A	
+125 Name: TNK2.SH3 Npartner: 2	 Partners: SYNJ1.PRD_1285to1290	SYNJ1.PRD_span	
+126 Name: SNX9.SH3 Npartner: 12	 Partners: SYNJ1.PRD_1285to1290	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	SYNJ1.PRD_span	TNK2.PRD	OCRL.PRD	DNM1.PRD_1_4-8_10-15	DNM2.PRD_1_4-8_10-15	
+127 Name: SH3GL2.SH3 Npartner: 6	 Partners: SYNJ1.PRD_1285to1290	SYNJ1.PRD_span	ITSN1.SH3B	DNM1.PRD9	DNM2.PRD9	SH3KBP1.PRD	
+128 Name: PACSIN2.SH3 Npartner: 5	 Partners: SYNJ1.PRD_1285to1290	DNM2.PRD2	WASL.PRD_span	SYNJ1.PRD_span	DNM1.PRD2	
+129 Name: MYO1E.SH3 Npartner: 10	 Partners: SYNJ1.PRD_1285to1290	DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	SYNJ1.PRD_span	DNM1.PRD_1_4-8_10-15	DNM2.PRD_1_4-8_10-15	
+130 Name: DNM2.PRD9 Npartner: 14	 Partners: SNX9.SH3	SH3BP4.SH3	TRIP10.SH3_1	MYO1E.SH3	ITSN2.SH3A	ITSN1.SH3A	FNBP1L.SH3	FNBP1.SH3	ITSN2.SH3E	ITSN1.SH3E	ITSN2.SH3C	ITSN1.SH3C	CTTN.SH3	SH3GL2.SH3	
+131 Name: SH3BP4.SH3 Npartner: 9	 Partners: DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	DNM1.PRD_1_4-8_10-15	DNM2.PRD_1_4-8_10-15	CARGO_YXXO.YXXO	
+132 Name: TRIP10.SH3_1 Npartner: 4	 Partners: DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM2.PRD_1_4-8_10-15	
+133 Name: FNBP1L.SH3 Npartner: 5	 Partners: DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM2.PRD_1_4-8_10-15	WASL.PRD_span	
+134 Name: FNBP1.SH3 Npartner: 9	 Partners: DNM2.PRD2	DNM2.PRD3	DNM2.PRD9	DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	DNM1.PRD_1_4-8_10-15	WASL.PRD_span	DNM2.PRD_1_4-8_10-15	
+135 Name: SH3KBP1.SH3C Npartner: 11	 Partners: DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	DNM2.PRD2	SYNJ2.PRD_1285to1290	SYNJ1.PRD_1285to1290	DNM1.PRD_1_4-8_10-15	WASL.PRD_277to392	INPPL1.PRD_944to949	HIP1R.PRD_1025to1030	DAB2.PRD_709to725	
+136 Name: SH3KBP1.SH3A Npartner: 11	 Partners: DNM1.PRD2	DNM1.PRD3	DNM1.PRD9	DNM2.PRD2	SYNJ2.PRD_1285to1290	SYNJ1.PRD_1285to1290	SH3KBP1.PRD	DNM1.PRD_1_4-8_10-15	WASL.PRD_277to392	INPPL1.PRD_944to949	HIP1R.PRD_1025to1030	
+137 Name: EPS15.EH1 Npartner: 10	 Partners: STON2.NPF2	AGFG1.NPF	EPN1.NPF	EPN3.NPF	EPN2.NPF	DAB2.NPF3_4_5	NUMB.NPF	PICALM.NPF1_2	SH3BP4.NPF	STON2.NPF1	
+138 Name: SH3KBP1.SH3B Npartner: 4	 Partners: SYNJ2.PRD_1285to1290	SYNJ1.PRD_1285to1290	INPPL1.PRD_944to949	HIP1R.PRD_1025to1030	
+139 Name: WASL.PRD_277to392 Npartner: 2	 Partners: SH3KBP1.SH3C	SH3KBP1.SH3A	
+140 Name: HIP1R.PRD_1025to1030 Npartner: 3	 Partners: SH3KBP1.SH3B	SH3KBP1.SH3C	SH3KBP1.SH3A	
+141 Name: SH3KBP1.PRD Npartner: 7	 Partners: ITSN2.SH3D	ITSN2.SH3E	SH3GL1.SH3	SH3GL2.SH3	SH3KBP1.SH3A	ITSN2.SH3C	ITSN1.SH3A	
+142 Name: DNM2.Actin_bind Npartner: 1	 Partners: ACTB.Subunit1_2_outsideFilament	
+143 Name: ACTB.PointedEnd_Back Npartner: 4	 Partners: ACTB.BarbedEnd_back	ACTG1.BarbedEnd_back	ACTR2.back_barbed_end_to_actin	ACTR3.back_barbed_end_to_actin	
+144 Name: ACTG1.PointedEnd_Back Npartner: 1	 Partners: ACTG1.BarbedEnd_back	
+145 Name: ACTR2.back_barbed_end_to_actin Npartner: 1	 Partners: ACTB.PointedEnd_Back	
+146 Name: ACTR2.interface_to_actr3 Npartner: 1	 Partners: ACTR3.interface_to_actr2	
+147 Name: ACTR3.interface_to_actr2 Npartner: 1	 Partners: ACTR2.interface_to_actr3	
+148 Name: ACTR2.interface_to_arpc4 Npartner: 1	 Partners: ARPC4.interface_to_actr2	
+149 Name: ARPC4.interface_to_actr2 Npartner: 1	 Partners: ACTR2.interface_to_arpc4	
+150 Name: ACTR2.side_front_to_acidic_domain Npartner: 2	 Partners: WASL.VCA_acidic	CTTN.ACIDICMOT	
+151 Name: ACTR3.interface_to_arpc3 Npartner: 1	 Partners: ARPC3.interface_to_actr3	
+152 Name: ARPC3.interface_to_actr3 Npartner: 1	 Partners: ACTR3.interface_to_arpc3	
+153 Name: ACTR3.interface_to_arpc4 Npartner: 1	 Partners: ARPC4.interface_to_actr3	
+154 Name: ARPC4.interface_to_actr3 Npartner: 1	 Partners: ACTR3.interface_to_arpc4	
+155 Name: ACTR3.back_barbed_end_to_actin Npartner: 1	 Partners: ACTB.PointedEnd_Back	
+156 Name: ACTR3.interface_to_arpc2 Npartner: 1	 Partners: ARPC2.interface_to_actr3	
+157 Name: ARPC2.interface_to_actr3 Npartner: 1	 Partners: ACTR3.interface_to_arpc2	
+158 Name: ACTR3.side_front_to_acidic_domain Npartner: 2	 Partners: WASL.VCA_acidic	CTTN.ACIDICMOT	
+159 Name: AP2A1.core_to_linker Npartner: 2	 Partners: FCHO1.LINKER	FCHO2.LINKER	
+160 Name: FCHO1.LINKER Npartner: 2	 Partners: AP2A1.core_to_linker	AP2A2.core_to_linker	
+161 Name: FCHO2.LINKER Npartner: 2	 Partners: AP2A1.core_to_linker	AP2A2.core_to_linker	
+162 Name: AP2A2.core_to_linker Npartner: 2	 Partners: FCHO1.LINKER	FCHO2.LINKER	
+163 Name: ARRB2.CTD Npartner: 1	 Partners: AP2B1.B2PLAT	
+164 Name: AP2B1.beta_to_sigma_interface Npartner: 1	 Partners: AP2S1.sigma_to_beta_interface	
+165 Name: AP2S1.sigma_to_beta_interface Npartner: 1	 Partners: AP2B1.beta_to_sigma_interface	
+166 Name: EPS15.DPF_linker_11-12 Npartner: 1	 Partners: AP2B1.B2PLAT	
+167 Name: ARRB1.CTD Npartner: 1	 Partners: AP2B1.B2PLAT	
+168 Name: AP2M1.M2MUH Npartner: 4	 Partners: CORO7.Tyr_motif	STON2.WVxF	NECAP1.PHear	CARGO_YXXO.YXXO	
+169 Name: CORO7.Tyr_motif Npartner: 1	 Partners: AP2M1.M2MUH	
+170 Name: AP2M1.mu_to_beta_interface Npartner: 1	 Partners: AP2B1.beta_to_mu_interface	
+171 Name: AP2B1.beta_to_mu_interface Npartner: 1	 Partners: AP2M1.mu_to_beta_interface	
+172 Name: AP2M1.mu_to_sigma_interface Npartner: 1	 Partners: AP2S1.sigma_to_mu_interface	
+173 Name: AP2S1.sigma_to_mu_interface Npartner: 1	 Partners: AP2M1.mu_to_sigma_interface	
+174 Name: AP2M1.PHOSPHO_SITE Npartner: 1	 Partners: AAK1.KD	
+175 Name: AP2M1.mu_to_alpha_interface Npartner: 2	 Partners: AP2A1.alpha_to_mu_interface	AP2A2.alpha_to_mu_interface	
+176 Name: AP2A1.alpha_to_mu_interface Npartner: 1	 Partners: AP2M1.mu_to_alpha_interface	
+177 Name: AP2A2.alpha_to_mu_interface Npartner: 1	 Partners: AP2M1.mu_to_alpha_interface	
+178 Name: ARPC1A.interface_to_arpc4 Npartner: 1	 Partners: ARPC4.interface_to_arpc1a	
+179 Name: ARPC4.interface_to_arpc1a Npartner: 1	 Partners: ARPC1A.interface_to_arpc4	
+180 Name: ARPC4.interface_to_arpc2 Npartner: 1	 Partners: ARPC2.interface_to_arpc4	
+181 Name: ARPC2.interface_to_arpc4 Npartner: 1	 Partners: ARPC4.interface_to_arpc2	
+182 Name: ARPC5L.interface_to_arpc4 Npartner: 1	 Partners: ARPC4.interface_to_arpc5l	
+183 Name: ARPC4.interface_to_arpc5l Npartner: 1	 Partners: ARPC5L.interface_to_arpc4	
+184 Name: ARPC5L.interface_to_actr2 Npartner: 1	 Partners: ACTR2.interface_to_arpc5l	
+185 Name: ACTR2.interface_to_arpc5l Npartner: 1	 Partners: ARPC5L.interface_to_actr2	
+186 Name: BIN1.BAR_DIMER Npartner: 1	 Partners: BIN1.BAR_DIMER	
+187 Name: BIN1.BAR_TOP Npartner: 1	 Partners: BIN1.BAR_BOTTOM	
+188 Name: BIN1.BAR_BOTTOM Npartner: 1	 Partners: BIN1.BAR_TOP	
+189 Name: BMP2K.PKD Npartner: 1	 Partners: NUMB.PhosphoSites	
+190 Name: NUMB.PhosphoSites Npartner: 1	 Partners: BMP2K.PKD	
+191 Name: CAPZB.interface_to_hspa8 Npartner: 1	 Partners: HSPA8.SBD	
+192 Name: HSPA8.SBD Npartner: 1	 Partners: CAPZB.interface_to_hspa8	
+193 Name: CAPZB.interface_to_capza2 Npartner: 1	 Partners: CAPZA2.interface_to_capzb	
+194 Name: CAPZA2.interface_to_capzb Npartner: 1	 Partners: CAPZB.interface_to_capza2	
+195 Name: HIP1R.CC Npartner: 2	 Partners: CLTB.interface_hip1_hip1r	HIP1R.CC	
+196 Name: DAB2.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+197 Name: DNAJC6.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+198 Name: EPN2.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+199 Name: CLTC.AD Npartner: 2	 Partners: AP2A1.A2BS	AP2A2.A2BS	
+200 Name: CLTC.PROX Npartner: 2	 Partners: CLTA.BIND	CLTB.BIND	
+201 Name: CLTA.BIND Npartner: 2	 Partners: CLTC.PROX	CLTCL1.PROX	
+202 Name: CLTB.BIND Npartner: 2	 Partners: CLTC.PROX	CLTCL1.PROX	
+203 Name: ARRB2.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+204 Name: ARRB1.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+205 Name: HIP1.CLAT Npartner: 2	 Partners: CLTC.TD_CBOX	CLTCL1.TD_CBOX	
+206 Name: CLTCL1.PROX Npartner: 2	 Partners: CLTA.BIND	CLTB.BIND	
+207 Name: CLTCL1.TD_CBOX Npartner: 3	 Partners: HIP1.CLAT	OCRL.CLAT	PICALM.CLAT	
+208 Name: TNK2.PRD Npartner: 3	 Partners: CTTN.SH3	SNX9.SH3	BIN1.SH3	
+209 Name: CTTN.HSrepeats Npartner: 1	 Partners: ACTG1.Subunit1_2_outsideFilament	
+210 Name: DNM1.MD Npartner: 2	 Partners: DNM2.GED	DNM1.GED	
+211 Name: DNM2.GED Npartner: 2	 Partners: DNM1.MD	DNM2.MD	
+212 Name: DNM1.GED Npartner: 1	 Partners: DNM1.MD	
+213 Name: DNM1.STALK_DIMER Npartner: 2	 Partners: DNM1.STALK_DIMER	DNM2.STALK_DIMER	
+214 Name: DNM2.STALK_DIMER Npartner: 2	 Partners: DNM1.STALK_DIMER	DNM2.STALK_DIMER	
+215 Name: DNM2.MD Npartner: 1	 Partners: DNM2.GED	
+216 Name: DYRK1A.Kinase_ST Npartner: 2	 Partners: DNM1.PHOSPHO_SITES_PRD	DYRK1A.Phospho_Site	
+217 Name: DNM1.PHOSPHO_SITES_PRD Npartner: 1	 Partners: DYRK1A.Kinase_ST	
+218 Name: EPN1.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+219 Name: EPN1.ENTH_H0 Npartner: 1	 Partners: EPN3.ENTH_H0	
+220 Name: EPN3.ENTH_H0 Npartner: 2	 Partners: EPN1.ENTH_H0	EPN2.ENTH_H0	
+221 Name: EPS15L1.EH1 Npartner: 3	 Partners: EPN1.NPF	NUMB.NPF	EPN2.NPF	
+222 Name: EPN1.DEX Npartner: 1	 Partners: AP2B1.B2PLAT	
+223 Name: EPN2.ENTH_H0 Npartner: 1	 Partners: EPN3.ENTH_H0	
+224 Name: EPS15.DPF_7-15 Npartner: 3	 Partners: AP2A2.A2PLAT	AP2A1.A2PLAT	FCHO2.MUH	
+225 Name: EPS15.CC Npartner: 3	 Partners: EPS15.CC	ITSN1.CC1	ITSN2.CC1	
+226 Name: EPS15.UIM2 Npartner: 2	 Partners: CORO7.interface_to_eps15	CARGO_ubiq.ubiquitin	
+227 Name: CORO7.interface_to_eps15 Npartner: 1	 Partners: EPS15.UIM2	
+228 Name: FNBP1.FBAR_DIMER Npartner: 2	 Partners: TRIP10.FBAR_DIMER	FNBP1.FBAR_DIMER	
+229 Name: TRIP10.FBAR_DIMER Npartner: 2	 Partners: FNBP1.FBAR_DIMER	TRIP10.FBAR_DIMER	
+230 Name: HSPA8.HSPATP Npartner: 2	 Partners: CLTA.interface_hspa8	CLTB.interface_hspa8	
+231 Name: CLTA.interface_hspa8 Npartner: 1	 Partners: HSPA8.HSPATP	
+232 Name: CLTB.interface_hspa8 Npartner: 1	 Partners: HSPA8.HSPATP	
+233 Name: ITSN1.LINK_SH3AB Npartner: 1	 Partners: AP2B1.B2BS	
+234 Name: SYNJ2.PRD_span Npartner: 2	 Partners: ITSN1.SH3A	ITSN2.SH3A	
+235 Name: PICALM.NPF1_2 Npartner: 2	 Partners: ITSN1.EH1	EPS15.EH1	
+236 Name: ITSN1.CC1 Npartner: 3	 Partners: ITSN1.CC1	EPS15.CC	ITSN2.CC1	
+237 Name: ITSN2.CC1 Npartner: 3	 Partners: EPS15.CC	ITSN2.CC1	ITSN1.CC1	
+238 Name: LDLRAP1.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+239 Name: LDLRAP1.AP2BIND Npartner: 1	 Partners: AP2B1.B2PLAT	
+240 Name: MYO6.DT Npartner: 2	 Partners: AP2A1.A2PLAT	AP2A2.A2PLAT	
+241 Name: MYO6.WWY Npartner: 2	 Partners: MYO6.WWY	DAB2.CTD	
+242 Name: DAB2.CTD Npartner: 1	 Partners: MYO6.WWY	
+243 Name: NUMB.DPF Npartner: 2	 Partners: AP2A2.A2PLAT	AP2A1.A2PLAT	
+244 Name: OCRL.FxDxF Npartner: 2	 Partners: AP2A2.A2PLAT	AP2A1.A2PLAT	
+245 Name: OCRL.CLAT Npartner: 2	 Partners: CLTCL1.TD_CBOX	CLTC.TD_CBOX	
+246 Name: PICALM.CLAT Npartner: 2	 Partners: CLTC.TD_CBOX	CLTCL1.TD_CBOX	
+247 Name: SH3BP4.CC Npartner: 1	 Partners: SH3BP4.CC	
+248 Name: SH3GL1.BAR_DIMER Npartner: 2	 Partners: SH3GL1.BAR_DIMER	SH3GL2.BAR_DIMER	
+249 Name: SH3GL2.BAR_DIMER Npartner: 2	 Partners: SH3GL1.BAR_DIMER	SH3GL2.BAR_DIMER	
+250 Name: DAB2.PRD_709to725 Npartner: 1	 Partners: SH3KBP1.SH3C	
+251 Name: SH3KBP1.coiled_coil Npartner: 1	 Partners: SH3KBP1.coiled_coil	
+252 Name: SNX9.LC Npartner: 4	 Partners: AP2A2.A2PLAT	AP2A1.A2PLAT	AP2B1.B2PLAT	CLTC.TD_WBOX	
+253 Name: CLTC.TD_WBOX Npartner: 1	 Partners: SNX9.LC	
+254 Name: OCRL.PRD Npartner: 1	 Partners: SNX9.SH3	
+255 Name: SNX9.BAR_DIMER Npartner: 1	 Partners: SNX9.BAR_DIMER	
+256 Name: TNK2.PhosphoSites Npartner: 1	 Partners: TNK2.PKD	
+257 Name: TRIP10.SH3_2 Npartner: 1	 Partners: WASL.PRD_span	
+258 Name: TRIP10.FBAR_TOP Npartner: 1	 Partners: TRIP10.FBAR_BOTTOM	
+259 Name: TRIP10.FBAR_BOTTOM Npartner: 1	 Partners: TRIP10.FBAR_TOP	
+260 Name: ARPC5L.interface_to_arpc1a Npartner: 1	 Partners: ARPC1A.interface_to_arpc5l	
+261 Name: ARPC1A.interface_to_arpc5l Npartner: 1	 Partners: ARPC5L.interface_to_arpc1a	
+262 Name: AP2B1.beta_to_alpha_interface Npartner: 2	 Partners: AP2A2.alpha_to_beta_interface	AP2A1.alpha_to_beta_interface	
+263 Name: AP2A2.alpha_to_beta_interface Npartner: 1	 Partners: AP2B1.beta_to_alpha_interface	
+264 Name: AP2A1.alpha_to_beta_interface Npartner: 1	 Partners: AP2B1.beta_to_alpha_interface	
+265 Name: AP2S1.sigma_to_alpha_interface Npartner: 2	 Partners: AP2A2.alpha_to_sigma_interface	AP2A1.alpha_to_sigma_interface	
+266 Name: AP2A2.alpha_to_sigma_interface Npartner: 1	 Partners: AP2S1.sigma_to_alpha_interface	
+267 Name: AP2A1.alpha_to_sigma_interface Npartner: 1	 Partners: AP2S1.sigma_to_alpha_interface	
+268 Name: HIP1R.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+269 Name: DYRK1A.Phospho_Site Npartner: 1	 Partners: DYRK1A.Kinase_ST	
+270 Name: PACSIN2.FBAR_DIMER Npartner: 1	 Partners: PACSIN2.FBAR_DIMER	
+271 Name: PACSIN2.FBAR_top Npartner: 1	 Partners: PACSIN2.FBAR_bottom	
+272 Name: PACSIN2.FBAR_bottom Npartner: 1	 Partners: PACSIN2.FBAR_top	
+273 Name: GAK.CLAT Npartner: 1	 Partners: CLTC.TD_CBOX	
+274 Name: GAK.Jdomain Npartner: 1	 Partners: HSPA8.COFACTOR	
+275 Name: HSPA8.COFACTOR Npartner: 2	 Partners: GAK.Jdomain	DNAJC6.Jdomain	
+276 Name: DNAJC6.Jdomain Npartner: 1	 Partners: HSPA8.COFACTOR	
+277 Name: AP2A1.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+278 Name: PI45P2.Head_group Npartner: 34	 Partners: AP2A1.PIP2_BIND	AP2A2.PIP2_BIND	AP2B1.PIP2_BIND	AP2M1.PIP2_BIND	HIP1.ENTH	HIP1R.ENTH	FCHO1.FBAR_MEM	FCHO2.FBAR_MEM	PICALM.ANTH_MEM	ITSN1.PH	DNM2.PH	DNM1.PH	DAB2.PTB_MEM	LDLRAP1.PTB_MEM	ARRB1.PIP2_BIND	ARRB2.PIP2_BIND	NUMB.PTB_MEM	EPN1.ENTH	EPN2.ENTH	TRIP10.FBAR_MEM	EPN3.ENTH	FNBP1.FBAR_MEM	FNBP1L.FBAR_MEM	MYO1E.PH	BIN1.BAR_MEM	SH3GL2.BAR_MEM	SH3GL1.BAR_MEM	PACSIN2.FBAR_MEM	SNX9.BAR_PX	SYNJ1.IPPc_Sac1	SYNJ2.IPPc_Sac1	OCRL.IPPc	DNAJC6.PTENlike	GAK.PTENlike	
+279 Name: AP2A2.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+280 Name: AP2B1.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+281 Name: AP2M1.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+282 Name: HIP1.ENTH Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+283 Name: PI_PS.Head_group Npartner: 14	 Partners: HIP1.ENTH	HIP1R.ENTH	FCHO1.FBAR_MEM	FCHO2.FBAR_MEM	TRIP10.FBAR_MEM	FNBP1.FBAR_MEM	FNBP1L.FBAR_MEM	MYO1E.PH	BIN1.BAR_MEM	SH3GL2.BAR_MEM	SH3GL1.BAR_MEM	PACSIN2.FBAR_MEM	SNX9.BAR_PX	PI4KA.Kinase_lipid	
+284 Name: HIP1R.ENTH Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+285 Name: FCHO1.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+286 Name: FCHO2.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+287 Name: PICALM.ANTH_MEM Npartner: 1	 Partners: PI45P2.Head_group	
+288 Name: ITSN1.PH Npartner: 1	 Partners: PI45P2.Head_group	
+289 Name: DNM2.PH Npartner: 1	 Partners: PI45P2.Head_group	
+290 Name: DNM1.PH Npartner: 1	 Partners: PI45P2.Head_group	
+291 Name: DAB2.PTB_MEM Npartner: 1	 Partners: PI45P2.Head_group	
+292 Name: LDLRAP1.PTB_MEM Npartner: 1	 Partners: PI45P2.Head_group	
+293 Name: ARRB1.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+294 Name: ARRB2.PIP2_BIND Npartner: 1	 Partners: PI45P2.Head_group	
+295 Name: NUMB.PTB_MEM Npartner: 1	 Partners: PI45P2.Head_group	
+296 Name: EPN1.ENTH Npartner: 1	 Partners: PI45P2.Head_group	
+297 Name: EPN2.ENTH Npartner: 1	 Partners: PI45P2.Head_group	
+298 Name: TRIP10.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+299 Name: EPN3.ENTH Npartner: 1	 Partners: PI45P2.Head_group	
+300 Name: FNBP1.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+301 Name: FNBP1L.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+302 Name: MYO1E.PH Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+303 Name: BIN1.BAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+304 Name: SH3GL2.BAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+305 Name: SH3GL1.BAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+306 Name: PACSIN2.FBAR_MEM Npartner: 2	 Partners: PI45P2.Head_group	PI_PS.Head_group	
+307 Name: SNX9.BAR_PX Npartner: 3	 Partners: PI_PS.Head_group	PI45P2.Head_group	PI34P2.Head_group	
+308 Name: PI34P2.Head_group Npartner: 1	 Partners: SNX9.BAR_PX	
+309 Name: AP2A1.CARGO_BIND Npartner: 1	 Partners: CARGO_DILEU.DEXXXLLI	
+310 Name: CARGO_DILEU.DEXXXLLI Npartner: 3	 Partners: AP2A1.CARGO_BIND	AP2A2.CARGO_BIND	AP2S1.CARGO_BIND	
+311 Name: AP2A2.CARGO_BIND Npartner: 1	 Partners: CARGO_DILEU.DEXXXLLI	
+312 Name: CARGO_YXXO.YXXO Npartner: 2	 Partners: AP2M1.M2MUH	SH3BP4.SH3	
+313 Name: AP2S1.CARGO_BIND Npartner: 1	 Partners: CARGO_DILEU.DEXXXLLI	
+314 Name: PICALM.ANTH_VAMP Npartner: 2	 Partners: CARGO_SNARE.coiled_coil	CARGO_VAMP2.coiled_coil	
+315 Name: CARGO_SNARE.coiled_coil Npartner: 1	 Partners: PICALM.ANTH_VAMP	
+316 Name: CARGO_VAMP2.coiled_coil Npartner: 1	 Partners: PICALM.ANTH_VAMP	
+317 Name: DAB2.PTB_CARGO Npartner: 1	 Partners: CARGO_PTB.FYXNPXYF	
+318 Name: CARGO_PTB.FYXNPXYF Npartner: 3	 Partners: DAB2.PTB_CARGO	LDLRAP1.PTB_CARGO	NUMB.PTB_CARGO	
+319 Name: LDLRAP1.PTB_CARGO Npartner: 1	 Partners: CARGO_PTB.FYXNPXYF	
+320 Name: NUMB.PTB_CARGO Npartner: 1	 Partners: CARGO_PTB.FYXNPXYF	
+321 Name: CARGO_ubiq.ubiquitin Npartner: 4	 Partners: EPS15.UIM2	EPN1.UIM	EPN2.UIM	EPN3.UIM	
+322 Name: EPN1.UIM Npartner: 1	 Partners: CARGO_ubiq.ubiquitin	
+323 Name: EPN2.UIM Npartner: 1	 Partners: CARGO_ubiq.ubiquitin	
+324 Name: EPN3.UIM Npartner: 1	 Partners: CARGO_ubiq.ubiquitin	
+325 Name: AGFG1.CARGO_BIND Npartner: 1	 Partners: CARGO_VAMP7.longin	
+326 Name: CARGO_VAMP7.longin Npartner: 1	 Partners: AGFG1.CARGO_BIND	
+327 Name: ARRB1.CARGO_BIND Npartner: 1	 Partners: CARGO_GPCR.pSpT	
+328 Name: CARGO_GPCR.pSpT Npartner: 2	 Partners: ARRB1.CARGO_BIND	ARRB2.CARGO_BIND	
+329 Name: ARRB2.CARGO_BIND Npartner: 1	 Partners: CARGO_GPCR.pSpT	
+330 Name: INPPL1.IPPc Npartner: 1	 Partners: PI345P3.Head_group	
+331 Name: PI345P3.Head_group Npartner: 1	 Partners: INPPL1.IPPc	
+332 Name: SYNJ1.IPPc_Sac1 Npartner: 1	 Partners: PI45P2.Head_group	
+333 Name: SYNJ2.IPPc_Sac1 Npartner: 1	 Partners: PI45P2.Head_group	
+334 Name: OCRL.IPPc Npartner: 1	 Partners: PI45P2.Head_group	
+335 Name: PI4KA.Kinase_lipid Npartner: 1	 Partners: PI_PS.Head_group	
+336 Name: PIP5K1C.Kinase_lipid Npartner: 1	 Partners: PI4P.Head_group	
+337 Name: PI4P.Head_group Npartner: 3	 Partners: PIP5K1C.Kinase_lipid	DNAJC6.PTENlike	GAK.PTENlike	
+338 Name: DNAJC6.PTENlike Npartner: 2	 Partners: PI45P2.Head_group	PI4P.Head_group	
+339 Name: GAK.PTENlike Npartner: 2	 Partners: PI45P2.Head_group	PI4P.Head_group	
+----------------------------------
+---------------
+ NO CELL TYPE DISTRIBUTION FILE READ IN. NOT PERFORMING STOICHIOMETRIC BALANCE FOR ANY RANDOMIZED COPY NUMBERS--NO P-VALUE CALCULATION.
+-------------------
+IIN edges: 489
+----------
+NRUNS RANDOM COPY NUMBERS, to evaluate p-value: 0
+-------------------------------------------------------------
+-------------------------------------------------------------
+---------------------PERFORM STOICHIOMETRIC BALANCE-------------------
+-------------------
+--------SOLVING BALANCE FOR THE REAL, OBSERVED PROTEIN COPY NUMBERS------
+Inside qp_solve
+RHS: 6.95686e+16
+Num nonzero elements in Q: 10498 total elements: 119805
+Ierr: 0
+objective function: -5.5998e+16 Plus RHS: 1.35706e+16
+-------------------------------
+ ------COPIES OF EACH COMPLEX FOR REAL COPY NUMBERS--------------
+edge: 0 FNBP1.FBAR_top::FNBP1.FBAR_bottom conc: 6.81751e+06
+edge: 1 SH3GL1.BAR_top::SH3GL1.BAR_bottom conc: 7.09815e+06
+edge: 2 SH3GL1.BAR_bottom::SH3GL2.BAR_top conc: 50
+edge: 3 SH3GL2.BAR_top::SH3GL2.BAR_bottom conc: 6.81157e+06
+edge: 4 FCHO1.FBAR_top::FCHO2.FBAR_bottom conc: 50
+edge: 5 FCHO1.FBAR_top::FCHO1.FBAR_bottom conc: 4.53619e+06
+edge: 6 FCHO2.FBAR_bottom::FCHO2.FBAR_top conc: 4.56535e+06
+edge: 7 SNX9.BAR_top::SNX9.BAR_bottom conc: 5.64647e+06
+edge: 8 EPS8.Helix_Bundle::ACTB.Subunit4_outsideFilament conc: 197640
+edge: 9 EPS8.Helix_Bundle::ACTG1.Subunit4_outsideFilament conc: 5.39791e+06
+edge: 10 EPS8.Helix_Bundle::ACTB.Subunit1_2_outsideFilament conc: 50
+edge: 11 EPS8.Helix_Bundle::ACTG1.Subunit1_2_outsideFilament conc: 50
+edge: 12 ACTB.Subunit4_outsideFilament::CORO1A.beta_propeller conc: 196057
+edge: 13 ACTG1.Subunit4_outsideFilament::CORO1A.beta_propeller conc: 3.33334e+06
+edge: 14 ACTB.Subunit1_2_outsideFilament::DBNL.ADFH conc: 50
+edge: 15 ACTB.Subunit1_2_outsideFilament::WASL.VCA_V_WH2_1 conc: 50
+edge: 16 ACTB.Subunit1_2_outsideFilament::WASL.VCA_V_WH2_2 conc: 50
+edge: 17 ACTB.Subunit1_2_outsideFilament::HIP1R.TALIN conc: 50
+edge: 18 ACTB.Subunit1_2_outsideFilament::HIP1.TALIN conc: 50
+edge: 19 ACTB.Subunit1_2_outsideFilament::ARPC3.interface_to_actin_filament conc: 50
+edge: 20 ACTB.Subunit1_2_outsideFilament::CORO1A.CC_actinbind conc: 50
+edge: 21 ACTB.Subunit1_2_outsideFilament::DNM1.Actin_bind conc: 1.68083e+06
+edge: 22 ACTB.Subunit1_2_outsideFilament::DNM2.Actin_bind conc: 2.63128e+06
+edge: 23 ACTB.Subunit1_2_outsideFilament::CFL1.ADFH conc: 50
+edge: 24 ACTG1.Subunit1_2_outsideFilament::DBNL.ADFH conc: 50
+edge: 25 ACTG1.Subunit1_2_outsideFilament::HIP1R.TALIN conc: 3.32629e+06
+edge: 26 ACTG1.Subunit1_2_outsideFilament::HIP1.TALIN conc: 3.90049e+06
+edge: 27 ACTG1.Subunit1_2_outsideFilament::ARPC3.interface_to_actin_filament conc: 50
+edge: 28 ACTG1.Subunit1_2_outsideFilament::CORO1A.CC_actinbind conc: 50
+edge: 29 ACTG1.Subunit1_2_outsideFilament::WASL.VCA_V_WH2_2 conc: 50
+edge: 30 ACTG1.Subunit1_2_outsideFilament::WASL.VCA_V_WH2_1 conc: 50
+edge: 31 ACTG1.Subunit1_2_outsideFilament::CFL1.ADFH conc: 3.88858e+06
+edge: 32 ACTG1.Subunit1_2_outsideFilament::CTTN.HSrepeats conc: 748261
+edge: 33 EPS8.AMPHI_HELIX::ACTB.BarbedEnd_back conc: 1.3995e+06
+edge: 34 EPS8.AMPHI_HELIX::ACTG1.BarbedEnd_back conc: 377852
+edge: 35 ACTB.BarbedEnd_back::CAPZB.interface_to_actin conc: 1.14713e+06
+edge: 36 ACTB.BarbedEnd_back::CAPZA2.interface_to_actin conc: 138010
+edge: 37 ACTB.BarbedEnd_back::ACTB.PointedEnd_Back conc: 50
+edge: 38 ACTG1.BarbedEnd_back::CAPZB.interface_to_actin conc: 352045
+edge: 39 ACTG1.BarbedEnd_back::CAPZA2.interface_to_actin conc: 89957.4
+edge: 40 ACTG1.BarbedEnd_back::ACTB.PointedEnd_Back conc: 50
+edge: 41 ACTG1.BarbedEnd_back::ACTG1.PointedEnd_Back conc: 1.02023e+07
+edge: 42 DBNL.SH3::DNM1.PRD_1_4-8_10-15 conc: 50
+edge: 43 DBNL.SH3::DNM1.PRD2 conc: 50
+edge: 44 DBNL.SH3::DNM1.PRD3 conc: 50
+edge: 45 DBNL.SH3::DNM1.PRD9 conc: 50
+edge: 46 DNM1.PRD_1_4-8_10-15::ITSN2.SH3A conc: 50
+edge: 47 DNM1.PRD_1_4-8_10-15::SH3KBP1.SH3C conc: 50
+edge: 48 DNM1.PRD_1_4-8_10-15::FNBP1.SH3 conc: 975626
+edge: 49 DNM1.PRD_1_4-8_10-15::ITSN1.SH3A conc: 50
+edge: 50 DNM1.PRD_1_4-8_10-15::MYO1E.SH3 conc: 2.36611e+06
+edge: 51 DNM1.PRD_1_4-8_10-15::SH3BP4.SH3 conc: 50
+edge: 52 DNM1.PRD_1_4-8_10-15::SH3KBP1.SH3A conc: 50
+edge: 53 DNM1.PRD_1_4-8_10-15::SNX9.SH3 conc: 200436
+edge: 54 DNM1.PRD2::BIN1.SH3 conc: 454364
+edge: 55 DNM1.PRD2::ITSN2.SH3A conc: 50
+edge: 56 DNM1.PRD2::SNX9.SH3 conc: 95691.5
+edge: 57 DNM1.PRD2::SH3BP4.SH3 conc: 50
+edge: 58 DNM1.PRD2::MYO1E.SH3 conc: 615083
+edge: 59 DNM1.PRD2::ITSN1.SH3A conc: 50
+edge: 60 DNM1.PRD2::FNBP1.SH3 conc: 425098
+edge: 61 DNM1.PRD2::SH3KBP1.SH3C conc: 50
+edge: 62 DNM1.PRD2::SH3KBP1.SH3A conc: 50
+edge: 63 DNM1.PRD2::PACSIN2.SH3 conc: 1.51409e+06
+edge: 64 DNM1.PRD2::SH3GL1.SH3 conc: 437847
+edge: 65 DNM1.PRD3::ITSN2.SH3A conc: 50
+edge: 66 DNM1.PRD3::SH3GL1.SH3 conc: 740826
+edge: 67 DNM1.PRD3::SNX9.SH3 conc: 173272
+edge: 68 DNM1.PRD3::SH3BP4.SH3 conc: 50
+edge: 69 DNM1.PRD3::MYO1E.SH3 conc: 1.19001e+06
+edge: 70 DNM1.PRD3::ITSN1.SH3A conc: 50
+edge: 71 DNM1.PRD3::FNBP1.SH3 conc: 662574
+edge: 72 DNM1.PRD3::SH3KBP1.SH3C conc: 50
+edge: 73 DNM1.PRD3::SH3KBP1.SH3A conc: 50
+edge: 74 DNM1.PRD3::BIN1.SH3 conc: 775492
+edge: 75 DNM1.PRD9::ITSN2.SH3A conc: 50
+edge: 76 DNM1.PRD9::SNX9.SH3 conc: 186791
+edge: 77 DNM1.PRD9::SH3BP4.SH3 conc: 50
+edge: 78 DNM1.PRD9::MYO1E.SH3 conc: 1.58268e+06
+edge: 79 DNM1.PRD9::ITSN1.SH3A conc: 50
+edge: 80 DNM1.PRD9::FNBP1.SH3 conc: 798984
+edge: 81 DNM1.PRD9::SH3KBP1.SH3C conc: 50
+edge: 82 DNM1.PRD9::SH3KBP1.SH3A conc: 50
+edge: 83 DNM1.PRD9::SH3GL2.SH3 conc: 973715
+edge: 84 EPN1.NPF::ITSN1.EH1 conc: 50
+edge: 85 EPN1.NPF::ITSN1.EH2 conc: 250294
+edge: 86 EPN1.NPF::EPS15.EH2 conc: 50
+edge: 87 EPN1.NPF::EPS15.EH3 conc: 50
+edge: 88 EPN1.NPF::EPS15L1.EH1 conc: 50
+edge: 89 EPN1.NPF::EPS15.EH1 conc: 50
+edge: 90 ITSN1.EH1::DAB2.NPF3_4_5 conc: 50
+edge: 91 ITSN1.EH1::PICALM.NPF1_2 conc: 563218
+edge: 92 ITSN1.EH1::STON2.NPF2 conc: 50
+edge: 93 FCHO1.FBAR_DIMER::FCHO1.FBAR_DIMER conc: 1.50797e+06
+edge: 94 FCHO1.FBAR_DIMER::FCHO2.FBAR_DIMER conc: 1.52027e+06
+edge: 95 FCHO2.FBAR_DIMER::FCHO2.FBAR_DIMER conc: 1.52255e+06
+edge: 96 FCHO1.MUH::PICALM.DPF conc: 1.94581e+06
+edge: 97 FCHO1.MUH::EPS15.DPF_1-6 conc: 1.6742e+06
+edge: 98 HIP1R.PRD_span::CTTN.SH3 conc: 3.09912e+06
+edge: 99 CTTN.SH3::DNM2.PRD2 conc: 50
+edge: 100 CTTN.SH3::DNM2.PRD3 conc: 50
+edge: 101 CTTN.SH3::DNM2.PRD9 conc: 50
+edge: 102 CTTN.SH3::TNK2.PRD conc: 50
+edge: 103 CTTN.SH3::WASL.PRD_span conc: 50
+edge: 104 CTTN.SH3::DNM2.PRD_1_4-8_10-15 conc: 50
+edge: 105 ITSN2.WVxF::AP2A2.A2BS conc: 50
+edge: 106 AP2A2.A2BS::SYNJ1.FxDxF conc: 50
+edge: 107 AP2A2.A2BS::SYNJ1.WVxF conc: 50
+edge: 108 AP2A2.A2BS::HIP1.FXDIF conc: 1.72706e+06
+edge: 109 AP2A2.A2BS::NECAP1.WXXF_2 conc: 50
+edge: 110 AP2A2.A2BS::STON2.WVxF conc: 50
+edge: 111 AP2A2.A2BS::CLTC.AD conc: 307741
+edge: 112 SYNJ1.WVxF::AP2A1.A2BS conc: 50
+edge: 113 HIP1.CC::CLTB.interface_hip1_hip1r conc: 687643
+edge: 114 HIP1.CC::HIP1.CC conc: 2.12797e+06
+edge: 115 CLTB.interface_hip1_hip1r::HIP1R.CC conc: 660590
+edge: 116 HIP1.FXDIF::AP2A1.A2BS conc: 1.93118e+06
+edge: 117 CLTC.TRIMER::CLTC.TRIMER conc: 647844
+edge: 118 CLTC.TRIMER::CLTCL1.TRIMER conc: 625650
+edge: 119 BIN1.SH3::SYNJ1.PRD_span conc: 409486
+edge: 120 BIN1.SH3::DNM2.PRD2 conc: 441448
+edge: 121 BIN1.SH3::SYNJ1.PRD_1285to1290 conc: 419260
+edge: 122 BIN1.SH3::WASL.PRD_span conc: 50
+edge: 123 BIN1.SH3::DNM2.PRD3 conc: 593101
+edge: 124 BIN1.SH3::TNK2.PRD conc: 2.06064e+06
+edge: 125 SYNJ1.PRD_span::ITSN1.SH3A conc: 50
+edge: 126 SYNJ1.PRD_span::MYO1E.SH3 conc: 478767
+edge: 127 SYNJ1.PRD_span::PACSIN2.SH3 conc: 1.11528e+06
+edge: 128 SYNJ1.PRD_span::SH3GL1.SH3 conc: 401742
+edge: 129 SYNJ1.PRD_span::SH3GL2.SH3 conc: 409296
+edge: 130 SYNJ1.PRD_span::SNX9.SH3 conc: 163369
+edge: 131 SYNJ1.PRD_span::TNK2.SH3 conc: 50
+edge: 132 DNM2.PRD2::SNX9.SH3 conc: 187661
+edge: 133 DNM2.PRD2::SH3BP4.SH3 conc: 50
+edge: 134 DNM2.PRD2::TRIP10.SH3_1 conc: 484786
+edge: 135 DNM2.PRD2::MYO1E.SH3 conc: 516918
+edge: 136 DNM2.PRD2::ITSN2.SH3A conc: 50
+edge: 137 DNM2.PRD2::ITSN1.SH3A conc: 50
+edge: 138 DNM2.PRD2::FNBP1L.SH3 conc: 682513
+edge: 139 DNM2.PRD2::FNBP1.SH3 conc: 405453
+edge: 140 DNM2.PRD2::ITSN2.SH3E conc: 50
+edge: 141 DNM2.PRD2::ITSN1.SH3E conc: 50
+edge: 142 DNM2.PRD2::ITSN2.SH3C conc: 50
+edge: 143 DNM2.PRD2::ITSN1.SH3C conc: 50
+edge: 144 DNM2.PRD2::SH3KBP1.SH3C conc: 50
+edge: 145 DNM2.PRD2::PACSIN2.SH3 conc: 1.53603e+06
+edge: 146 DNM2.PRD2::SH3GL1.SH3 conc: 423777
+edge: 147 DNM2.PRD2::SH3KBP1.SH3A conc: 50
+edge: 148 ITSN1.SH3B::SH3GL1.SH3 conc: 656313
+edge: 149 ITSN1.SH3B::INPPL1.PRD_span conc: 50
+edge: 150 ITSN1.SH3B::WASL.PRD_span conc: 50
+edge: 151 ITSN1.SH3B::SH3GL2.SH3 conc: 706995
+edge: 152 SH3GL1.SH3::DNM2.PRD3 conc: 612033
+edge: 153 SH3GL1.SH3::SYNJ1.PRD_1285to1290 conc: 383358
+edge: 154 SH3GL1.SH3::SH3KBP1.PRD conc: 1.72745e+06
+edge: 155 DAB2.DPF::FCHO2.MUH conc: 1.67271e+06
+edge: 156 DAB2.DPF::AP2A2.A2PLAT conc: 50
+edge: 157 DAB2.DPF::AP2A1.A2PLAT conc: 50
+edge: 158 FCHO2.MUH::EPS15.DPF_1-6 conc: 151186
+edge: 159 FCHO2.MUH::EPS15.DPF_7-15 conc: 1.82529e+06
+edge: 160 AAK1.KD::AAK1.KD conc: 50
+edge: 161 AAK1.KD::NUMB.PhosphoSite_T102 conc: 9013.21
+edge: 162 AAK1.KD::AP2M1.PHOSPHO_SITE conc: 957824
+edge: 163 NECAP1.PHear::AP2B1.CLAT_linker conc: 977848
+edge: 164 NECAP1.PHear::AP2M1.M2MUH conc: 50
+edge: 165 AP2B1.CLAT_linker::CLTC.TD_CBOX conc: 50
+edge: 166 NECAP1.WXXF_2::AP2A1.A2BS conc: 50
+edge: 167 AP2A1.A2BS::CLTC.AD conc: 328269
+edge: 168 CTTN.ACIDICMOT::ARPC1A.interface_to_actin_filament_acidic conc: 459169
+edge: 169 CTTN.ACIDICMOT::ACTR3.side_front_to_acidic_domain conc: 604404
+edge: 170 CTTN.ACIDICMOT::ACTR2.side_front_to_acidic_domain conc: 609796
+edge: 171 ARPC1A.interface_to_actin_filament_acidic::WASL.VCA_acidic conc: 173524
+edge: 172 CTTN.SRC_BIND::CFL1.ADFH conc: 2.83433e+06
+edge: 173 CORO1A.CC_dimer::CORO1A.CC_dimer conc: 589055
+edge: 174 ITSN2.SH3A::DNM2.PRD3 conc: 50
+edge: 175 ITSN2.SH3A::DNM2.PRD9 conc: 50
+edge: 176 ITSN2.SH3A::WASL.PRD_span conc: 50
+edge: 177 ITSN2.SH3A::DNM2.PRD_1_4-8_10-15 conc: 50
+edge: 178 ITSN2.SH3A::SYNJ2.PRD_span conc: 27355.7
+edge: 179 ITSN2.SH3D::NUMB.PRD conc: 50
+edge: 180 ITSN2.SH3D::WASL.PRD_span conc: 50
+edge: 181 ITSN2.SH3D::SH3KBP1.PRD conc: 50
+edge: 182 NUMB.PRD::ITSN1.SH3D conc: 236067
+edge: 183 ITSN1.SH3D::INPPL1.PRD_span conc: 138059
+edge: 184 ITSN1.SH3D::WASL.PRD_span conc: 50
+edge: 185 ITSN1.SH3D::INPPL1.PRD_944to949 conc: 131808
+edge: 186 STON2.WVxF::AP2M1.M2MUH conc: 50
+edge: 187 ITSN1.EH2::STON2.NPF1 conc: 271770
+edge: 188 SYNJ1.PRD_1285to1290::TNK2.SH3 conc: 50
+edge: 189 SYNJ1.PRD_1285to1290::SNX9.SH3 conc: 119902
+edge: 190 SYNJ1.PRD_1285to1290::SH3GL2.SH3 conc: 394929
+edge: 191 SYNJ1.PRD_1285to1290::PACSIN2.SH3 conc: 1.1678e+06
+edge: 192 SYNJ1.PRD_1285to1290::MYO1E.SH3 conc: 492542
+edge: 193 SYNJ1.PRD_1285to1290::ITSN1.SH3A conc: 50
+edge: 194 SYNJ1.PRD_1285to1290::SH3KBP1.SH3B conc: 50
+edge: 195 SYNJ1.PRD_1285to1290::SH3KBP1.SH3C conc: 50
+edge: 196 SYNJ1.PRD_1285to1290::SH3KBP1.SH3A conc: 50
+edge: 197 WASL.VCA_acidic::ACTR2.side_front_to_acidic_domain conc: 198077
+edge: 198 WASL.VCA_acidic::ACTR3.side_front_to_acidic_domain conc: 203384
+edge: 199 CLTCL1.TRIMER::CLTCL1.TRIMER conc: 610059
+edge: 200 FNBP1L.FBAR_DIMER::FNBP1L.FBAR_DIMER conc: 3.42981e+06
+edge: 201 FNBP1L.FBAR_TOP::FNBP1L.FBAR_BOTTOM conc: 6.85963e+06
+edge: 202 AGFG1.CLAT::CLTC.TD_CBOX conc: 50
+edge: 203 CLTC.TD_CBOX::TNK2.CLAT conc: 50
+edge: 204 CLTC.TD_CBOX::OCRL.CLAT_NS conc: 50
+edge: 205 CLTC.TD_CBOX::DAB2.CLAT conc: 50
+edge: 206 CLTC.TD_CBOX::DNAJC6.CLAT conc: 50
+edge: 207 CLTC.TD_CBOX::EPN2.CLAT conc: 50
+edge: 208 CLTC.TD_CBOX::ARRB2.CLAT conc: 50
+edge: 209 CLTC.TD_CBOX::ARRB1.CLAT conc: 50
+edge: 210 CLTC.TD_CBOX::HIP1.CLAT conc: 900.91
+edge: 211 CLTC.TD_CBOX::EPN1.CLAT conc: 50
+edge: 212 CLTC.TD_CBOX::LDLRAP1.CLAT conc: 50
+edge: 213 CLTC.TD_CBOX::OCRL.CLAT conc: 50
+edge: 214 CLTC.TD_CBOX::PICALM.CLAT conc: 50
+edge: 215 CLTC.TD_CBOX::HIP1R.CLAT conc: 3.15854e+06
+edge: 216 CLTC.TD_CBOX::GAK.CLAT conc: 50
+edge: 217 AGFG1.FXXFXXF::AP2A1.A2PLAT conc: 50
+edge: 218 AGFG1.FXXFXXF::AP2A2.A2PLAT conc: 50
+edge: 219 AP2A1.A2PLAT::EPN1.DPW conc: 50
+edge: 220 AP2A1.A2PLAT::EPS15.DPF_7-15 conc: 50
+edge: 221 AP2A1.A2PLAT::MYO6.DT conc: 50
+edge: 222 AP2A1.A2PLAT::NUMB.DPF conc: 50
+edge: 223 AP2A1.A2PLAT::OCRL.FxDxF conc: 171854
+edge: 224 AP2A1.A2PLAT::SNX9.LC conc: 1.42565e+06
+edge: 225 AP2A2.A2PLAT::EPN1.DPW conc: 50
+edge: 226 AP2A2.A2PLAT::EPS15.DPF_7-15 conc: 50
+edge: 227 AP2A2.A2PLAT::MYO6.DT conc: 50
+edge: 228 AP2A2.A2PLAT::NUMB.DPF conc: 50
+edge: 229 AP2A2.A2PLAT::OCRL.FxDxF conc: 133140
+edge: 230 AP2A2.A2PLAT::SNX9.LC conc: 1.23982e+06
+edge: 231 EPS15L1.EH2::STON2.NPF2 conc: 50
+edge: 232 EPS15L1.EH2::EPN2.NPF conc: 50
+edge: 233 EPS15L1.EH2::STON2.NPF1 conc: 50
+edge: 234 STON2.NPF2::EPS15.EH1 conc: 77668.7
+edge: 235 STON2.NPF2::EPS15.EH2 conc: 87803.7
+edge: 236 EPS15.EH3::DAB2.NPF3_4_5 conc: 350951
+edge: 237 EPS15.EH3::SH3BP4.NPF conc: 124522
+edge: 238 EPS15.EH3::AGFG1.NPF conc: 51444.2
+edge: 239 EPS15.EH3::NUMB.NPF conc: 56439.5
+edge: 240 EPS15.EH3::EPN3.NPF conc: 504594
+edge: 241 DAB2.NPF3_4_5::EPS15.EH2 conc: 303280
+edge: 242 DAB2.NPF3_4_5::EPS15.EH1 conc: 244746
+edge: 243 EPN1.DPW::AP2B1.B2PLAT conc: 50
+edge: 244 AP2B1.B2PLAT::ARRB2.CTD conc: 50
+edge: 245 AP2B1.B2PLAT::EPS15.DPF_linker_11-12 conc: 917653
+edge: 246 AP2B1.B2PLAT::ARRB1.CTD conc: 50
+edge: 247 AP2B1.B2PLAT::EPN1.DEX conc: 50
+edge: 248 AP2B1.B2PLAT::LDLRAP1.AP2BIND conc: 50
+edge: 249 AP2B1.B2PLAT::SNX9.LC conc: 516051
+edge: 250 ACTR3.barbed_end_groove_to_Chelix::WASL.VCA_central conc: 491060
+edge: 251 WASL.VCA_central::ACTR2.barbed_end_groove_to_Chelix conc: 445899
+edge: 252 AP2B1.B2BS::PIP5K1C.CTD conc: 1.05354e+06
+edge: 253 AP2B1.B2BS::ITSN1.LINK_SH3AB conc: 415372
+edge: 254 ITSN1.RhoGEF_autoinhibit::ITSN1.SH3E_LINK_toDH conc: 571950
+edge: 255 CTTN.PhosphoSites::TNK2.PKD conc: 1.18591e+06
+edge: 256 TNK2.PKD::TNK2.PhosphoSites conc: 50
+edge: 257 ITSN1.SH3C::DNM2.PRD_1_4-8_10-15 conc: 50
+edge: 258 ITSN1.SH3C::INPPL1.PRD_span conc: 250687
+edge: 259 ITSN1.SH3C::WASL.PRD_span conc: 50
+edge: 260 ITSN1.SH3C::INPPL1.PRD_944to949 conc: 255047
+edge: 261 ITSN1.SH3C::DNM2.PRD3 conc: 50
+edge: 262 ITSN1.SH3C::DNM2.PRD9 conc: 50
+edge: 263 DNM2.PRD_1_4-8_10-15::ITSN2.SH3C conc: 50
+edge: 264 DNM2.PRD_1_4-8_10-15::ITSN1.SH3E conc: 50
+edge: 265 DNM2.PRD_1_4-8_10-15::ITSN2.SH3E conc: 50
+edge: 266 DNM2.PRD_1_4-8_10-15::FNBP1.SH3 conc: 688316
+edge: 267 DNM2.PRD_1_4-8_10-15::FNBP1L.SH3 conc: 1.71993e+06
+edge: 268 DNM2.PRD_1_4-8_10-15::ITSN1.SH3A conc: 50
+edge: 269 DNM2.PRD_1_4-8_10-15::MYO1E.SH3 conc: 1.25614e+06
+edge: 270 DNM2.PRD_1_4-8_10-15::SH3BP4.SH3 conc: 50
+edge: 271 DNM2.PRD_1_4-8_10-15::SNX9.SH3 conc: 173505
+edge: 272 DNM2.PRD_1_4-8_10-15::TRIP10.SH3_1 conc: 840801
+edge: 273 ITSN2.SH3C::WASL.PRD_span conc: 50
+edge: 274 ITSN2.SH3C::DNM2.PRD3 conc: 50
+edge: 275 ITSN2.SH3C::DNM2.PRD9 conc: 50
+edge: 276 ITSN2.SH3C::SH3KBP1.PRD conc: 50
+edge: 277 ITSN1.SH3E::INPPL1.PRD_span conc: 251971
+edge: 278 ITSN1.SH3E::WASL.PRD_span conc: 50
+edge: 279 ITSN1.SH3E::INPPL1.PRD_944to949 conc: 253763
+edge: 280 ITSN1.SH3E::DNM2.PRD3 conc: 50
+edge: 281 ITSN1.SH3E::DNM2.PRD9 conc: 50
+edge: 282 ITSN2.SH3E::WASL.PRD_span conc: 50
+edge: 283 ITSN2.SH3E::DNM2.PRD3 conc: 50
+edge: 284 ITSN2.SH3E::DNM2.PRD9 conc: 50
+edge: 285 ITSN2.SH3E::SH3KBP1.PRD conc: 50
+edge: 286 INPPL1.PRD_span::ITSN1.SH3A conc: 50
+edge: 287 ITSN2.SH3B::WASL.PRD_span conc: 50
+edge: 288 WASL.PRD_span::FNBP1.SH3 conc: 50
+edge: 289 WASL.PRD_span::FNBP1L.SH3 conc: 50
+edge: 290 WASL.PRD_span::ITSN1.SH3A conc: 50
+edge: 291 WASL.PRD_span::PACSIN2.SH3 conc: 50
+edge: 292 WASL.PRD_span::TRIP10.SH3_2 conc: 2.43635e+06
+edge: 293 DNM2.PRD3::SNX9.SH3 conc: 161141
+edge: 294 DNM2.PRD3::SH3BP4.SH3 conc: 50
+edge: 295 DNM2.PRD3::TRIP10.SH3_1 conc: 668717
+edge: 296 DNM2.PRD3::MYO1E.SH3 conc: 831802
+edge: 297 DNM2.PRD3::ITSN1.SH3A conc: 50
+edge: 298 DNM2.PRD3::FNBP1L.SH3 conc: 1.27184e+06
+edge: 299 DNM2.PRD3::FNBP1.SH3 conc: 540057
+edge: 300 STON2.NPF1::EPS15.EH1 conc: 50
+edge: 301 STON2.NPF1::EPS15.EH2 conc: 50
+edge: 302 SH3BP4.NPF::EPS15.EH2 conc: 110425
+edge: 303 SH3BP4.NPF::EPS15.EH1 conc: 100847
+edge: 304 EPS15.EH2::EPN3.NPF conc: 349600
+edge: 305 EPS15.EH2::AGFG1.NPF conc: 46748.4
+edge: 306 EPS15.EH2::EPN2.NPF conc: 138508
+edge: 307 EPS15.EH2::NUMB.NPF conc: 51537.2
+edge: 308 EPN3.NPF::EPS15.EH1 conc: 265087
+edge: 309 AGFG1.NPF::EPS15.EH1 conc: 43922.8
+edge: 310 EPN2.NPF::EPS15L1.EH3 conc: 50
+edge: 311 EPN2.NPF::EPS15.EH1 conc: 140698
+edge: 312 EPN2.NPF::EPS15L1.EH1 conc: 50
+edge: 313 NUMB.NPF::EPS15L1.EH1 conc: 50
+edge: 314 NUMB.NPF::EPS15.EH1 conc: 48786.6
+edge: 315 INPPL1.PRD_944to949::ITSN1.SH3A conc: 50
+edge: 316 INPPL1.PRD_944to949::SH3KBP1.SH3B conc: 50
+edge: 317 INPPL1.PRD_944to949::SH3KBP1.SH3C conc: 50
+edge: 318 INPPL1.PRD_944to949::SH3KBP1.SH3A conc: 50
+edge: 319 ITSN1.SH3A::SYNJ2.PRD_1285to1290 conc: 202964
+edge: 320 ITSN1.SH3A::DNM2.PRD9 conc: 50
+edge: 321 ITSN1.SH3A::SYNJ2.PRD_span conc: 380659
+edge: 322 ITSN1.SH3A::SH3KBP1.PRD conc: 50
+edge: 323 SYNJ2.PRD_1285to1290::SH3KBP1.SH3B conc: 75441.3
+edge: 324 SYNJ2.PRD_1285to1290::SH3KBP1.SH3C conc: 60908.5
+edge: 325 SYNJ2.PRD_1285to1290::SH3KBP1.SH3A conc: 68701.3
+edge: 326 SNX9.SH3::DNM2.PRD9 conc: 167600
+edge: 327 SNX9.SH3::TNK2.PRD conc: 234714
+edge: 328 SNX9.SH3::OCRL.PRD conc: 2.31253e+06
+edge: 329 SH3GL2.SH3::DNM2.PRD9 conc: 682378
+edge: 330 SH3GL2.SH3::SH3KBP1.PRD conc: 1.92945e+06
+edge: 331 MYO1E.SH3::DNM2.PRD9 conc: 1.01849e+06
+edge: 332 DNM2.PRD9::SH3BP4.SH3 conc: 50
+edge: 333 DNM2.PRD9::TRIP10.SH3_1 conc: 733224
+edge: 334 DNM2.PRD9::FNBP1L.SH3 conc: 1.47047e+06
+edge: 335 DNM2.PRD9::FNBP1.SH3 conc: 606524
+edge: 336 SH3BP4.SH3::CARGO_YXXO.YXXO conc: 502435
+edge: 337 SH3KBP1.SH3C::WASL.PRD_277to392 conc: 294651
+edge: 338 SH3KBP1.SH3C::HIP1R.PRD_1025to1030 conc: 762197
+edge: 339 SH3KBP1.SH3C::DAB2.PRD_709to725 conc: 851030
+edge: 340 SH3KBP1.SH3A::SH3KBP1.PRD conc: 50
+edge: 341 SH3KBP1.SH3A::WASL.PRD_277to392 conc: 358434
+edge: 342 SH3KBP1.SH3A::HIP1R.PRD_1025to1030 conc: 1.5416e+06
+edge: 343 EPS15.EH1::PICALM.NPF1_2 conc: 332291
+edge: 344 SH3KBP1.SH3B::HIP1R.PRD_1025to1030 conc: 1.8936e+06
+edge: 345 ACTB.PointedEnd_Back::ACTR2.back_barbed_end_to_actin conc: 965876
+edge: 346 ACTB.PointedEnd_Back::ACTR3.back_barbed_end_to_actin conc: 946040
+edge: 347 ACTR2.interface_to_actr3::ACTR3.interface_to_actr2 conc: 713488
+edge: 348 ACTR2.interface_to_arpc4::ARPC4.interface_to_actr2 conc: 673288
+edge: 349 ACTR3.interface_to_arpc3::ARPC3.interface_to_actr3 conc: 651091
+edge: 350 ACTR3.interface_to_arpc4::ARPC4.interface_to_actr3 conc: 682852
+edge: 351 ACTR3.interface_to_arpc2::ARPC2.interface_to_actr3 conc: 701266
+edge: 352 AP2A1.core_to_linker::FCHO1.LINKER conc: 1.40028e+06
+edge: 353 AP2A1.core_to_linker::FCHO2.LINKER conc: 1.4288e+06
+edge: 354 FCHO1.LINKER::AP2A2.core_to_linker conc: 1.30196e+06
+edge: 355 FCHO2.LINKER::AP2A2.core_to_linker conc: 1.30262e+06
+edge: 356 AP2B1.beta_to_sigma_interface::AP2S1.sigma_to_beta_interface conc: 1.08501e+06
+edge: 357 AP2M1.M2MUH::CORO7.Tyr_motif conc: 50
+edge: 358 AP2M1.M2MUH::CARGO_YXXO.YXXO conc: 1.22204e+06
+edge: 359 AP2M1.mu_to_beta_interface::AP2B1.beta_to_mu_interface conc: 1.15865e+06
+edge: 360 AP2M1.mu_to_sigma_interface::AP2S1.sigma_to_mu_interface conc: 1.00445e+06
+edge: 361 AP2M1.mu_to_alpha_interface::AP2A1.alpha_to_mu_interface conc: 950413
+edge: 362 AP2M1.mu_to_alpha_interface::AP2A2.alpha_to_mu_interface conc: 725918
+edge: 363 ARPC1A.interface_to_arpc4::ARPC4.interface_to_arpc1a conc: 562840
+edge: 364 ARPC4.interface_to_arpc2::ARPC2.interface_to_arpc4 conc: 640482
+edge: 365 ARPC5L.interface_to_arpc4::ARPC4.interface_to_arpc5l conc: 623686
+edge: 366 ARPC5L.interface_to_actr2::ACTR2.interface_to_arpc5l conc: 670841
+edge: 367 BIN1.BAR_DIMER::BIN1.BAR_DIMER conc: 3.43434e+06
+edge: 368 BIN1.BAR_TOP::BIN1.BAR_BOTTOM conc: 6.86867e+06
+edge: 369 BMP2K.PKD::NUMB.PhosphoSites conc: 115204
+edge: 370 CAPZB.interface_to_hspa8::HSPA8.SBD conc: 3.71906e+06
+edge: 371 CAPZB.interface_to_capza2::CAPZA2.interface_to_capzb conc: 1.54002e+06
+edge: 372 HIP1R.CC::HIP1R.CC conc: 1.77989e+06
+edge: 373 CLTC.PROX::CLTA.BIND conc: 1.19273e+06
+edge: 374 CLTC.PROX::CLTB.BIND conc: 706790
+edge: 375 CLTA.BIND::CLTCL1.PROX conc: 1.13887e+06
+edge: 376 CLTB.BIND::CLTCL1.PROX conc: 674171
+edge: 377 HIP1.CLAT::CLTCL1.TD_CBOX conc: 3.70387e+06
+edge: 378 CLTCL1.TD_CBOX::OCRL.CLAT conc: 50
+edge: 379 CLTCL1.TD_CBOX::PICALM.CLAT conc: 50
+edge: 380 DNM1.MD::DNM2.GED conc: 50
+edge: 381 DNM1.MD::DNM1.GED conc: 2.60709e+06
+edge: 382 DNM2.GED::DNM2.MD conc: 3.65017e+06
+edge: 383 DNM1.STALK_DIMER::DNM1.STALK_DIMER conc: 847464
+edge: 384 DNM1.STALK_DIMER::DNM2.STALK_DIMER conc: 912183
+edge: 385 DNM2.STALK_DIMER::DNM2.STALK_DIMER conc: 1.369e+06
+edge: 386 DYRK1A.Kinase_ST::DNM1.PHOSPHO_SITES_PRD conc: 2.20778e+06
+edge: 387 DYRK1A.Kinase_ST::DYRK1A.Phospho_Site conc: 50
+edge: 388 EPN1.ENTH_H0::EPN3.ENTH_H0 conc: 319907
+edge: 389 EPN3.ENTH_H0::EPN2.ENTH_H0 conc: 442738
+edge: 390 EPS15.CC::EPS15.CC conc: 434606
+edge: 391 EPS15.CC::ITSN1.CC1 conc: 240898
+edge: 392 EPS15.CC::ITSN2.CC1 conc: 2682.48
+edge: 393 EPS15.UIM2::CORO7.interface_to_eps15 conc: 617223
+edge: 394 EPS15.UIM2::CARGO_ubiq.ubiquitin conc: 370831
+edge: 395 FNBP1.FBAR_DIMER::TRIP10.FBAR_DIMER conc: 1.70215e+06
+edge: 396 FNBP1.FBAR_DIMER::FNBP1.FBAR_DIMER conc: 2.55768e+06
+edge: 397 TRIP10.FBAR_DIMER::TRIP10.FBAR_DIMER conc: 1.24762e+06
+edge: 398 HSPA8.HSPATP::CLTA.interface_hspa8 conc: 3.00409e+06
+edge: 399 HSPA8.HSPATP::CLTB.interface_hspa8 conc: 1.88533e+06
+edge: 400 ITSN1.CC1::ITSN1.CC1 conc: 164255
+edge: 401 ITSN1.CC1::ITSN2.CC1 conc: 2541.75
+edge: 402 ITSN2.CC1::ITSN2.CC1 conc: 1237.79
+edge: 403 MYO6.WWY::MYO6.WWY conc: 50
+edge: 404 MYO6.WWY::DAB2.CTD conc: 706310
+edge: 405 SH3BP4.CC::SH3BP4.CC conc: 140007
+edge: 406 SH3GL1.BAR_DIMER::SH3GL1.BAR_DIMER conc: 2.3882e+06
+edge: 407 SH3GL1.BAR_DIMER::SH3GL2.BAR_DIMER conc: 2.32178e+06
+edge: 408 SH3GL2.BAR_DIMER::SH3GL2.BAR_DIMER conc: 2.24491e+06
+edge: 409 SH3KBP1.coiled_coil::SH3KBP1.coiled_coil conc: 971164
+edge: 410 SNX9.LC::CLTC.TD_WBOX conc: 2.21405e+06
+edge: 411 SNX9.BAR_DIMER::SNX9.BAR_DIMER conc: 2.82323e+06
+edge: 412 TRIP10.FBAR_TOP::TRIP10.FBAR_BOTTOM conc: 4.19738e+06
+edge: 413 ARPC5L.interface_to_arpc1a::ARPC1A.interface_to_arpc5l conc: 531864
+edge: 414 AP2B1.beta_to_alpha_interface::AP2A2.alpha_to_beta_interface conc: 740933
+edge: 415 AP2B1.beta_to_alpha_interface::AP2A1.alpha_to_beta_interface conc: 965429
+edge: 416 AP2S1.sigma_to_alpha_interface::AP2A2.alpha_to_sigma_interface conc: 730023
+edge: 417 AP2S1.sigma_to_alpha_interface::AP2A1.alpha_to_sigma_interface conc: 954519
+edge: 418 PACSIN2.FBAR_DIMER::PACSIN2.FBAR_DIMER conc: 3.52404e+06
+edge: 419 PACSIN2.FBAR_top::PACSIN2.FBAR_bottom conc: 7.04808e+06
+edge: 420 GAK.Jdomain::HSPA8.COFACTOR conc: 2.27385e+06
+edge: 421 HSPA8.COFACTOR::DNAJC6.Jdomain conc: 2.25289e+06
+edge: 422 AP2A1.PIP2_BIND::PI45P2.Head_group conc: 1.63633e+06
+edge: 423 PI45P2.Head_group::AP2A2.PIP2_BIND conc: 1.41183e+06
+edge: 424 PI45P2.Head_group::AP2B1.PIP2_BIND conc: 1.47734e+06
+edge: 425 PI45P2.Head_group::AP2M1.PIP2_BIND conc: 1.39528e+06
+edge: 426 PI45P2.Head_group::HIP1.ENTH conc: 50
+edge: 427 PI45P2.Head_group::HIP1R.ENTH conc: 50
+edge: 428 PI45P2.Head_group::FCHO1.FBAR_MEM conc: 50
+edge: 429 PI45P2.Head_group::FCHO2.FBAR_MEM conc: 50
+edge: 430 PI45P2.Head_group::PICALM.ANTH_MEM conc: 1.22741e+06
+edge: 431 PI45P2.Head_group::ITSN1.PH conc: 733715
+edge: 432 PI45P2.Head_group::DNM2.PH conc: 3.86049e+06
+edge: 433 PI45P2.Head_group::DNM1.PH conc: 2.79829e+06
+edge: 434 PI45P2.Head_group::DAB2.PTB_MEM conc: 1.134e+06
+edge: 435 PI45P2.Head_group::LDLRAP1.PTB_MEM conc: 539459
+edge: 436 PI45P2.Head_group::ARRB1.PIP2_BIND conc: 568108
+edge: 437 PI45P2.Head_group::ARRB2.PIP2_BIND conc: 572162
+edge: 438 PI45P2.Head_group::NUMB.PTB_MEM conc: 391791
+edge: 439 PI45P2.Head_group::EPN1.ENTH conc: 432348
+edge: 440 PI45P2.Head_group::EPN2.ENTH conc: 592659
+edge: 441 PI45P2.Head_group::TRIP10.FBAR_MEM conc: 50
+edge: 442 PI45P2.Head_group::EPN3.ENTH conc: 1.58924e+06
+edge: 443 PI45P2.Head_group::FNBP1.FBAR_MEM conc: 50
+edge: 444 PI45P2.Head_group::FNBP1L.FBAR_MEM conc: 50
+edge: 445 PI45P2.Head_group::MYO1E.PH conc: 50
+edge: 446 PI45P2.Head_group::BIN1.BAR_MEM conc: 50
+edge: 447 PI45P2.Head_group::SH3GL2.BAR_MEM conc: 50
+edge: 448 PI45P2.Head_group::SH3GL1.BAR_MEM conc: 50
+edge: 449 PI45P2.Head_group::PACSIN2.FBAR_MEM conc: 50
+edge: 450 PI45P2.Head_group::SNX9.BAR_PX conc: 50
+edge: 451 PI45P2.Head_group::SYNJ1.IPPc_Sac1 conc: 1.61371e+06
+edge: 452 PI45P2.Head_group::SYNJ2.IPPc_Sac1 conc: 973963
+edge: 453 PI45P2.Head_group::OCRL.IPPc conc: 948195
+edge: 454 PI45P2.Head_group::DNAJC6.PTENlike conc: 50
+edge: 455 PI45P2.Head_group::GAK.PTENlike conc: 50
+edge: 456 HIP1.ENTH::PI_PS.Head_group conc: 1.344e+07
+edge: 457 PI_PS.Head_group::HIP1R.ENTH conc: 1.1503e+07
+edge: 458 PI_PS.Head_group::FCHO1.FBAR_MEM conc: 1.18188e+07
+edge: 459 PI_PS.Head_group::FCHO2.FBAR_MEM conc: 1.1848e+07
+edge: 460 PI_PS.Head_group::TRIP10.FBAR_MEM conc: 1.148e+07
+edge: 461 PI_PS.Head_group::FNBP1.FBAR_MEM conc: 1.53139e+07
+edge: 462 PI_PS.Head_group::FNBP1L.FBAR_MEM conc: 1.5356e+07
+edge: 463 PI_PS.Head_group::MYO1E.PH conc: 3.0771e+07
+edge: 464 PI_PS.Head_group::BIN1.BAR_MEM conc: 1.53651e+07
+edge: 465 PI_PS.Head_group::SH3GL2.BAR_MEM conc: 1.5308e+07
+edge: 466 PI_PS.Head_group::SH3GL1.BAR_MEM conc: 1.55946e+07
+edge: 467 PI_PS.Head_group::PACSIN2.FBAR_MEM conc: 1.55445e+07
+edge: 468 PI_PS.Head_group::SNX9.BAR_PX conc: 1.2929e+07
+edge: 469 PI_PS.Head_group::PI4KA.Kinase_lipid conc: 2.54991e+07
+edge: 470 SNX9.BAR_PX::PI34P2.Head_group conc: 50
+edge: 471 AP2A1.CARGO_BIND::CARGO_DILEU.DEXXXLLI conc: 1.14909e+06
+edge: 472 CARGO_DILEU.DEXXXLLI::AP2A2.CARGO_BIND conc: 924599
+edge: 473 CARGO_DILEU.DEXXXLLI::AP2S1.CARGO_BIND conc: 421449
+edge: 474 PICALM.ANTH_VAMP::CARGO_SNARE.coiled_coil conc: 943190
+edge: 475 PICALM.ANTH_VAMP::CARGO_VAMP2.coiled_coil conc: 50
+edge: 476 DAB2.PTB_CARGO::CARGO_PTB.FYXNPXYF conc: 825327
+edge: 477 CARGO_PTB.FYXNPXYF::LDLRAP1.PTB_CARGO conc: 45575.6
+edge: 478 CARGO_PTB.FYXNPXYF::NUMB.PTB_CARGO conc: 83113.8
+edge: 479 CARGO_ubiq.ubiquitin::EPN1.UIM conc: 29148.1
+edge: 480 CARGO_ubiq.ubiquitin::EPN2.UIM conc: 55059.7
+edge: 481 CARGO_ubiq.ubiquitin::EPN3.UIM conc: 782837
+edge: 482 AGFG1.CARGO_BIND::CARGO_VAMP7.longin conc: 106703
+edge: 483 ARRB1.CARGO_BIND::CARGO_GPCR.pSpT conc: 112288
+edge: 484 CARGO_GPCR.pSpT::ARRB2.CARGO_BIND conc: 116341
+edge: 485 INPPL1.IPPc::PI345P3.Head_group conc: 346960
+edge: 486 PIP5K1C.Kinase_lipid::PI4P.Head_group conc: 4.13948e+06
+edge: 487 PI4P.Head_group::DNAJC6.PTENlike conc: 3.15863e+06
+edge: 488 PI4P.Head_group::GAK.PTENlike conc: 3.1796e+06
+-------------------------------
+Full time: 0.081604

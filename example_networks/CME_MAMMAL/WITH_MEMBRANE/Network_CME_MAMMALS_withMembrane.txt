@@ -570,5 +570,7 @@ SYNJ2	IPPc_Sac1	PI45P2	Head_group	1:01
 OCRL	IPPc	PI45P2	Head_group	1:01
 PI4KA	Kinase_lipid	PI_PS	Head_group	01:00.5
 PIP5K1C	Kinase_lipid	PI4P	Head_group	1:01
-DNAJC6	PTENlike	PI_PS	Head_group	1:01
-GAK	PTENlike	PI_PS	Head_group	1:01
+DNAJC6	PTENlike	PI45P2	Head_group	1:01
+GAK	PTENlike	PI45P2	Head_group	1:01
+DNAJC6	PTENlike	PI4P	Head_group	1:01
+GAK	PTENlike	PI4P	Head_group	1:01
