@@ -15,8 +15,7 @@ ProteinList_Hein_CME_HeLa.txt:	Protein name, Copy numbers, and IsConstrained?
 				IsConstrained: Yes means balance shouldl be close as possible to defined copy numbers, 
 				IsConstrained: No means that interfaces still add up to partners, but,
 					       copy numbers are not constrained to be close to the starting observed values.
-Network_CME_MAMMALS_5col.txt:    List of protein-interface interactions. Five Columns: Pro1 Iface1 Pro2 Iface2 Stoichimetry.
-				 NOTE: Cannot have commas or quotes in names!
+Network_CME_MAMMALS_5col.txt:    List of protein-interface interactions. Five Columns: Pro1 Iface1 Pro2 Iface2 Stoichimetry
 
 Hein_CellTypeHeLa_CopyNumberCDF.txt:   OPTIONAL: Cell Type Protein Copy Number distribution.  This is used to determine a p-value, by initializing
 				  copy numbers based on sampling from this distribution.

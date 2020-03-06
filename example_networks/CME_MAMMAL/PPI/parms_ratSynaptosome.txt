@@ -1,4 +1,4 @@
-78	# Number of proteins
+80	# Number of proteins
 20	# min number of complexes (determines min number of interface copies as well).
 1	#alpha: default 1, lower value biases towards equal interfaces copies within a protein.
 100	#Number of times to perform randomized copy numbers: 0 will only do Real copy numbers
