@@ -1,0 +1,84 @@
+#include "pro_classes.h"
+#include "read_protein_class.h"
+
+void read_proteins_from_file(int &Npro, ifstream &expfile, constrainParms &plist, vector<string> & genid, vector<double> &abund,  vector<ProteinClass> &proList)
+{
+  
+  cout<<"----------"<<endl;
+  
+  expfile.ignore(400,'\n');
+  ProteinClass temp(-1);
+
+  int cnt=0;
+  //  int Npro=plist.nwhole;
+  //  vector<string> applyConstraint;//=new string[Npro];
+  int i=0;
+  string gid, yn;
+  double copies;
+  //for(int i=0;i<Npro;i++){
+  while(!expfile.eof()){
+    /*
+      Read in name of the protein, its copy numbers (use dummy value if unknown) and
+      either Yes or No for applyConstraint to that protein. 
+    */
+    expfile>>gid>>copies>>yn;
+    if(yn != "Y" && yn != "N"){
+      cout <<" LINE IN PROTEIN FILE, "<<i<<" IS NOT FORMATTED PROPERLY, SKIPPING... "<<endl;
+    }else{
+      //expfile>>genid[i]>>abund[i]>>applyConstraint[i];
+      //cout <<"genid: "<<genid[i]<<" abund: "<<abund[i]<<" isConstrained?: "<<applyConstraint[i]<<endl;
+      genid.push_back(gid);
+      //applyConstraint.push_back(yn);
+      abund.push_back(copies);
+      
+      temp.name=gid;
+      temp.copies=copies;
+      temp.nInterfaces=0;//haven't added these yet, initialize to zero
+      
+      
+      if(yn=="Y"){
+	temp.isConstrained=true;
+	//constrain.push_back(i);
+	
+      }else
+	temp.isConstrained=false;
+      //add this protein to the List.
+      temp.index=i;
+      proList.push_back(temp);
+      //cout <<i<<' '<<genid[i]<<' '<<abund[i]<<endl;
+      i++;
+      
+    }//skip lines with improper format
+  }
+  /*Remove Duplicates*/
+ 
+  Npro=i;
+  for(i=0;i<Npro;i++){
+    for(int j=i+1;j<Npro;j++){
+      if(proList[i].name==proList[j].name){
+	cout <<"Found duplicate protein, REMOVING..."<<proList[j].name<<endl;
+	proList[i]=proList[Npro-1];
+	//proList.erase(Npro-1);
+	Npro--;
+      }
+    }
+  }
+	
+  proList.resize(Npro);
+  cout <<" -------------------- "<<endl;
+  cout <<"READ IN A TOTAL OF: "<<Npro<<" PROTEINS "<<endl;
+  int t=0;
+  int nConstrain=0;
+  for(int i=0;i<Npro;i++){
+    if(proList[i].isConstrained==true){
+      //constrain.push_back(i);
+      nConstrain++;
+    }
+  }
+  //  cout <<"read in abundances "<<endl;
+  cout <<" -------------------- "<<endl;
+  cout <<" NUMBER OF CONSTRAINED PROTEIN ABUNDANCES READ IN : "<<nConstrain<<". Calculated from file: "<<expfile<<endl;
+
+
+
+}

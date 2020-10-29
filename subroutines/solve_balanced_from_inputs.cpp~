@@ -1,0 +1,320 @@
+#include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <ctime>
+#include <cmath>
+#include <string.h>
+#include <sys/time.h>
+#include <gsl/gsl_rng.h>
+#include <string>
+#include <sstream>
+#include <vector>
+
+#include "md_timer.h"
+#include "pro_classes.h"
+#include "read_protein_class.h"
+#include "metrics_class.h"
+#include "matmultiply.h"
+#include "qp_solvers.h"
+#include "functionCalls.h"
+#include "initialize_qp.h"
+
+
+#include "read_proinput.h"
+#include "construct_net.h"
+#include "read_yeast_conc.h"
+#include "write_outs.h"
+#include "fill_iface_conc.h"
+#include "gen_fullrand_dist.h"
+#include "fitness_constrain_to_target.h"
+
+#include "avg_rmsd_from_random_dists.h"
+#include "build_Amatrix.h"
+
+#include "calc_abund_target_metrics.h"
+#include "gen_constraints.h"
+#include "gen_rand_dist.h"
+#include "even_protein.h"
+#include "init_iin_net.h"
+
+using namespace std;
+
+struct MD_Timer looptime;
+struct MD_Timer qptime;
+
+
+void solve_balanced_from_inputs(int Npro, string label, ofstream &distanceFile, vector<double> &Real, vector<double> &iFaceBalanced, vector<double> &proBalanced, vector<double> &stdBalanced, vector<ProteinClass> &proList, int NedgeRead, vector<string> edge1Interface, vector<string> edge2Interface, vector<string> edge1Protein, vector<string> edge2Protein, vector<string> stoichiometry, vector<string> filenames, constrainParms &plist, vector<double> &distMetrics)
+{
+
+  /*
+    POPULATE THE proLIST network, based on the proteins read in from file, matched to all the edges read in.
+    SOME EDGES CONTAIN PROTEINS NOT IN THE INPUT FILE, THESE WILL BE SKIPPED.
+    Construct the interface Network.
+  */
+  
+  int nTotalInterfaces=0;
+  int maxInterfacePartners=0;
+  int nTotalEdges=0;
+  vector<int> constrain;
+  int nConstrain=0;
+  
+  construct_network_from_inputs( NedgeRead,  nTotalInterfaces,  maxInterfacePartners,  nTotalEdges, proList, edge1Interface, edge2Interface, edge1Protein, edge2Protein, stoichiometry, filenames);
+
+  Npro=proList.size();
+  plist.nwhole=Npro;
+  /*Define constrain vectors.*/
+  for(int i=0;i<proList.size();i++){
+    if(proList[i].isConstrained==true){
+      constrain.push_back(i);
+      nConstrain++;
+    }
+  }
+  string *iNames=new string[nTotalInterfaces];
+  int **Speclist=new int*[nTotalInterfaces];
+  double **Stoichlist=new double*[nTotalInterfaces];
+  int i, j;
+  for(i=0;i<nTotalInterfaces;i++){
+      Speclist[i]=new int[maxInterfacePartners];
+      Stoichlist[i]=new double[maxInterfacePartners];
+  }
+  int *numpartners=new int[nTotalInterfaces];
+  Protein *wholep=new Protein[proList.size()];
+  int Nif=nTotalInterfaces;
+  int *p_home=new int[Nif];//this reverses and tells you what protein a given interface belongs to
+  
+  /*USE THE PROLIST NETWORK TO FORMAT THE INTERFACE ARRAYS FED INTO THE QP-SOLVERS.
+   */
+  construct_formatted_interface_arrays(nTotalInterfaces, proList,  wholep,  numpartners,  iNames, Speclist,  Stoichlist, p_home);
+  
+  int Ncomplex=0;//Need to account for extra edges in IIN
+  string *edgenames=new string[nTotalEdges];
+  define_edgenames( Ncomplex,  Nif,  numpartners,  Speclist,  edgenames,  nTotalEdges, iNames);
+   
+  
+  /*BUILD THE A MATRIX, USED IN THE QP-SOLVERS. 
+    A[i*Nif+j]: i is column, j is the row, each row is a different interface, each column a different complex.
+  */
+  
+  double *A=new double[Nif*Ncomplex];
+  for(i=0;i<Nif*Ncomplex;i++)
+    A[i]=0;
+    
+  build_Amatrix_with_Stoich(Nif, A, numpartners, Speclist, Stoichlist);
+  
+
+  double *indivconc=new double[Nif];
+  double *complexconc=new double[Ncomplex];
+  double *complexmut=new double[Ncomplex];
+  double *complexopt=new double[Ncomplex];
+  double *curr_indiv=new double[Nif];
+  
+  /*
+    INITIALIZE ALL ARRAYS FOR THE QP-SOLVE. THEY ARE DEFINED BASED ON THE NETWORK STRUCTURE, AND THE NUMBER OF CONSTRAINED COPY NUMBERS
+    PARAMETER FOR SOLVING IS ALPHA: ENCODED HERE AS alphaValue
+  */
+  double alphaValue=plist.ascale;
+  double nProCopies;
+  
+   /*Memory allocation for QP calls*/
+  double *Q=new double[Ncomplex*Ncomplex];
+  double *c=new double[Ncomplex];
+  int nx=Ncomplex;
+  /*bounds, should be zero*/
+  double  *xupp=new double[nx];//0;//[] = { 20,   0 };
+  char   *ixupp=new char[nx];//0;//[] = {  1,   0 };
+  
+  double  *xlow=new double[nx];//0;//[] = {  0,   0 };
+  char   *ixlow=new char[nx];//0;//[] = {  1,   1 };
+  const int nnzQ = Ncomplex*(Ncomplex+1)/2;//Ncomplex choose 2
+
+  int    *irowQ=new int[nnzQ];// = {  0,   1,   1 }; 
+  int    *jcolQ=new int[nnzQ];//[] = {  0,   0,   1 };
+  double   * dQ=new double[nnzQ];//[] = {  8,   2,  10 };
+  const int mz=Ncomplex;
+  double *clow=new double[mz];
+  char  *iclow=new char[mz];
+  
+  double *cupp=new double[mz];
+  char  *icupp=new char[mz];
+  const int nnzC = Ncomplex;
+  int   *irowC=new int[nnzC];
+  int   *jcolC=new int[nnzC];
+  double   *dC=new double[nnzC];
+  
+  /*Construct same interfaces constraint matrix for this IIN*/
+  double *H=new double[Nif*Nif];//this is size ninterfacexninterface
+  /*construct matrix for weighting which protein concentrations are fixed*/
+  double *ZA=new double[Nif*Ncomplex];
+  double *Q2=new double[Nif*Ncomplex];
+  
+  initialize_qpMatrices( Ncomplex,  Nif,  nConstrain, plist, wholep, constrain, A, p_home,  xupp,  ixupp,  xlow,  ixlow,  irowQ,  jcolQ,   clow,  iclow,  cupp,  icupp,  irowC,  jcolC,  dC,  H,  ZA);
+  
+  /*****PART 2*****/
+  /*Set up output files*/
+  /*R, Rp, and Rpp will be copies into Real, iFaceBalanced and proBalanced. VarBalanced from ivars*/
+  vector<double> R;// = new double[Nif];
+  vector<double> Rp;// = new double[Nif];
+  vector<double> Rpp;// = new double[Nif];
+  double *ivars = new double[Npro];
+  double *imean = new double[Npro];
+  double *CSD = new double[4];
+  double *ENTR = new double[4];
+  
+  //Also want to write R, R', and R'' for real copy numbers
+  
+  ofstream solvefile;
+  solvefile.precision(12);
+  char fname[300];
+  sprintf(fname, "RealCopies_vsBalanced_Npro%d_%s.txt",Npro, label.c_str());//label is a string.
+  solvefile.open(fname);
+  solvefile << "Protein\tInterface\tReal\tIfaceBalanced\tProBalanced\tStd<IfaceBalanced>\tRealBalancedRatio"<<endl;
+
+  /***** Part 3 *****/
+  initialize_timer(&looptime);
+  initialize_timer(&qptime);
+  start_timer(&looptime);
+
+  /*Now that everything has been defined, do qp_solve*/
+  /*We want to do this both with the real and random protein concentrations
+    The first run (nc=0) will do the real, observed copy numbers for the proteins.
+   */
+
+  double pJSD=0;
+  double pCSD=0;
+  double realCSD,realJSD;
+  
+  int check=0;//Use this if some proteins not constrained
+  vector<double> initCopies;// = new double[Npro];
+  //Set initCopiess to abund for first run
+  vector<double> realCopies;//replace abund vector, because some nodes are deleted from list!
+  vector<string> realNames;//replace genid vector, because some nodes are deleted from list!
+  for(i=0;i<Npro;i++){
+    initCopies.push_back(proList[i].copies);
+    realCopies.push_back(proList[i].copies);
+    realNames.push_back(proList[i].name);
+  }
+  cout<<"----------"<<endl;
+
+
+  cout<<"-------------------------------------------------------------"<<endl;
+  cout<<"-------------------------------------------------------------"<<endl;
+  cout<<"---------------------PERFORM STOICHIOMETRIC BALANCE-------------------"<<endl;
+  int nc=0;
+  start_timer(&qptime);
+  
+  cout <<"-------------------"<<endl;
+  cout <<"--------SOLVING BALANCE FOR THE REAL, OBSERVED PROTEIN COPY NUMBERS------"<<endl;
+  
+  //Make "R" from initCopies using p_home
+  for(i=0;i<Nif;i++){
+    R.push_back(initCopies[p_home[i]]);
+  }
+  
+    //replacing "abund" with "initCopies" since initCopies is going to be variable
+  
+  qp_solve(Npro, Nif, Ncomplex,  wholep, indivconc, complexconc, A, plist, nConstrain, constrain, initCopies, Q, c, xlow, xupp, ixlow, ixupp, irowQ, jcolQ, dQ, clow, cupp, iclow, icupp, irowC, jcolC, dC, H, ZA, Q2, alphaValue,p_home);      
+  
+  stop_timer(&qptime);    
+  //cout <<"QPsolve time: "<<timer_duration(qptime)<<endl;
+  
+  matmultiply(Nif,  Ncomplex, indivconc, complexconc, A);//Forward solve for Rp
+  
+  for(i=0;i<Nif;i++){
+    Rp.push_back(indivconc[i]);
+    //cout <<"i: "<<iNames[i]<<" "<<indivconc[i]<<endl;
+  }
+
+  
+  cout<<"-------------------------------"<<endl;
+  cout <<" ------COPIES OF EACH COMPLEX FOR REAL COPY NUMBERS--------------"<<endl;
+  for(i=0;i<Ncomplex;i++){
+    cout <<"edge: "<<i<<" "<<edgenames[i]<<" conc: "<<complexconc[i]<<endl;
+  }
+  cout<<"-------------------------------"<<endl;
+  /*cout <<"--------Solved for interface copy numbers-----"<<endl;
+    for(i=0;i<Nif;i++){
+    cout <<"i: "<<iNames[i]<<" "<<indivconc[i]<<endl;
+    }*/
+    
+  //We can now get the variances using Rp
+  get_variances(Npro, Nif, wholep, Rp, ivars, imean);
+  
+    
+  
+  even_protein(Npro, wholep, indivconc, nProCopies);//This changes indivconc by averaging concentrations for each protein. Therefore, I should save indivconc beforehand.
+  for(i=0;i<Nif;i++){
+    Rpp.push_back(indivconc[i]);
+  }
+  
+  int i1, p1;
+  
+  /*First run is the Real Observed Copy numbers, write out full solution*/
+  
+  for(p1=0;p1<proList.size();p1++){
+    for(i1=0;i1<proList[p1].InterfaceList.size();i1++){
+      int index=proList[p1].InterfaceList[i1].globalIndex;
+      solvefile<<proList[p1].name<<"\t"<<proList[p1].InterfaceList[i1].name<<"\t"<<R[index]<<'\t'<<Rp[index]<<'\t'<<Rpp[index]<<'\t'<<sqrt(ivars[p1])<<'\t'<<R[index]/Rp[index]<<endl;
+    }//all interfaces on pro p1
+  }
+  /*Copy results into the Real arrays, for sending back to main.*/
+  for(i=0;i<Nif;i++){
+    Real.push_back(R[i]);
+    iFaceBalanced.push_back(Rp[i]);
+    proBalanced.push_back(Rpp[i]);
+    stdBalanced.push_back(sqrt(ivars[p_home[i]]));
+  }
+
+  /*For looking at stats, want to look at constrained proteins only.*/
+  if(nConstrain<Npro){
+    for(j=0;j<Nif;j++){
+      for(i=0;i<nConstrain;i++){
+	if(p_home[j]==constrain[i])
+	  check=1;
+      }
+      if(check==0){
+	Rp[j]=R[j];
+	Rpp[j]=R[j]; //Making these equal means distance of zero, and negative to skip them in distance calculations.
+      }
+      check=0;
+    }
+    
+  }
+    
+  /*Next find distances from R to R', R to R'', and R' to R''.
+    Also want to look at distance between real copy numbers and random copy numbers*/
+  
+  CSD[0]=calc_chisquare(Nif,R,Rp);
+  CSD[1]=calc_chisquare(Nif,R,Rpp);
+  cout<<"Ninterfaces in solve_balanced_from_inputs : "<<Nif<<endl;
+  for(int i=0;i<Nif;i++){
+     cout <<" Interface: "<<i<<' '<<R[i]<<' '<<Rpp[i]<<endl;
+  }
+ 
+  CSD[2]=calc_chisquare(Nif,Rp,Rpp);
+  CSD[3]=calc_chisquare(Npro,realCopies,initCopies);
+  distMetrics.push_back(CSD[0]);
+  distMetrics.push_back(CSD[1]);
+  distMetrics.push_back(CSD[2]);
+  
+  //Calculating Jensen Shannon distance, rather than KL divergence
+  ENTR[0]=calc_dist_jensenshannon(Nif,R,Rp);
+  ENTR[1]=calc_dist_jensenshannon(Nif,R,Rpp);
+  ENTR[2]=calc_dist_jensenshannon(Nif,Rp,Rpp);
+  ENTR[3]=calc_dist_jensenshannon(Npro,initCopies,realCopies);
+  distMetrics.push_back(ENTR[0]);
+  distMetrics.push_back(ENTR[1]);
+  distMetrics.push_back(ENTR[2]);
+  
+  //Write out entries to file
+  
+  distanceFile << "CSD\t" << CSD[0] << "\t" << CSD[1] << "\t" << CSD[2] << endl;
+  distanceFile << "JSD\t" << ENTR[0] << "\t" << ENTR[1] << "\t" << ENTR[2] << endl;
+    
+  stop_timer(&looptime);    
+  cout <<"time to Solve for input network: "<<timer_duration(looptime)<<endl;
+
+  solvefile.close();
+  /*NEED TO DELETE A BUNCH OF ARRAYS HERE.*/
+  
+    
+}

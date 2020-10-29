@@ -1,22 +1,29 @@
 #include "build_Amatrix.h"
 
 
-void build_Amatrix(int nmol, double *A, int * numpartners, int **Speclist)
+void build_Amatrix_with_Stoich(int nmol, double *A, int * numpartners, int **Speclist, double **Stoichlist)
 {
   int i, j;
   int part;
   int t=0;
+  double sval1, sval2;
   for(i=0;i<nmol;i++){
     for(j=0;j<numpartners[i];j++){
-      part=Speclist[i][j];
-      if(part>i){
+	part=Speclist[i][j];
+	sval1=Stoichlist[i][j];
+      
+	if(part>i){
 	//new reaction
 
 	//rows of A are for each interface, columns are for each complex
-	A[t*nmol+i]=1;
-	A[t*nmol+part]=1;
+	A[t*nmol+i]=sval1;
+	for(int s=0;s<numpartners[part];s++){
+	    if(Speclist[part][s]==i)
+		A[t*nmol+part]=Stoichlist[part][s];//this should be overwritten by below.
+	}
 	t++;
       }
+	
       if(part==i){
 	A[t*nmol+i]=2;
 	t++;

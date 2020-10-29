@@ -1,5 +1,6 @@
 #include "pro_classes.h"
 #include "constrainParms.h"
+#include "ProteinClass.h"
 #include "read_proinput.h"
 
 int read_just_ppi(int nwhole, ifstream &ppifile, ppidata *ppi)

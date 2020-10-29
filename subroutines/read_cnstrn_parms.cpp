@@ -1,5 +1,6 @@
 #include "pro_classes.h"
 #include "constrainParms.h"
+#include "ProteinClass.h"
 #include "read_proinput.h"
 
 void read_cnstrn_parms(ifstream &parmfile, constrainParms &plist)

@@ -1,0 +1,2 @@
+
+void solve_balanced_from_inputs(int Npro, string label, ofstream &distanceFile, vector<double> &Real, vector<double> &iFaceBalanced, vector<double> &proBalanced, vector<double> &stdBalanced, vector<ProteinClass> &proList, int NedgeRead, vector<string> edge1Interface, vector<string> edge2Interface, vector<string> edge1Protein, vector<string> edge2Protein, vector<string> stoichiometry, vector<string> filenames, constrainParms &plist, vector<double> &distMetrics);

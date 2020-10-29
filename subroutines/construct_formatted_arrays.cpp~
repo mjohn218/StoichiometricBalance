@@ -1,0 +1,44 @@
+
+
+void construct_formatted_arrays()
+{
+  /*Loop over all proteins, figure out the indexes of each interface interaction using the global indices.*/
+  
+  for(p1=0;p1<proList.size();p1++){
+    int nint=proList[p1].InterfaceList.size();
+    wholep[p1].ninterface=proList[p1].InterfaceList.size();
+    for(j=0;j<nint;j++){
+      i1=proList[p1].InterfaceList[j].globalIndex;
+      wholep[p1].valiface[j]=i1;//interfaces on this protein.
+      iNames[i1]=proList[p1].name;
+      iNames[i1].append(".");
+      iNames[i1].append(proList[p1].InterfaceList[j].name);
+      p_home[i1]=p1;//home protein for this interface.
+      int numPartner=proList[p1].InterfaceList[j].interfacePartnerName.size();
+      numpartners[i1]=numPartner;
+      for(int k=0;k<numPartner;k++){//umpartners[i1];k++){
+	int i2=proList[p1].InterfaceList[j].interfacePartnerIndex[k];
+	Speclist[i1][k]=i2;
+	Stoichlist[i1][k]=proList[p1].InterfaceList[j].stoichiometry[k];
+      }
+    }
+    
+    
+    
+  }
+  cout <<"----------------------------------"<<endl;
+  cout <<" PRINT OUT INTERFACE INTERACTION NETWORK "<<endl;
+  cout <<"----------------------------------"<<endl;
+  /*Now write out Speclist*/
+  for(i=0;i<nTotalInterfaces;i++){
+    cout <<i<<" Name: "<<iNames[i]<<" Npartner: "<<numpartners[i]<<'\t'<<" Partners: ";
+    for(j=0;j<numpartners[i];j++){
+      //cout <<Speclist[i][j]<<'\t';
+      int id=Speclist[i][j];
+      cout<<iNames[id]<<'\t';
+    }
+    cout <<endl;
+    
+  }
+  cout <<"----------------------------------"<<endl;
+}

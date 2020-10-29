@@ -30,4 +30,17 @@ void build_Amatrix_with_Stoich(int nmol, double *A, int * numpartners, int **Spe
       }
     }
   }
+
+  /* cout <<"-------------------"<<endl;
+     cout <<" Write A MATRIX TRANSPOSE (First row is all interfaces in complex 1) to amatrixT.out file: "<<endl;
+     ofstream amatrix("amatrixT.out");
+     for(i=0;i<Nif*Ncomplex;i++){
+     if((i+1)%Nif==0)
+     amatrix <<A[i]<<endl;
+     else
+     amatrix <<A[i]<<'\t';
+     }
+     cout <<"-------------------"<<endl; 
+  */
+  
 }

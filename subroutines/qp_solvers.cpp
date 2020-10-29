@@ -4,7 +4,7 @@
 #include "matmultiply.h"
 #include "gen_fullrand_dist.h"
 #include "doubleLexSort.h"
-
+#include <vector>
 
 
 void qp_init(int Npro, int Nif, int Ncomplex, int &numstart, Protein *wholep, double *yeast_abund, double *cumul, double *indivconc, double *complexconc, double *A, constrainParms plist, int Nconstrain, int *constrain, double *abund, double * Q, double *c, double *xlow, double *xupp, char *ixlow, char *ixupp, int *irowQ, int *jcolQ, double *dQ, double *clow, double *cupp, char *iclow, char *icupp, int *irowC, int *jcolC, double *dC, double *randvals)
@@ -192,7 +192,7 @@ void qp_init(int Npro, int Nif, int Ncomplex, int &numstart, Protein *wholep, do
   delete jcolA;
   
 }
-void qp_solve(int Npro, int Nif, int Ncomplex, int &numstart, Protein *wholep, double *indivconc, double *complexconc, double *A, constrainParms plist, int Nconstrain, int *constrain, double *abund, double * Q, double *c, double *xlow, double *xupp, char *ixlow, char *ixupp, int *irowQ, int *jcolQ, double *dQ, double *clow, double *cupp, char *iclow, char *icupp, int *irowC, int *jcolC, double *dC, double *H, double *ZA, double *Q2, double ascale, int *p_home)
+void qp_solve(int Npro, int Nif, int Ncomplex, Protein *wholep, double *indivconc, double *complexconc, double *A, constrainParms plist, int Nconstrain, std::vector<int> constrain, vector<double> targCopies, double * Q, double *c, double *xlow, double *xupp, char *ixlow, char *ixupp, int *irowQ, int *jcolQ, double *dQ, double *clow, double *cupp, char *iclow, char *icupp, int *irowC, int *jcolC, double *dC, double *H, double *ZA, double *Q2, double ascale, int *p_home)
 {
 
   int i, j;
@@ -218,7 +218,7 @@ void qp_solve(int Npro, int Nif, int Ncomplex, int &numstart, Protein *wholep, d
   for(i=0;i<Nconstrain;i++){
     p1=constrain[i];
     ni=wholep[p1].ninterface;
-    Rhs+=ascale*abund[p1]*abund[p1]*ni;//this is c'Z*c
+    Rhs+=ascale*targCopies[p1]*targCopies[p1]*ni;//this is c'Z*c
   }
   int k, l;
    
@@ -238,7 +238,7 @@ void qp_solve(int Npro, int Nif, int Ncomplex, int &numstart, Protein *wholep, d
     for(i=0;i<Nif;i++){
       //    do c'*Z*A
       p1=p_home[i];
-      c[j]+=-2.0*ascale*abund[p1]*ZA[j*Nif+i];
+      c[j]+=-2.0*ascale*targCopies[p1]*ZA[j*Nif+i];
       
     }
   }

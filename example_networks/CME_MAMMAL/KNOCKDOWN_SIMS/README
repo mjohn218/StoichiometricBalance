@@ -1,0 +1,11 @@
+
+TO run the original network, and then perform single knockdowns of each protein:
+
+./stoich_balance_knockdowns.exe parms_hela.txt ProteinList_CONSENSUSHeLa_CME.txt Network_5col_Jan2020_proOnly.txt -all >std.out
+
+
+To run the original network, and then perform knockdown of a specific set of proteins, list 
+the set of proteins to knockdown in the 4th input file. 
+Example knockdown of all AP-2 subunits: kd_apsubunits.txt
+
+./stoich_balance_knockdowns.exe parms_hela.txt ProteinList_CONSENSUSHeLa_CME.txt Network_5col_Jan2020_proOnly.txt kd_apsubunits.txt >std.out

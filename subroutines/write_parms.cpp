@@ -4,11 +4,14 @@
 
 void write_parms(constrainParms &plist)
 {
-  cout <<"parameters read in.. "<<endl; 
-  cout <<"N whole proteins: "<<plist.nwhole<<endl;
-  cout <<"Min Number of molecules to allow: "<<plist.min_complex<<endl;
-  cout <<"Nedges: "<<plist.Nedge<<endl;
-  cout <<"Nconstrain: "<<plist.Nconstrain<<endl;
-  cout <<"ascale: "<<plist.ascale<<endl;  
-  
+
+  cout <<"------------------ Parameters -----------"<<endl;
+  //cout <<" N Proteins : "<<plist.nwhole<<endl;
+  cout <<" Minimum number of Complexes assignable (>=0): "<<plist.min_complex<<endl;
+  cout <<" Alpha value assigned: "<<plist.ascale <<". A value of 1 works well. Very small forces all interfaces on same protein to be equal copy numbers. "<<endl;
+  cout <<" Number of times to repeat with randomized copy numbers, solely to evaluate p-value : "<<plist.nruns_rand<<endl;
+  cout <<" Only if above is >0: initialize random copies from the Cell Type distribution, or by shuffling the observed copy numbers: "<<plist.flagread<<". (Set to 1 to sample from Cell Type distribution.) "<<endl;
+  cout <<" Max Complexes: "<<plist.max_complex<<". Default=0 will allow max to infinity (unconstrained max value). "<<endl;
+  //cout <<"WARNING: If Max Complexes is a finite value, one cannot sample randomized copy numbers for p-value calculations that exceed this, so it should accomodate the maximum protein copy numbers in the CellType_Distribution_CopyNumbers file. "<<endl;
+      
 }

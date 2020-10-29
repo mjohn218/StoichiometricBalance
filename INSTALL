@@ -26,13 +26,14 @@ make
 
 Inside OOQP folder. This will require LAPACK and BLAS libraries, so you may need to install these if you don't have them. (See the INSTALL file inside the OOQP directory for more details)
 
-6) Go back to top directory and add proper library tags to the Makefile. If you don't know the proper library tags, look at GNUMakefile inside the OOQP directory and copy them from there. Copy into the FLIBSLIN tag.
+6) Go back to top directory (StoichiometricBalance) and add proper library tags to the Makefile. If you don't know the proper library tags, look at GNUMakefile inside the OOQP directory and copy them from there. Copy into the FLIBSLIN tag.
 
 7) Run
 
 make
 
-To compile balance_network_dist.exe
+To compile stoich_balance.exe
+
 
 
 *****MAC INSTRUCTIONS******
@@ -66,13 +67,14 @@ make
 
 Inside OOQP folder. This will require LAPACK and BLAS libraries, so you may need to install these if you don't have them. (See the INSTALL file inside the OOQP directory for more details)
 
-9) Go back to top directory and add proper library tags to the Makefile. If you don't know the proper library tags, look at GNUMakefile inside the OOQP directory and copy them from there. Copy into the FLIBSMAC tag.
+9) Go back to top directory (StoichiometricBalance). Edit this Makefile to update the FLIBSMAC. Copy in the FLIBS line from OOQPfolder/GNUMakefile. Then add the flags: -framework accelerate
+to that line, to link in the blas and lapack. 
 
 10) Run
 
 make
 
-To compile balance_network_dist.exe
+To compile stoich_balance.exe
 
 *****TROUBLESHOOTING****
 

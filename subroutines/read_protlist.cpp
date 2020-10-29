@@ -1,7 +1,10 @@
 #include "pro_classes.h"
 #include "constrainParms.h"
+#include "ProteinClass.h"
 #include "read_proinput.h"
 
+
+/*OLD VERSION*/
 void read_protlist(int nwhole, Protein *wholep, int nmol, int *p_home, ifstream &protfile)
 {
   //read in each proteins number of interfaces and their identities

@@ -1,13 +1,15 @@
 #include "calc_abund_target_metrics.h"
 
-double calc_chisquare(int Npro, double *proconc, double *abund)
+/*Abund must be a vector with negative numbers for any un-constrained proteins.*/
+
+double calc_chisquare(int Npro, vector<double> proconc, vector<double> abund)
 {
   int i;
   double sum=0;
   double df, df2;
 
   for(i=0;i<Npro;i++){
-    if(abund[i]>0){
+    if(abund[i]>=0 && proconc[i]>=0){
       df=proconc[i]-abund[i];
       df2=df*df;
       sum+=df2/(proconc[i]+abund[i]);

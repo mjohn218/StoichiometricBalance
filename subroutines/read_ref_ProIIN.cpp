@@ -1,5 +1,6 @@
 #include "pro_classes.h"
 #include "constrainParms.h"
+#include "ProteinClass.h"
 #include "read_proinput.h"
 
 void read_ref_ProIIN(int nwhole, Protein *wholep, int &nrefinterface, ifstream &reffile, int *npartners, int **Speclist, int *p_home)

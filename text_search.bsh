@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+input_phrase=`echo ${1?Error: no phrase given for search}`
+length="${#input_phrase}"
+#echo $length
+
+#do not search for phrase if it is not given
+if [ "$length" -gt "0" ]
+then
+echo "read in from command line "
+echo $input_phrase
+echo "Search cpp files "
+for i in `find . -name "*cpp"`; do echo $i ; cat $i | grep "`echo $input_phrase`" ; done
+
+echo "Search hpp files "
+for i in `find . -name "*hpp"`; do echo $i ; cat $i | grep "`echo $input_phrase`" ; done
+fi

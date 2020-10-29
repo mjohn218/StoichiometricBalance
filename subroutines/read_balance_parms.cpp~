@@ -2,6 +2,7 @@
 #include "constrainParms.h"
 #include "read_proinput.h"
 
+
 void read_balance_parms(ifstream &parmfile, constrainParms &plist)
 {
   parmfile >>plist.nwhole;

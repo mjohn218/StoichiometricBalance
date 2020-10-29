@@ -24,8 +24,9 @@ BLAS =
 #Replace -lblas with lg2c if necessary
 FLIBSLIN    =  -L$(LINGCC) -L$(BLAS) -L$(GFLIB) -lgfortran  -lm -lstdc++ -lblas -lg2c
 
-FLIBSMAC    =   -lgfortran -lquadmath -lm -lstdc++ -framework accelerate
-#FLIBSMAC    =  -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin14/4.9.2 -L/usr/local/gfortran/lib/ -lgfortran -lquadmath -lm -lstdc++ -framework accelerate
+FLIBSMAC    =  -L/opt/local/lib/gcc10/gcc/x86_64-apple-darwin18/10.1.0 -L/opt/local/lib/gcc10/gcc/x86_64-apple-darwin18/10.1.0/../../.. -lgfortran -lquadmath -lm -lstdc++ -framework accelerate
+#-lgfortran -lquadmath -lm -lstdc++ -framework accelerate
+
 
 LIBS   = $(shell gsl-config --libs)
 LIBS  += $(MA27LIB) 
@@ -47,7 +48,8 @@ else
 	LIBS  +=$(FLIBSMAC)
 endif
 
-_EXECUTABLES = 	stoich_balance.exe \
+_EXECUTABLES = 	stoich_balance_knockdowns.exe \
+##		stoich_balance.exe \
 
 
 

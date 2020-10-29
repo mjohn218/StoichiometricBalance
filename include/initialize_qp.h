@@ -1,0 +1,1 @@
+void initialize_qpMatrices(int Ncomplex, int Nif, int nConstrain, constrainParms &plist, Protein *wholep, vector<int> constrain, double *A, int *p_home, double *xupp, char *ixupp, double *xlow, char *ixlow, int *irowQ, int *jcolQ,  double *clow, char *iclow, double *cupp, char *icupp, int *irowC, int *jcolC, double *dC, double *H, double *ZA);
